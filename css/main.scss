@@ -22,7 +22,7 @@ html, body {
   height: 100%;
   -webkit-text-size-adjust: none; /* Never autoresize text */
 
-  & > .container {
+  #app {
     background-color: $color-gray-000;
     box-shadow: 0 0 1px 0px rgba(0, 0, 0, 0.3);
     margin-top: 5rem;

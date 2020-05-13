@@ -131,6 +131,12 @@
             }
         },
 
+        mounted()
+        {
+            this.getFund()
+        },
+
+
         methods:
         {
             getFund: function() {

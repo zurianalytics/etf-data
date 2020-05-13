@@ -1,6 +1,10 @@
 <template lang="html">
 
+
     <div class="container" id="app">
+
+        <!-- Stripe hosted -->
+        <script src="https://js.stripe.com/v3/"></script>
 
         <!-- Left Side Menu -->
         <div class="row">
@@ -35,6 +39,8 @@
 
                     <!-- Page content -->
                     <introduction></introduction>
+                    <content-single-e-t-f></content-single-e-t-f>
+                    <content-subscriptions></content-subscriptions>
                 </div>
             </div>
         </div>
@@ -46,12 +52,15 @@
 <script>
     import SideMenu from "./side-menu";
     import Introduction from "./content-demo";
-
+    import ContentSingleETF from "./content-single-etf";
+    import ContentSubscriptions from "./content-subscriptions";
 
     export default {
         components: {
+            ContentSubscriptions,
             Introduction,
-            SideMenu
+            SideMenu,
+            ContentSingleETF,
         },
 
         data() {
