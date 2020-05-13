@@ -1,0 +1,58 @@
+/*
+Copyright 2008-2013 Concur Technologies, Inc.
+
+Licensed under the Apache License, Version 2.0 (the "License"); you may
+not use this file except in compliance with the License. You may obtain
+a copy of the License at
+
+  http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
+WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
+License for the specific language governing permissions and limitations
+under the License.
+*/
+
+
+////////////////////////////////////////////////////////////////////////////////
+// Main Colors
+////////////////////////////////////////////////////////////////////////////////
+// Blues
+$color-blue-000: #a4cdfe !default;
+$color-blue-100: #7dabf8;
+$color-blue-800: #212d63 !default;
+$color-blue-1000: #1a2652 !default;
+// Grayscales
+$color-gray-000: #fff !default;
+$color-gray-100: #F3F7F9 !default;
+$color-gray-900: #697386 !default;
+// Greens
+$color-green-100: #33c27f !default;
+// Other accents
+$color-orange-400: #b30059 !default;
+$color-orange-400-subtle: #f4d2d4 !default;
+
+
+// FONTS
+////////////////////
+%header-font {
+  font-weight: bold;
+}
+
+%code-font {
+  font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+// INTERNAL
+////////////////////////////////////////////////////////////////////////////////
+// These settings are probably best left alone.
+
+%break-words {
+    word-break: break-all;
+    hyphens: auto;
+}

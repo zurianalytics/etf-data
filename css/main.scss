@@ -1,0 +1,491 @@
+@charset "utf-8";
+@import 'variables';
+@import 'normalize';
+@import 'bootstrap';
+
+
+////////////////////////////////////////////////////////////////////////////////
+// GENERAL STUFF / Page Layout
+////////////////////////////////////////////////////////////////////////////////
+html, body {
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 14px;
+
+  line-height: 1.6rem;
+  color: $color-blue-1000;
+  padding: 0;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: $color-gray-100;
+  height: 100%;
+  -webkit-text-size-adjust: none; /* Never autoresize text */
+
+  & > .container {
+    background-color: $color-gray-000;
+    box-shadow: 0 0 1px 0px rgba(0, 0, 0, 0.3);
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+  }
+
+  // Container sizes
+  @media (max-width: 1200px) {
+    & > .container {
+      margin-top: 0;
+    }
+  }
+}
+
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+// Side Menu Styles
+////////////////////////////////////////////////////////////////////////////////
+
+// Normal styles
+nav
+{
+  background-color: $color-gray-000;
+  position: fixed;
+  font-weight: bold;
+  margin-top: 8rem;
+  padding: 1.4rem;
+  z-index: 30;
+
+  .puller
+  {
+    height: 40vh;
+    float: right;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    width: 22px;
+    border-right: 2px solid $color-blue-100;
+    color: $color-blue-100;
+    font-size: 2rem;
+  }
+
+  @media (max-width: 1200px) {
+    & {
+      padding: 0.6rem;
+    }
+  }
+
+  // Responsive
+  @media (max-width: 992px)
+  {
+    &
+    {
+      padding-right: 0;
+      transform: translateX(-100%);
+      margin-left: 8px;
+      transition: all 0.3s ease-out;
+    }
+
+    &.active
+    {
+      transform: translateX(0);
+      margin-left: 0;
+    }
+
+    .puller
+    {
+      display: flex;
+    }
+  }
+
+  // Section at the bottom
+  footer
+  {
+    border-top: 1px solid $color-gray-100;
+    font-size: 0.7rem;
+  }
+
+  // Top header
+  .representation {
+    text-align: center;
+
+    .logo {
+      margin-left: auto;
+      margin-right: auto;
+      max-width: 80px;
+      margin-bottom: 0;
+    }
+
+    .special {
+      color: $color-blue-100;
+    }
+  }
+
+  // Main list of links
+  & > ul
+  {
+    line-height: 2rem;
+    border-top: 1px solid $color-gray-100;
+    font-size: 0.9rem;
+
+    .active > a{
+      color: $color-blue-100;
+    }
+
+    // First level headers
+    ul, li
+    {
+      line-height: 2rem;
+    }
+
+    li {
+      color: $color-gray-900;
+
+      // Second level headers
+      li
+      {
+        padding-left: 1rem;
+        font-weight: normal;
+        font-size: 0.85rem;
+      }
+
+      ul {
+        max-height: 0;
+        overflow: hidden;
+      }
+
+      &.active ul {
+        max-height: 200px;
+      }
+
+      ul, li
+      {
+        transition: all 0.6s 0s;
+      }
+    }
+  }
+}
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+// CONTENT STYLES
+////////////////////////////////////////////////////////////////////////////////
+// This is all the stuff with the light background in the left half of the page
+
+.content {
+
+  h1 {
+    @extend %header-font;
+    font-size: 2rem;
+  }
+
+  h2 {
+    @extend %header-font;
+    font-size: 1.5rem;
+  }
+
+  h1, h2
+  {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  & > .container-fluid
+  {
+    border-top: 1px solid $color-gray-100;
+    padding-top: 3rem;
+
+    &:first-of-type
+    {
+      border-top: none;
+      margin-top: 6rem;
+    }
+
+    margin-top: 12rem;
+
+    & > .row
+    {
+      &:first-of-type
+      {
+        margin-top: 0;
+      }
+
+      margin-top: 8rem;
+    }
+  }
+
+  h3, h4, h5, h6 {
+    @extend %header-font;
+    font-size: 1.2rem;
+    margin-top: 2.5em;
+    margin-bottom: 0.8em;
+  }
+
+  code {
+    @extend %break-words;
+    @extend %code-font;
+  }
+
+  .code-aggresive
+  {
+    color: $color-green-100;
+    font-weight: bold;
+  }
+
+  li
+  {
+    border-top: 1px solid $color-gray-100;
+    padding: 1rem 0;
+  }
+
+  a
+  {
+    color: $color-blue-100;
+  }
+}
+
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+// Dark Box Styles
+////////////////////////////////////////////////////////////////////////////////
+// This is all the stuff that appears in the right half of the page
+
+.content {
+
+  .accent-box {
+    background-color: $color-blue-800;
+    border-radius: 10px;
+    color: $color-gray-000;
+    box-sizing: border-box;
+    @extend %code-font;
+
+    header
+    {
+      background-color: $color-blue-1000;
+      border-top-left-radius: 10px;
+      border-top-right-radius: 10px;
+
+      & > *:first-child
+      {
+        color: $color-green-100;
+        font-weight: bold;
+        margin-right: 10px;
+        animation: blinker-text 1.4s linear infinite;
+      }
+
+      input
+      {
+        background: rgba(1, 1, 1, 0.3);
+        padding: 2px 10px;
+        border: none;
+        border-bottom: 1px solid $color-green-100;
+        animation: blinker-border 1.4s linear infinite;
+      }
+
+      @keyframes blinker-text {
+        50%
+        {
+          color: #5dd9d7;
+          opacity: 0.7;
+        }
+      }
+
+      @keyframes blinker-border {
+        50%
+        {
+          border-bottom-color: #5dd9d7;
+          opacity: 0.7;
+        }
+      }
+    }
+
+    & > * {
+      padding: 1.2rem 2rem;
+    }
+
+    label {
+      color: $color-blue-000;
+    }
+
+    code {
+      .s2 {
+        color: $color-blue-000;
+      }
+
+      .kc {
+        color: $color-green-100;
+      }
+
+      .mf {
+        color: $color-gray-100
+      }
+
+    }
+  }
+}
+
+
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////
+// Stripe & Form Elemenets & Other Misc
+////////////////////////////////////////////////////////////////////////////////
+button {
+  background: $color-blue-100;
+  color: $color-gray-100;
+  height: 38px;
+  padding: 0 14px;
+  border: none;
+  box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+  border-radius: 4px;
+}
+
+button > img {
+  height: 50%;
+  vertical-align: middle;
+}
+
+button:disabled {
+  background: $color-gray-900;
+}
+
+button:disabled.success {
+  background: $color-green-100;
+}
+
+.StripeElement, form input, form select, form textarea {
+  box-sizing: border-box;
+  height: 40px;
+  padding: 10px 12px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: $color-gray-000;
+  box-shadow: 0 1px 3px 0 #e6ebf1;
+  -webkit-transition: box-shadow 150ms ease;
+  transition: box-shadow 150ms ease;
+}
+
+.StripeElement--focus, form input:focus, form select:focus {
+  box-shadow: 0 1px 3px 0 #cfd7df;
+}
+
+.StripeElement--invalid, form input:invalid, form select:invalid {
+  border-color: #fa755a;
+}
+
+.StripeElement--webkit-autofill {
+  background-color: #fefde5 !important;
+}
+
+.StripeElement, form input, form button, form select, form textarea {
+  margin-bottom: 1rem;
+  font-size: 16px !important;
+}
+
+form {
+  margin-top: 3rem;
+  background-color: $color-gray-100;
+  padding: 1rem;
+}
+
+form .form-row:first-of-type > * {
+  width: 100%;
+}
+
+form .form-row > * {
+  display: inline-block;
+  vertical-align: middle;
+  padding: 0 1rem 0 0;
+  box-sizing: border-box;
+}
+
+form label {
+  display: block;
+  color: #8297b3;
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+
+////////////////////////////////////////////////////////////////////////////////
+// Tippy
+////////////////////////////////////////////////////////////////////////////////
+.tippy-box[data-theme~='zurianalytics'] {
+  background-color: $color-blue-800;
+  color: $color-gray-000;
+}
+
+.tippy-box[data-theme~='zurianalytics'][data-placement^='top'] > .tippy-arrow::before,
+.tippy-box[data-theme~='zurianalytics'][data-placement^='bottom'] > .tippy-arrow::before,
+.tippy-box[data-theme~='zurianalytics'][data-placement^='left'] > .tippy-arrow::before,
+.tippy-box[data-theme~='zurianalytics'][data-placement^='right'] > .tippy-arrow::before{
+  border-top-color: $color-blue-800;
+}
+
+.tippy-box[data-theme~='aggressive'] {
+  background-color: $color-orange-400;
+  color: $color-orange-400-subtle;
+}
+
+.tippy-box[data-theme~='aggressive'][data-placement^='bottom'] > .tippy-arrow::before,
+.tippy-box[data-theme~='aggressive'][data-placement^='top'] > .tippy-arrow::before {
+  border-bottom-color: $color-orange-400;
+  color: $color-orange-400;
+}
+
+.tippy-box[data-theme~='mild'] {
+  background-color: $color-green-100;
+  color: $color-gray-000;
+}
+
+.tippy-box[data-theme~='mild'][data-placement^='bottom'] > .tippy-arrow::before,
+.tippy-box[data-theme~='mild'][data-placement^='top'] > .tippy-arrow::before {
+  border-bottom-color: $color-green-100;
+  color: $color-green-100;
+}
+
+.tippy-box[data-animation=scale][data-placement^=top] {
+  transform-origin: bottom
+}
+
+.tippy-box[data-animation=scale][data-placement^=bottom] {
+  transform-origin: top
+}
+
+.tippy-box[data-animation=scale][data-placement^=left] {
+  transform-origin: right
+}
+
+.tippy-box[data-animation=scale][data-placement^=right] {
+  transform-origin: left
+}
+
+.tippy-box[data-animation=scale][data-state=hidden] {
+  transform: scale(.5);
+  opacity: 0
+}
+
+.info {
+  color: $color-blue-100;
+}
+
+.info:after {
+  vertical-align: text-top;
+  font-size: 0.8em;
+  margin-left: 2px;
+}
+
