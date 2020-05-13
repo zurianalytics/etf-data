@@ -319,6 +319,29 @@ nav
       color: $color-blue-000;
     }
 
+    .json-formatter-row,
+    .json-formatter-row a,
+    .json-formatter-row a:hover,
+    .json-formatter-number
+    {
+      color: $color-gray-000 !important;
+    }
+
+    .json-formatter-key,
+    .json-formatter-bracket
+    {
+      color: $color-blue-000;
+    }
+
+    .json-formatter-string
+    {
+      color: $color-green-100;
+    }
+
+    .json-formatter-null
+    {
+      color: $color-gray-900;
+    }
     code {
       .s2 {
         color: $color-blue-000;
@@ -335,6 +358,7 @@ nav
     }
   }
 }
+
 
 
 
