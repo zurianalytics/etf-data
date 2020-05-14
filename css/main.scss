@@ -10,7 +10,7 @@
 html, body {
 
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 14px;
+  font-size: 15px;
 
   line-height: 1.6rem;
   color: $color-blue-1000;
@@ -27,13 +27,38 @@ html, body {
     box-shadow: 0 0 1px 0px rgba(0, 0, 0, 0.3);
     margin-top: 5rem;
     margin-bottom: 5rem;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
   }
 
   // Container sizes
   @media (max-width: 1200px) {
-    & > .container {
+    & #app {
       margin-top: 0;
+      margin-bottom: 0;
     }
+  }
+
+  .accent-blue {
+    color: $color-blue-100;
+  }
+
+  .accent-hard {
+    color: $color-green-100;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .accent-gray
+  {
+    font-weight: bold;
+    color: $color-gray-400;
+    text-transform: lowercase;
+  }
+
+  .accent-bold
+  {
+    font-weight: bold;
   }
 }
 
@@ -116,10 +141,6 @@ nav
       margin-right: auto;
       max-width: 80px;
       margin-bottom: 0;
-    }
-
-    .special {
-      color: $color-blue-100;
     }
   }
 
@@ -205,7 +226,7 @@ nav
     &:first-of-type
     {
       border-top: none;
-      margin-top: 6rem;
+      margin-top: 0;
     }
 
     margin-top: 12rem;
@@ -233,12 +254,6 @@ nav
     @extend %code-font;
   }
 
-  .code-aggresive
-  {
-    color: $color-green-100;
-    font-weight: bold;
-  }
-
   li
   {
     border-top: 1px solid $color-gray-100;
@@ -247,7 +262,23 @@ nav
 
   a
   {
+    display: inline-block;
     color: $color-blue-100;
+
+    &.external
+    {
+      &:after
+      {
+        content: '\2BAD';
+        font-size: 0.8em;
+        margin-left: 2px;
+      }
+
+      &:hover
+      {
+        color: $color-green-100;
+      }
+    }
   }
 }
 
@@ -269,6 +300,7 @@ nav
     border-radius: 10px;
     color: $color-gray-000;
     box-sizing: border-box;
+    overflow: hidden;
     @extend %code-font;
 
     header
@@ -316,7 +348,7 @@ nav
     }
 
     label {
-      color: $color-blue-000;
+      color: $color-blue-100;
     }
 
     .json-formatter-row,
@@ -330,7 +362,7 @@ nav
     .json-formatter-key,
     .json-formatter-bracket
     {
-      color: $color-blue-000;
+      color: $color-blue-100;
     }
 
     .json-formatter-string
@@ -341,20 +373,6 @@ nav
     .json-formatter-null
     {
       color: $color-gray-900;
-    }
-    code {
-      .s2 {
-        color: $color-blue-000;
-      }
-
-      .kc {
-        color: $color-green-100;
-      }
-
-      .mf {
-        color: $color-gray-100
-      }
-
     }
   }
 }
@@ -439,15 +457,26 @@ form .form-row > * {
 
 form label {
   display: block;
-  color: #8297b3;
+  color: $color-gray-400;
   font-size: 14px;
   margin-bottom: 6px;
 }
 
 
+textarea {
+  width: 100%;
+  height: 8rem !important;
+  resize:none;
+}
+
 ////////////////////////////////////////////////////////////////////////////////
 // Tippy
 ////////////////////////////////////////////////////////////////////////////////
+.tippy-box
+{
+  padding: 0.8rem;
+}
+
 .tippy-box[data-theme~='zurianalytics'] {
   background-color: $color-blue-800;
   color: $color-gray-000;
@@ -505,11 +534,14 @@ form label {
 
 .info {
   color: $color-blue-100;
-}
+  cursor: help;
+  border-bottom: 1px dotted $color-blue-100;
 
-.info:after {
-  vertical-align: text-top;
-  font-size: 0.8em;
-  margin-left: 2px;
+  &:after {
+    content: '\1F6C8';
+    vertical-align: text-bottom;
+    font-size: 0.8em;
+    margin-left: 2px;
+  }
 }
 

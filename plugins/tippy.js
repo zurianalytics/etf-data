@@ -5,15 +5,18 @@ import 'tippy.js/dist/tippy.css';
 Vue.mixin({
     methods: {
         initializeTooltips: function () {
-            tippy('[data-tippy-content]', {
+            // Initialize tooltips on info links
+            tippy('.info', {
                 animation: 'scale',
                 theme: 'zurianalytics',
-                inertia: true
+                inertia: true,
+                interactive: true,
+                allowHTML: true
             });
         },
 
         openTooltip: function (error, element, theme) {
-            var t = tippy(element,
+            let t = tippy(element,
                 {
                     content: error,
                     animation: 'scale',

@@ -1,86 +1,120 @@
 <template>
-    <div class="container-fluid">
+    <div class="container-fluid" v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, 'subscriptions')">
         <h1 id="subscriptions">Subscriptions</h1>
 
-        <div class="row"
-             v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, 'subscriptions')">
 
-            <div class="col-md-12"
-                 v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, 'subscription-plans')">
+        <div class = "row" v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, 'subscription-plans')">
+            <div class="col-md-12">
 
                 <h2 id="subscription-plans">Subscription Plans </h2>
 
+                <div class = "row">
+                    <div class = "col-md-4">
+                        <h3>Individual</h3>
+                        <ul>
+                            <li><span >1000</span> API calls | month</li>
+                            <li><span class = "info" data-tippy-content="
+          For individual research and use in personal investing. Data can not be used to present products to third parties.
+          <a href ='https://zurianalytics.com/terms_conditions' class = 'external'>Learn more</a>">Individual</span> Use License</li>
+                            <li><span class = "accent-hard">5.24</span> <span>&euro; | month</span></li>
+                        </ul>
+                    </div>
+                    <div class = "col-md-4">
+                        <h3>Business</h3>
+                        <ul>
+                            <li><span class = "accent-green">500 000</span> API calls | month</li>
+                            <li><span class = "info" data-tippy-content="
+          For business research and use to provide data to third parties. Data can be used to present products to third parties. Data can't be resold as a service.
+          <a href ='https://zurianalytics.com/terms_conditions' class = 'external'>Learn more</a>">Business</span> Use License</li>
+                            <li><span class = "accent-hard">377</span> <span>&euro; | month</span></li>
+                        </ul>
+                    </div>
+                    <div class = "col-md-4">
+                        <h3>Enterprise</h3>
+                        <ul>
+                            <li><span class = "accent-green">Unlimited</span> API calls | month</li>
+                            <li><span class = "info" data-tippy-content="
+          An International Securities Identification Number (ISIN)
+          uniquely identifies a security. Its structure is defined in ISO 6166.">Business</span> Use License</li>
+                            <li><span class = "accent-hard">Get In Contact</span></li>
+                        </ul>
+                    </div>
+                </div>
 
-                <form id="payment-form">
+                <div class = "row">
+                    <div class = "col-md-8">
+                        <form id="payment-form">
 
-                    <div class="row">
+                            <div class="row">
 
-                        <div class="col-md-6">
-                            <div class="form-group">
-                                <label for="card-element">
-                                    Credit or debit card
-                                </label>
-                                <div id="card-element"><!-- A Stripe Element will be inserted here. --></div>
-                            </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="card-element">
+                                            Credit or debit card
+                                        </label>
+                                        <div id="card-element"><!-- A Stripe Element will be inserted here. --></div>
+                                    </div>
 
-                            <div class="form-group">
-                                <label for="api-token">
+                                    <div class="form-group">
+                                        <label for="api-token">
               <span class="info" data-tippy-content="The API token is used to authenticate & track all API calls.
               A token can be reused and additional calls and time will be added to the token automatically with the subscription.
               The API token must be kept safe and secret.
               The only restriction of the token is for it to be between 4 and 240 characters.">API Token </span>
-                                </label>
-                                <textarea readonly="readonly" id="api-token" v-model="payment.token"></textarea>
+                                        </label>
+                                        <textarea readonly="readonly" id="api-token" v-model="payment.token" v-on:click="copyToClipboard"></textarea>
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-6">
+
+
+                                    <div class="form-group">
+
+                                        <label for="plan">
+                                            Select Plan
+                                        </label>
+                                        <select id="plan" v-model="payment.plan" selected="individual">
+                                            <option value="individual">Individual</option>
+                                            <option value="business">Business</option>
+                                        </select>
+
+                                    </div>
+
+
+                                    <div class="form-group">
+                                        <label for="email">
+                                            Email Address
+                                        </label>
+                                        <input type="text" class="form-control" id="email" placeholder="Enter email"
+                                               v-model="payment.email">
+                                    </div>
+
+                                </div>
+
                             </div>
 
-                        </div>
+                            <span id = "subscribe-wrapper">
+                        <button v-bind:class="{ 'success': paymentComplete }"
+                                :disabled='!isComplete || isProcessing || paymentComplete'
+                                v-on:click="initiatePaymentRequest" id="subscribe">
+                            <span>Subscribe</span><span v-if="paymentComplete">d</span>
+                            <img v-if="isProcessing" src="~/assets/loading.svg">
+                        </button>
+                    </span>
 
-                        <div class="col-md-6">
-
-
-                            <div class="form-group">
-
-                                <label for="plan">
-                                    Select Plan
-                                </label>
-                                <select id="plan" v-model="payment.plan" selected="individual">
-                                    <option value="individual">Individual</option>
-                                    <option value="business">Business</option>
-                                </select>
-
-                            </div>
-
-
-                            <div class="form-group">
-                                <label for="email">
-                                    Email Address
-                                </label>
-                                <input type="email" class="form-control" id="email" placeholder="Enter email"
-                                       v-model="payment.email">
-                            </div>
-
-                        </div>
-
+                        </form>
                     </div>
-
-                    <button v-bind:class="{ 'success': paymentComplete }"
-                            :disabled='!isComplete || isProcessing || paymentComplete'
-                            v-on:click="initiatePaymentRequest" id="subscribe">
-                        <span>Subscribe</span><span v-if="paymentComplete">d</span>
-                        <img v-if="isProcessing" src="images/loading.svg">
-                    </button>
-
-                </form>
-
+                </div>
 
             </div>
         </div>
 
-        <div class="row"
-             v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, 'manage-subscription')">
 
-            <div class="col-md-6"
-                 v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, 'manage-subscription')">
+        <div class="row" v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, 'manage-subscription')">
+
+            <div class="col-md-6">
 
                 <h2 id="manage-subscription">Manage Subscription</h2>
 
@@ -90,7 +124,7 @@
                     logging in with your token and email address.
                 </p>
 
-                <form method="GET" id="manage-subscription">
+                <form method="GET" id="manage-subscription-form">
 
                     <div class="row">
                         <div class="col-md-6">
@@ -166,10 +200,16 @@
             isComplete: function () {
                 return this.payment.plan
                     && this.payment.email
+                    && this.isEmailValid
                     && this.payment.token
                     && this.payment.token.length >= 4
                     && !this.payment.cardError
                     && !this.paymentComplete;
+            },
+
+            isEmailValid: function()
+            {
+                return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,24}))$/.test(this.payment.email)
             },
 
             isProcessing: function () {
@@ -188,6 +228,14 @@
 
         methods:
             {
+                /* =======================================
+                 = Misc METHODS
+                 ======================================= */
+                copyToClipboard: function (event) {
+                    event.currentTarget.select();
+                    document.execCommand('copy');
+                },
+
                 /* =======================================
                  = STRIPE METHODS
                  ======================================= */
@@ -217,13 +265,12 @@
                     event.preventDefault();
                     this.payment.status = "processing"
 
-                    var instance = this;
-
                     this.submitToStripe()
-                        .then(instance.submitToServer.bind(this))
+                        .then(this.submitToServer.bind(this))
                         .catch(function (error) {
-                            instance.openTooltip(error.response.data.message)
-                            instance.payment.status = "ready"
+                            console.error("Error in creating subscription: ", error)
+                            this.openTooltip(error.response.data.message, '#subscribe-wrapper')
+                            this.payment.status = "ready"
                         })
                 },
 
@@ -241,7 +288,7 @@
                             console.dir("Subscription returned: ", result.data);
 
                             if (result.data.status === 'active') {
-                                instance.openTooltip("Your payment has been successful! Additional time & calls has been loaded to your api token! Call the token API for additional information!", '#subscribe', 'mild');
+                                instance.openTooltip("Your payment has been successful! Additional time & calls has been loaded to your api token! Call the token API for additional information!", '#subscribe-wrapper', 'mild');
                                 instance.payment.status = "complete";
                             } else if (result.data.status === 'incomplete') {
                                 instance.submitToStripeConfirmPayment(result.data.latest_invoice.payment_intent.client_secret);
@@ -249,27 +296,26 @@
 
                         })
                         .catch(function (result) {
-                            console.dir("Subscription failed: ", result)
-                            instance.openTooltip(result.response.data.message);
+                            console.dir("Request failed: ", result.data)
+                            instance.openTooltip(result.response.data.message, '#subscribe-wrapper');
                             instance.payment.status = "ready"
                         })
                 },
 
                 submitToStripeConfirmPayment: function (clientSecret) {
-                    var instance = this;
 
                     console.dir("Status incomplete, verifying payment ...");
                     this.payment.stripe.confirmCardPayment(clientSecret)
-                        .then(function (result) {
+                        .then(result => {
                             if (result.error) {
                                 if (result.error && result.error.message)
-                                    instance.openTooltip(result.error.message);
+                                    this.openTooltip(result.error.message, '#subscribe-wrapper');
                                 else
-                                    instance.openTooltip("Subscription failed for mysterious reasons.")
-                                instance.payment.status = "ready";
+                                    this.openTooltip("Subscription failed for mysterious reasons.", '#subscribe-wrapper')
+                                this.payment.status = "ready";
                             } else {
-                                instance.openTooltip("Your payment has been successful! Additional time & calls has been loaded to your api token! Call the token API for additional information!", '#subscribe', 'mild');
-                                instance.payment.status = "complete";
+                                this.openTooltip("Your payment has been successful! Additional time & calls has been loaded to your api token! Call the token API for additional information!", '#subscribe-wrapper', 'mild');
+                                this.payment.status = "complete";
                             }
                         });
                 },

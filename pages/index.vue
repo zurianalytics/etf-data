@@ -19,7 +19,7 @@
                     <div class="representation">
                         <a href="https://zurianalytics.com/">
                             <img src="~/assets/logo.png" class = "logo"/>
-                            <div><span class="special">ETF</span> Data API</div>
+                            <div><span class="accent-blue">ETF</span> Data API</div>
                         </a>
                     </div>
 
@@ -40,6 +40,7 @@
                     <!-- Page content -->
                     <introduction></introduction>
                     <content-single-e-t-f></content-single-e-t-f>
+                    <content-authentication></content-authentication>
                     <content-subscriptions></content-subscriptions>
                 </div>
             </div>
@@ -54,9 +55,11 @@
     import Introduction from "./content-demo";
     import ContentSingleETF from "./content-single-etf";
     import ContentSubscriptions from "./content-subscriptions";
+    import ContentAuthentication from "./content-authentication";
 
     export default {
         components: {
+            ContentAuthentication,
             ContentSubscriptions,
             Introduction,
             SideMenu,

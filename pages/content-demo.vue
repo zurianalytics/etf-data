@@ -7,15 +7,15 @@
             <div class="col-md-6">
 
                 <p>
-                    This API contains all ETFs listed on all major european exchanges (LSE, XETRA, SIX).
+                    This API contains all ETFs listed on all major european exchanges (LSE, XETRA, SIX, Borsa Italiana).
                 </p>
                 <p>
-                    The API provides deep machine-learned information about the ETFs, not easily available, such as: sector
-                    allocation,
-                    country allocation, dividend yield, an index the etf is followed, etc.
+                    The API provides both manually analyzed information which does not change often, as well as
+                    deep machine-learned fundamental information about the ETFs, such as: <b>sector
+                    allocation</b>, <b>country allocation</b>, dividend yield, <b>investment factors</b>, etc.
                 </p>
                 <p>
-                    The information is updated each day and any structural changes / listing / delisting of an ETF is available
+                    The information is updated each day and any structural changes, listing, de-listing of an ETF is available
                     immediately.
                 </p>
             </div>
@@ -174,7 +174,7 @@
 
             drawChart: function (element, data, attr) {
                 let el = document.getElementById(element);
-                console.log(element)
+
                 // Take first 9 elements
                 data = data.slice(0, 9)
 
