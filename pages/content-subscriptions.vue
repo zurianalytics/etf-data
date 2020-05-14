@@ -16,7 +16,7 @@
                             <li><span class = "info" data-tippy-content="
           For individual research and use in personal investing. Data can not be used to present products to third parties.
           <a href ='https://zurianalytics.com/terms_conditions' class = 'external'>Learn more</a>">Individual</span> Use License</li>
-                            <li><span class = "accent-hard">5.24</span> <span>&euro; | month</span></li>
+                            <li><span class = "accent-hard">5</span> <span>&euro; | month</span></li>
                         </ul>
                     </div>
                     <div class = "col-md-4">
@@ -24,19 +24,22 @@
                         <ul>
                             <li><span class = "accent-green">500 000</span> API calls | month</li>
                             <li><span class = "info" data-tippy-content="
-          For business research and use to provide data to third parties. Data can be used to present products to third parties. Data can't be resold as a service.
+          For business research and providing data to third parties. Data can be used to present products to third parties.
           <a href ='https://zurianalytics.com/terms_conditions' class = 'external'>Learn more</a>">Business</span> Use License</li>
+                            <li>Integration Support</li>
                             <li><span class = "accent-hard">377</span> <span>&euro; | month</span></li>
                         </ul>
                     </div>
                     <div class = "col-md-4">
                         <h3>Enterprise</h3>
                         <ul>
-                            <li><span class = "accent-green">Unlimited</span> API calls | month</li>
+                            <li><span class = "accent-hard">Unlimited</span> API calls | month</li>
                             <li><span class = "info" data-tippy-content="
-          An International Securities Identification Number (ISIN)
-          uniquely identifies a security. Its structure is defined in ISO 6166.">Business</span> Use License</li>
-                            <li><span class = "accent-hard">Get In Contact</span></li>
+          For business research and providing data to third parties. Data can be used to present products to third parties.
+          <a href ='https://zurianalytics.com/terms_conditions' class = 'external'>Learn more</a>">Business</span> Use License</li>
+                            <li>Integration Support</li>
+                            <li><span>Custom Data Feeds</span> (e.g., <span class = "accent-hard">CSV</span>, <span class = "accent-hard">XLSX</span>)</li>
+                            <li>Get In Touch: <br/><a href = "mailto:contact@zurianalytics.com" class = "external">contact@zurianalytics.com</a></li>
                         </ul>
                     </div>
                 </div>

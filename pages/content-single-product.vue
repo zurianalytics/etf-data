@@ -34,21 +34,11 @@
                     <ul>
                         <li>
                             <span>
-                                <code class = "accent-hard">GET</code>
-                                <code>{{apiUrl}}/fund/<span class = "accent-hard">DE000ETFL326</span></code>
+                                <code class = "accent-hard">GET </code>
+                                <code class = "inline">{{apiUrl}}/fund/<span class = "accent-hard">DE000ETFL326</span></code>
                             </span>
                             <p>
                                 Retrieves information about <a class = "external" href = "https://www.deka-etf.de/etfs/Deka-MSCI-China-ex-A-Shares-UCITS-ETF">Deka MSCI China</a>.
-                                Not authenticated. There is a daily maximum.
-                            </p>
-                        </li>
-                        <li>
-                            <span>
-                                <code class = "accent-green">GET</code>
-                                <code>{{apiUrl}}/fund/<span class = "accent-green">LU0392496690</span>&token=</code><code class = "accent-green">eyJ0..</code>
-                            </span>
-                            <p>
-                                Retrieves information about ComStage ATX UCITS ETF
                             </p>
                         </li>
                     </ul>
@@ -121,9 +111,12 @@
                     <h2 id="get-product-by-ticker-and-exchange">Get Product by Ticker & Exchange</h2>
 
 
-                    <p>This endpoint searches for an ETF/Fund by its <span class="info" data-tippy-content="
-          An International Securities Identification Number (ISIN)
-          uniquely identifies a security. It can be safely reused across applications">ISIN</span>
+                    <p>
+                        This endpoint searches for an ETF/Fund by a pair of its <span class="info" data-tippy-content="
+          A ticker symbol or stock symbol is an abbreviation used to uniquely identify publicly traded shares of a particular stock on a particular stock market.">Exchange Ticker</span> and Exchange.
+                    </p>
+                    <p>
+                        Supported exchanges are listed below
                     </p>
 
                     <p>
@@ -133,9 +126,22 @@
                     <h3>Parameters</h3>
                     <ul>
                         <li>
-                            <code class = "accent-bold">isin</code> <code class="accent-gray">String</code> <code class="accent-hard">Mandatory</code>
+                            <code class = "accent-bold">Exchange</code> <code class="accent-gray">Exchange</code> <code class="accent-hard">Mandatory</code>
                             <p>
-                                The ISIN that distinctly identifies the product.
+                                The exchange, which contains the provided ticker.
+                                One of:
+                                <code class = "inline">LSE</code>,
+                                <code class = "inline">XETRA</code>,
+                                <code class = "inline">BORSA_ITALIANA</code>,
+                                <code class = "inline">SIX</code>
+                            </p>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                            <code class = "accent-bold">Ticker</code> <code class="accent-gray">String</code> <code class="accent-hard">Mandatory</code>
+                            <p>
+                                The ticker of the product for the given exchange
                             </p>
                         </li>
                     </ul>
@@ -145,20 +151,10 @@
                         <li>
                             <span>
                                 <code class = "accent-hard">GET</code>
-                                <code>{{apiUrl}}/fund/<span class = "accent-hard">DE000ETFL326</span></code>
+                                <code>{{apiUrl}}/fund?exchange=<span class = "accent-hard">SIX</span>&ticker=<span class = "accent-hard">EVOE</span></code>
                             </span>
                             <p>
-                                Retrieves information about <a class = "external" href = "https://www.deka-etf.de/etfs/Deka-MSCI-China-ex-A-Shares-UCITS-ETF">Deka MSCI China</a>.
-                                Not authenticated. There is a daily maximum.
-                            </p>
-                        </li>
-                        <li>
-                            <span>
-                                <code class = "accent-green">GET</code>
-                                <code>{{apiUrl}}/fund/<span class = "accent-green">LU0392496690</span>&token=</code><code class = "accent-green">eyJ0..</code>
-                            </span>
-                            <p>
-                                Retrieves information about ComStage ATX UCITS ETF
+                                Retrieves information about <a class = "external" href ="https://www.bnpparibas-am.lu/intermediary-fund-selector/fundsheet/equity/bnp-paribas-easy-equity-low-vol-europe-ucits-etf-c-lu1377381717/">BNP Easy Equity Low Vol EUROPE - EUR</a>
                             </p>
                         </li>
                     </ul>

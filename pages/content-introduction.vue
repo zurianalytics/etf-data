@@ -7,7 +7,7 @@
             <div class="col-md-6">
 
                 <p>
-                    This API contains all ETFs listed on all major european exchanges (LSE, XETRA, SIX, Borsa Italiana).
+                    This API contains all ETFs listed on all major european exchanges.
                 </p>
                 <p>
                     The API provides both manually analyzed information which does not change often, as well as
