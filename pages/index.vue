@@ -38,8 +38,8 @@
                 <div class="content">
 
                     <!-- Page content -->
-                    <introduction></introduction>
-                    <content-single-e-t-f></content-single-e-t-f>
+                    <content-introduction></content-introduction>
+                    <content-single-product></content-single-product>
                     <content-authentication></content-authentication>
                     <content-subscriptions></content-subscriptions>
                 </div>
@@ -52,18 +52,19 @@
 
 <script>
     import SideMenu from "./side-menu";
-    import Introduction from "./content-demo";
-    import ContentSingleETF from "./content-single-etf";
+    import Introduction from "./content-introduction";
+    import ContentSingleProduct from "./content-single-product";
     import ContentSubscriptions from "./content-subscriptions";
     import ContentAuthentication from "./content-authentication";
+    import ContentIntroduction from "./content-introduction";
 
     export default {
         components: {
+            SideMenu,
+            ContentIntroduction,
             ContentAuthentication,
             ContentSubscriptions,
-            Introduction,
-            SideMenu,
-            ContentSingleETF,
+            ContentSingleProduct
         },
 
         data() {

@@ -11,8 +11,8 @@
                 </p>
                 <p>
                     The API provides both manually analyzed information which does not change often, as well as
-                    deep machine-learned fundamental information about the ETFs, such as: <b>sector
-                    allocation</b>, <b>country allocation</b>, dividend yield, <b>investment factors</b>, etc.
+                    deep machine-learned fundamental information about the ETFs, such as: sector
+                    allocation, country allocation, dividend yield, investment factors, etc.
                 </p>
                 <p>
                     The information is updated each day and any structural changes, listing, de-listing of an ETF is available
@@ -120,7 +120,7 @@
     import Chart from 'chart.js'
 
     export default {
-        name: "introduction",
+        name: "content-introduction",
 
         data() {
             return {

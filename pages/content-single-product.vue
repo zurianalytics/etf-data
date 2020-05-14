@@ -17,7 +17,7 @@
                     </p>
 
                     <p>
-                        Retrieves <b>all</b> of the information known for a specific product in a JSON format.
+                        Retrieves all of the information known for a specific product in a JSON format.
                     </p>
 
                     <h3>Parameters</h3>
@@ -127,7 +127,7 @@
                     </p>
 
                     <p>
-                        Retrieves <b>all</b> of the information known for a specific product in a JSON format.
+                        Retrieves all of the information known for a specific product in a JSON format.
                     </p>
 
                     <h3>Parameters</h3>
