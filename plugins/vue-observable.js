@@ -6,7 +6,7 @@ Vue.use(VueObserveVisibility)
 
 Vue.mixin({
     methods: {
-        visibilityChanged (isVisible, entry, linkPointsTo) {
+        visibilityChanged(isVisible, entry, linkPointsTo) {
             this.isVisible = isVisible
 
             // Get the parent link

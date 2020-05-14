@@ -40,7 +40,6 @@ html, body {
 }
 
 
-
 /* ---------------------
   Side menu
   --------------------*/
@@ -149,14 +148,6 @@ nav {
 }
 
 
-
-
-
-
-
-
-
-
 /* ---------------------
   Content formatting styles
   --------------------*/
@@ -216,13 +207,10 @@ nav {
 }
 
 
-
-
 /* ---------------------
   Accents & Special
   --------------------*/
-.content
-{
+.content {
   .info {
     color: $color-blue-100;
     cursor: help;
@@ -253,8 +241,7 @@ nav {
     }
   }
 
-  code.inline
-  {
+  code.inline {
     background-color: #f4f7f996;
     padding: 0.2rem 0.4rem;
     border-radius: 4px;
@@ -281,7 +268,6 @@ nav {
     font-weight: bold;
   }
 }
-
 
 
 /* ---------------------
@@ -355,9 +341,6 @@ nav {
     color: $color-gray-900;
   }
 }
-
-
-
 
 
 /* ---------------------

@@ -3,7 +3,8 @@
 
         <h1 id="introduction">Introduction</h1>
 
-        <div class="row" v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, 'introduction')">
+        <div class="row"
+             v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, 'introduction')">
             <div class="col-md-6">
 
                 <p>
@@ -15,7 +16,8 @@
                     allocation, country allocation, dividend yield, investment factors, etc.
                 </p>
                 <p>
-                    The information is updated each day and any structural changes, listing, de-listing of an ETF is available
+                    The information is updated each day and any structural changes, listing, de-listing of an ETF is
+                    available
                     immediately.
                 </p>
             </div>
@@ -24,20 +26,21 @@
             <div class="col-md-6">
                 <div class="accent-box .light">
 
-                    <header id = "demo-header">
-                        <code class="info" data-tippy-content="Input an ISIN into the field to the right, to check what information we store about the security">
+                    <header id="demo-header">
+                        <code class="info"
+                              data-tippy-content="Input an ISIN into the field to the right, to check what information we store about the security">
                             LIVE DEMO (ISIN):</code><input v-model="isin" v-on:change="getFund()"/>
                     </header>
 
 
-                    <div id = "demo-content">
+                    <div id="demo-content">
 
                         <div class="row">
                             <div class="col-sm-12">
-                                <canvas id="countries" style = "width: 100%;"></canvas>
+                                <canvas id="countries" style="width: 100%;"></canvas>
                             </div>
                             <div class="col-sm-12">
-                                <canvas id="sectors" style= "width: 100%;"></canvas>
+                                <canvas id="sectors" style="width: 100%;"></canvas>
                             </div>
                         </div>
 
@@ -131,86 +134,84 @@
             }
         },
 
-        mounted()
-        {
+        mounted() {
             this.getFund()
         },
 
 
         methods:
-        {
-            getFund: function() {
-                let url = process.env.api + "fund/" + this.isin;
+            {
+                getFund: function () {
+                    let url = process.env.api + "fund/" + this.isin;
 
-                console.log("Loading fund on: " + url);
+                    console.log("Loading fund on: " + url);
 
-                // Get fund
-                axios
-                    .get(url)
-                    .then(response => {
-                        this.fund = response.data
+                    // Get fund
+                    axios
+                        .get(url)
+                        .then(response => {
+                            this.fund = response.data
 
-                        let sectors = response.data.sectors;
-                        let regions = response.data.regions;
+                            let sectors = response.data.sectors;
+                            let regions = response.data.regions;
 
-                        if (this.chart.sectors)
-                            this.chart.sectors.destroy();
-                        this.chart.sectors = this.drawChart("sectors", sectors, "sector")
+                            if (this.chart.sectors)
+                                this.chart.sectors.destroy();
+                            this.chart.sectors = this.drawChart("sectors", sectors, "sector")
 
-                        if (this.chart.regions)
-                            this.chart.regions.destroy();
-                        this.chart.regions = this.drawChart("countries", regions, "country")
-                    })
-                    // Free requests have expired
-                    .catch(error =>
-                    {
-                        console.log(error)
+                            if (this.chart.regions)
+                                this.chart.regions.destroy();
+                            this.chart.regions = this.drawChart("countries", regions, "country")
+                        })
+                        // Free requests have expired
+                        .catch(error => {
+                            console.log(error)
 
-                        document
-                            .querySelector('#demo-content')
-                            .innerHTML = error.response.data.message
-                    })
-            },
+                            document
+                                .querySelector('#demo-content')
+                                .innerHTML = error.response.data.message
+                        })
+                },
 
-            drawChart: function (element, data, attr) {
-                let el = document.getElementById(element);
+                drawChart: function (element, data, attr) {
+                    let el = document.getElementById(element);
 
-                // Take first 9 elements
-                data = data.slice(0, 9)
+                    // Take first 9 elements
+                    data = data.slice(0, 9)
 
-                // Hide canvas
-                if (data.length === 0) {
-                    el.style.display = "none";
-                    return
-                } else
-                    el.style.display = "block"
+                    // Hide canvas
+                    if (data.length === 0) {
+                        el.style.display = "none";
+                        return
+                    } else
+                        el.style.display = "block"
 
-                return new Chart(el.getContext('2d'), {
-                    type: 'pie',
-                    data: {
-                        labels: data.map(function (c) {
-                            return c[attr]
-                        }),
-                        datasets: [{
-                            label: '# of Votes',
-                            data: data.map(function (c) {
-                                return c["percentage"]
+                    return new Chart(el.getContext('2d'), {
+                        type: 'pie',
+                        data: {
+                            labels: data.map(function (c) {
+                                return c[attr]
                             }),
-                            backgroundColor: palette('cb-Blues', data.length).map(function (hex) {
-                                return '#' + hex;
-                            }),
-                            borderColor: "rgba(0, 0, 0, 0)",
-                            borderWidth: 8
-                        }]
-                    },
-                    options: {
-                        legend: {
-                            position: (element === 'sectors') ? 'left' : 'right',
-                            labels: {fontColor: '#a4cdfe', fontSize: 10}, align: 'end'
+                            datasets: [{
+                                label: '# of Votes',
+                                data: data.map(function (c) {
+                                    return c["percentage"]
+                                }),
+                                backgroundColor: palette('cb-Blues', data.length).map(function (hex) {
+                                    return '#' + hex;
+                                }),
+                                borderColor: "rgba(0, 0, 0, 0)",
+                                borderWidth: 8
+                            }]
+                        },
+                        options: {
+                            legend: {
+                                position: (element === 'sectors') ? 'left' : 'right',
+                                labels: {fontColor: '#a4cdfe', fontSize: 10}, align: 'end'
+                            }
                         }
-                    }
-                });
+                    });
+                }
             }
-        }
     }
 </script>

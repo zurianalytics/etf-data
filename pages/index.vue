@@ -18,7 +18,7 @@
                     </a>
                     <div class="representation">
                         <a href="https://zurianalytics.com/">
-                            <img src="~/assets/logo.png" class = "logo"/>
+                            <img class="logo" src="~/assets/logo.png"/>
                             <div><span class="accent-blue">ETF</span> Data API</div>
                         </a>
                     </div>
@@ -52,11 +52,10 @@
 
 <script>
     import SideMenu from "./side-menu";
-    import Introduction from "./content-introduction";
+    import ContentIntroduction from "./content-introduction";
     import ContentSingleProduct from "./content-single-product";
     import ContentSubscriptions from "./content-subscriptions";
     import ContentAuthentication from "./content-authentication";
-    import ContentIntroduction from "./content-introduction";
 
     export default {
         components: {

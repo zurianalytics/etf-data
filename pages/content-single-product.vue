@@ -1,5 +1,6 @@
 <template>
-    <div class="container-fluid" v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, 'get-individual-etf')">
+    <div class="container-fluid"
+         v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, 'get-individual-etf')">
 
         <h1 id="get-individual-etf">Get Individual ETF/Fund</h1>
 
@@ -23,7 +24,8 @@
                     <h3>Parameters</h3>
                     <ul>
                         <li>
-                            <code class = "accent-bold">isin</code> <code class="accent-gray">String</code> <code class="accent-hard">Mandatory</code>
+                            <code class="accent-bold">isin</code> <code class="accent-gray">String</code> <code
+                                class="accent-hard">Mandatory</code>
                             <p>
                                 The ISIN that distinctly identifies the product.
                             </p>
@@ -34,11 +36,14 @@
                     <ul>
                         <li>
                             <span>
-                                <code class = "accent-hard">GET </code>
-                                <code class = "inline">{{apiUrl}}/fund/<span class = "accent-hard">DE000ETFL326</span></code>
+                                <code class="accent-hard">GET </code>
+                                <code class="inline">{{apiUrl}}/fund/<span
+                                        class="accent-hard">DE000ETFL326</span></code>
                             </span>
                             <p>
-                                Retrieves information about <a class = "external" href = "https://www.deka-etf.de/etfs/Deka-MSCI-China-ex-A-Shares-UCITS-ETF">Deka MSCI China</a>.
+                                Retrieves information about <a class="external"
+                                                               href="https://www.deka-etf.de/etfs/Deka-MSCI-China-ex-A-Shares-UCITS-ETF">Deka
+                                MSCI China</a>.
                             </p>
                         </li>
                     </ul>
@@ -113,7 +118,8 @@
 
                     <p>
                         This endpoint searches for an ETF/Fund by a pair of its <span class="info" data-tippy-content="
-          A ticker symbol or stock symbol is an abbreviation used to uniquely identify publicly traded shares of a particular stock on a particular stock market.">Exchange Ticker</span> and Exchange.
+          A ticker symbol or stock symbol is an abbreviation used to uniquely identify publicly traded shares of a particular stock on a particular stock market.">Exchange Ticker</span>
+                        and Exchange.
                     </p>
                     <p>
                         Supported exchanges are listed below
@@ -126,20 +132,22 @@
                     <h3>Parameters</h3>
                     <ul>
                         <li>
-                            <code class = "accent-bold">Exchange</code> <code class="accent-gray">Exchange</code> <code class="accent-hard">Mandatory</code>
+                            <code class="accent-bold">Exchange</code> <code class="accent-gray">Exchange</code> <code
+                                class="accent-hard">Mandatory</code>
                             <p>
                                 The exchange, which contains the provided ticker.
                                 One of:
-                                <code class = "inline">LSE</code>,
-                                <code class = "inline">XETRA</code>,
-                                <code class = "inline">BORSA_ITALIANA</code>,
-                                <code class = "inline">SIX</code>
+                                <code class="inline">LSE</code>,
+                                <code class="inline">XETRA</code>,
+                                <code class="inline">BORSA_ITALIANA</code>,
+                                <code class="inline">SIX</code>
                             </p>
                         </li>
                     </ul>
                     <ul>
                         <li>
-                            <code class = "accent-bold">Ticker</code> <code class="accent-gray">String</code> <code class="accent-hard">Mandatory</code>
+                            <code class="accent-bold">Ticker</code> <code class="accent-gray">String</code> <code
+                                class="accent-hard">Mandatory</code>
                             <p>
                                 The ticker of the product for the given exchange
                             </p>
@@ -150,11 +158,14 @@
                     <ul>
                         <li>
                             <span>
-                                <code class = "accent-hard">GET</code>
-                                <code>{{apiUrl}}/fund?exchange=<span class = "accent-hard">SIX</span>&ticker=<span class = "accent-hard">EVOE</span></code>
+                                <code class="accent-hard">GET</code>
+                                <code>{{apiUrl}}/fund?exchange=<span class="accent-hard">SIX</span>&ticker=<span
+                                        class="accent-hard">EVOE</span></code>
                             </span>
                             <p>
-                                Retrieves information about <a class = "external" href ="https://www.bnpparibas-am.lu/intermediary-fund-selector/fundsheet/equity/bnp-paribas-easy-equity-low-vol-europe-ucits-etf-c-lu1377381717/">BNP Easy Equity Low Vol EUROPE - EUR</a>
+                                Retrieves information about <a class="external"
+                                                               href="https://www.bnpparibas-am.lu/intermediary-fund-selector/fundsheet/equity/bnp-paribas-easy-equity-low-vol-europe-ucits-etf-c-lu1377381717/">BNP
+                                Easy Equity Low Vol EUROPE - EUR</a>
                             </p>
                         </li>
                     </ul>

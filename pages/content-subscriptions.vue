@@ -1,51 +1,62 @@
 <template>
-    <div class="container-fluid" v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, 'subscriptions')">
+    <div class="container-fluid"
+         v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, 'subscriptions')">
         <h1 id="subscriptions">Subscriptions</h1>
 
 
-        <div class = "row" v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, 'subscription-plans')">
+        <div class="row"
+             v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, 'subscription-plans')">
             <div class="col-md-12">
 
                 <h2 id="subscription-plans">Subscription Plans </h2>
 
-                <div class = "row">
-                    <div class = "col-md-4">
+                <div class="row">
+                    <div class="col-md-4">
                         <h3>Individual</h3>
                         <ul>
-                            <li><span >1000</span> API calls | month</li>
-                            <li><span class = "info" data-tippy-content="
+                            <li><span>1000</span> API calls | month</li>
+                            <li><span class="info" data-tippy-content="
           For individual research and use in personal investing. Data can not be used to present products to third parties.
-          <a href ='https://zurianalytics.com/terms_conditions' class = 'external'>Learn more</a>">Individual</span> Use License</li>
-                            <li><span class = "accent-hard">5</span> <span>&euro; | month</span></li>
+          <a href ='https://zurianalytics.com/terms_conditions' class = 'external'>Learn more</a>">Individual</span> Use
+                                License
+                            </li>
+                            <li><span class="accent-hard">5</span> <span>&euro; | month</span></li>
                         </ul>
                     </div>
-                    <div class = "col-md-4">
+                    <div class="col-md-4">
                         <h3>Business</h3>
                         <ul>
-                            <li><span class = "accent-green">500 000</span> API calls | month</li>
-                            <li><span class = "info" data-tippy-content="
+                            <li><span class="accent-green">500 000</span> API calls | month</li>
+                            <li><span class="info" data-tippy-content="
           For business research and providing data to third parties. Data can be used to present products to third parties.
-          <a href ='https://zurianalytics.com/terms_conditions' class = 'external'>Learn more</a>">Business</span> Use License</li>
+          <a href ='https://zurianalytics.com/terms_conditions' class = 'external'>Learn more</a>">Business</span> Use
+                                License
+                            </li>
                             <li>Integration Support</li>
-                            <li><span class = "accent-hard">377</span> <span>&euro; | month</span></li>
+                            <li><span class="accent-hard">377</span> <span>&euro; | month</span></li>
                         </ul>
                     </div>
-                    <div class = "col-md-4">
+                    <div class="col-md-4">
                         <h3>Enterprise</h3>
                         <ul>
-                            <li><span class = "accent-hard">Unlimited</span> API calls | month</li>
-                            <li><span class = "info" data-tippy-content="
+                            <li><span class="accent-hard">Unlimited</span> API calls | month</li>
+                            <li><span class="info" data-tippy-content="
           For business research and providing data to third parties. Data can be used to present products to third parties.
-          <a href ='https://zurianalytics.com/terms_conditions' class = 'external'>Learn more</a>">Business</span> Use License</li>
+          <a href ='https://zurianalytics.com/terms_conditions' class = 'external'>Learn more</a>">Business</span> Use
+                                License
+                            </li>
                             <li>Integration Support</li>
-                            <li><span>Custom Data Feeds</span> (e.g., <span class = "accent-hard">CSV</span>, <span class = "accent-hard">XLSX</span>)</li>
-                            <li>Get In Touch: <br/><a href = "mailto:contact@zurianalytics.com" class = "external">contact@zurianalytics.com</a></li>
+                            <li><span>Custom Data Feeds</span> (e.g., <span class="accent-hard">CSV</span>, <span
+                                    class="accent-hard">XLSX</span>)
+                            </li>
+                            <li>Get In Touch: <br/><a class="external" href="mailto:contact@zurianalytics.com">contact@zurianalytics.com</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
 
-                <div class = "row">
-                    <div class = "col-md-8">
+                <div class="row">
+                    <div class="col-md-8">
                         <form id="payment-form">
 
                             <div class="row">
@@ -65,7 +76,8 @@
               The API token must be kept safe and secret.
               The only restriction of the token is for it to be between 4 and 240 characters.">API Token </span>
                                         </label>
-                                        <textarea readonly="readonly" id="api-token" v-model="payment.token" v-on:click="copyToClipboard"></textarea>
+                                        <textarea id="api-token" readonly="readonly" v-model="payment.token"
+                                                  v-on:click="copyToClipboard"></textarea>
                                     </div>
 
                                 </div>
@@ -78,7 +90,7 @@
                                         <label for="plan">
                                             Select Plan
                                         </label>
-                                        <select id="plan" v-model="payment.plan" selected="individual">
+                                        <select id="plan" selected="individual" v-model="payment.plan">
                                             <option value="individual">Individual</option>
                                             <option value="business">Business</option>
                                         </select>
@@ -90,7 +102,7 @@
                                         <label for="email">
                                             Email Address
                                         </label>
-                                        <input type="text" class="form-control" id="email" placeholder="Enter email"
+                                        <input class="form-control" id="email" placeholder="Enter email" type="text"
                                                v-model="payment.email">
                                     </div>
 
@@ -98,12 +110,12 @@
 
                             </div>
 
-                            <span id = "subscribe-wrapper">
-                        <button v-bind:class="{ 'success': paymentComplete }"
-                                :disabled='!isComplete || isProcessing || paymentComplete'
-                                v-on:click="initiatePaymentRequest" id="subscribe">
+                            <span id="subscribe-wrapper">
+                        <button :disabled='!isComplete || isProcessing || paymentComplete'
+                                id="subscribe"
+                                v-bind:class="{ 'success': paymentComplete }" v-on:click="initiatePaymentRequest">
                             <span>Subscribe</span><span v-if="paymentComplete">d</span>
-                            <img v-if="isProcessing" src="~/assets/loading.svg">
+                            <img src="~/assets/loading.svg" v-if="isProcessing">
                         </button>
                     </span>
 
@@ -115,7 +127,8 @@
         </div>
 
 
-        <div class="row" v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, 'manage-subscription')">
+        <div class="row"
+             v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, 'manage-subscription')">
 
             <div class="col-md-6">
 
@@ -127,7 +140,7 @@
                     logging in with your token and email address.
                 </p>
 
-                <form method="GET" id="manage-subscription-form">
+                <form id="manage-subscription-form" method="GET">
 
                     <div class="row">
                         <div class="col-md-6">
@@ -136,7 +149,7 @@
                                 <label for="email">
                                     Email Address
                                 </label>
-                                <input type="email" class="form-control" id="email" placeholder="Enter email"
+                                <input class="form-control" id="email" placeholder="Enter email" type="email"
                                        v-model="dashboard.email">
                             </div>
 
@@ -153,8 +166,8 @@
                         </div>
                     </div>
 
-                    <button :disabled='!dashboard.email || !dashboard.token' v-on:click="managementDashboardLogin"
-                            id="management-portal">
+                    <button :disabled='!dashboard.email || !dashboard.token' id="management-portal"
+                            v-on:click="managementDashboardLogin">
                         <span>Manage Subscription</span>
                     </button>
 
@@ -210,8 +223,7 @@
                     && !this.paymentComplete;
             },
 
-            isEmailValid: function()
-            {
+            isEmailValid: function () {
                 return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,24}))$/.test(this.payment.email)
             },
 
@@ -365,7 +377,7 @@
 
                 initializeToken: function () {
                     return axios
-                        .get(process.env.api+ "/token/")
+                        .get(process.env.api + "/token/")
                         .then(response => this.payment.token = response.data)
                 }
             }

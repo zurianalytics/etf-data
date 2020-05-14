@@ -1,30 +1,36 @@
 <template>
-    <div class="container-fluid" v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, 'authentication')">
+    <div class="container-fluid"
+         v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, 'authentication')">
 
         <h1 id="authentication">Authentication</h1>
 
         <div class="row">
 
-            <div class = "col-md-6">
+            <div class="col-md-6">
                 <p>
-                    {{apiName}} uses tokens to authenticate requests. These tokens are computed automatically by {{apiName}} when the page is visited.
-                    Tokens are loaded with time and calls when you <a href = "#subscriptions" class = "internal">subscribe</a>.
+                    {{apiName}} uses tokens to authenticate requests. These tokens are computed automatically by
+                    {{apiName}} when the page is visited.
+                    Tokens are loaded with time and calls when you <a class="internal"
+                                                                      href="#subscriptions">subscribe</a>.
                 </p>
                 <p>
-                    Once a token has been loaded, it can be <a href = "#manage-subscription">renewed, cancelled and managed.</a>
+                    Once a token has been loaded, it can be <a href="#manage-subscription">renewed, cancelled and
+                    managed.</a>
                 </p>
                 <p>
                     To make an request, just pass the token in the query string as follows:
                 </p>
                 <p>
-                    <code class = "inline">https://api-url?token=<span class = "accent-hard">YOUR_TOKEN</span></code>
+                    <code class="inline">https://api-url?token=<span class="accent-hard">YOUR_TOKEN</span></code>
                 </p>
 
                 <p>
-                    Your tokens carry many privileges, so be sure to keep them secure! Do not share your token in publicly accessible areas such as GitHub, client-side code, and so forth.
+                    Your tokens carry many privileges, so be sure to keep them secure! Do not share your token in
+                    publicly accessible areas such as GitHub, client-side code, and so forth.
                 </p>
                 <p>
-                    All API requests must be made over HTTPS. Calls made over plain HTTP will fail. API requests without authentication will also fail.
+                    All API requests must be made over HTTPS. Calls made over plain HTTP will fail. API requests without
+                    authentication will also fail.
                     There is a daily limit of a few unauthenticated calls which can be used to test the API.
                 </p>
             </div>
