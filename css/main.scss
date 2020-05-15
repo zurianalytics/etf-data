@@ -177,8 +177,11 @@ nav {
 
     margin-top: 12rem;
 
-    & > .row {
-      &:first-of-type {
+    & > .row
+    {
+      margin-top: 8rem;
+      &:first-of-type
+      {
         margin-top: 0;
       }
     }
@@ -209,7 +212,7 @@ nav {
 .content {
 
   // External && info
-  a.external, a.info {
+  a.external, a.info, a.internal {
 
     display: inline-block;
     color: $color-blue-100;
@@ -231,9 +234,12 @@ nav {
       }
     }
 
-    &.external {
-      &:after {
+    &.external, &.internal {
+      &.external:after {
         content: '\e100';
+      }
+      &.internal:after {
+        content: '\e102';
       }
 
       /* Effect */
@@ -273,13 +279,18 @@ nav {
 
   code.inline {
     background-color: #f4f7f996;
-    padding: 0.2rem 0.4rem;
+    padding: 0.15rem 0.3rem;
     border-radius: 4px;
     border: 1px solid #d3e1f26b;
+    display:inline-block;
   }
 
   .accent-blue {
     color: $color-blue-100;
+  }
+
+  .accent-green {
+    color: $color-green-100;
   }
 
   .accent-hard {
@@ -291,7 +302,6 @@ nav {
   .accent-gray {
     font-weight: bold;
     color: $color-gray-400;
-    text-transform: lowercase;
   }
 
   .accent-bold {

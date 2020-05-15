@@ -40,6 +40,7 @@
                     <!-- Page content -->
                     <content-introduction></content-introduction>
                     <content-single-product></content-single-product>
+                    <content-search-product></content-search-product>
                     <content-authentication></content-authentication>
                     <content-subscriptions></content-subscriptions>
                 </div>
@@ -56,9 +57,11 @@
     import ContentSingleProduct from "../components/content-single-product";
     import ContentSubscriptions from "../components/content-subscriptions";
     import ContentAuthentication from "../components/content-authentication";
+    import ContentSearchProduct from "../components/content-search-product";
 
     export default {
         components: {
+            ContentSearchProduct,
             ContentIntroduction,
             ContentAuthentication,
             ContentSubscriptions,
