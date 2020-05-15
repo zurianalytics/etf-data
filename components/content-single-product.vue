@@ -9,7 +9,7 @@
             <div class="col-md-6">
 
                 <div v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, 'get-product-by-isin')">
-                    <h2 id="get-product-by-isin">Get Product by ISIN</h2>
+                    <h2 id="get-product-by-isin">By ISIN</h2>
 
 
                     <p>This endpoint searches for an ETF/Fund by its <span class="info" data-tippy-content="
@@ -113,12 +113,12 @@
             <div class="col-md-6">
 
                 <div v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, 'get-product-by-ticker-and-exchange')">
-                    <h2 id="get-product-by-ticker-and-exchange">Get Product by Ticker & Exchange</h2>
+                    <h2 id="get-product-by-ticker-and-exchange">By Ticker & Exchange</h2>
 
 
                     <p>
-                        This endpoint searches for an ETF/Fund by a pair of its <span class="info" data-tippy-content="
-          A ticker symbol or stock symbol is an abbreviation used to uniquely identify publicly traded shares of a particular stock on a particular stock market.">Exchange Ticker</span>
+                        This endpoint searches for an ETF/Fund by a pair of its <a class="info" data-tippy-content="
+          A ticker symbol or stock symbol is an abbreviation used to uniquely identify publicly traded shares of a particular stock on a particular stock market.">Exchange Ticker</a>
                         and Exchange.
                     </p>
                     <p>

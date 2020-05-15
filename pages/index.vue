@@ -51,19 +51,19 @@
 </template>
 
 <script>
-    import SideMenu from "./side-menu";
-    import ContentIntroduction from "./content-introduction";
-    import ContentSingleProduct from "./content-single-product";
-    import ContentSubscriptions from "./content-subscriptions";
-    import ContentAuthentication from "./content-authentication";
+    import SideMenu from "../components/side-menu";
+    import ContentIntroduction from "../components/content-introduction";
+    import ContentSingleProduct from "../components/content-single-product";
+    import ContentSubscriptions from "../components/content-subscriptions";
+    import ContentAuthentication from "../components/content-authentication";
 
     export default {
         components: {
-            SideMenu,
             ContentIntroduction,
             ContentAuthentication,
             ContentSubscriptions,
-            ContentSingleProduct
+            ContentSingleProduct,
+            SideMenu
         },
 
         data() {
