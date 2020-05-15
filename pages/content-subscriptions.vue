@@ -15,9 +15,9 @@
                         <h3>Individual</h3>
                         <ul>
                             <li><span>1000</span> API calls | month</li>
-                            <li><span class="info" data-tippy-content="
+                            <li><a class="info" data-tippy-content="
           For individual research and use in personal investing. Data can not be used to present products to third parties.
-          <a href ='https://zurianalytics.com/terms_conditions' class = 'external'>Learn more</a>">Individual</span> Use
+          <a href ='https://zurianalytics.com/terms_conditions' class = 'external'>Learn more</a>">Individual</a> Use
                                 License
                             </li>
                             <li><span class="accent-hard">5</span> <span>&euro; | month</span></li>
@@ -27,9 +27,9 @@
                         <h3>Business</h3>
                         <ul>
                             <li><span class="accent-green">500 000</span> API calls | month</li>
-                            <li><span class="info" data-tippy-content="
+                            <li><a class="info" data-tippy-content="
           For business research and providing data to third parties. Data can be used to present products to third parties.
-          <a href ='https://zurianalytics.com/terms_conditions' class = 'external'>Learn more</a>">Business</span> Use
+          <a href ='https://zurianalytics.com/terms_conditions' class = 'external'>Learn more</a>">Business</a> Use
                                 License
                             </li>
                             <li>Integration Support</li>
@@ -40,9 +40,9 @@
                         <h3>Enterprise</h3>
                         <ul>
                             <li><span class="accent-hard">Unlimited</span> API calls | month</li>
-                            <li><span class="info" data-tippy-content="
+                            <li><a class="info" data-tippy-content="
           For business research and providing data to third parties. Data can be used to present products to third parties.
-          <a href ='https://zurianalytics.com/terms_conditions' class = 'external'>Learn more</a>">Business</span> Use
+          <a href ='https://zurianalytics.com/terms_conditions' class = 'external'>Learn more</a>">Business</a> Use
                                 License
                             </li>
                             <li>Integration Support</li>
@@ -71,10 +71,10 @@
 
                                     <div class="form-group">
                                         <label for="api-token">
-              <span class="info" data-tippy-content="The API token is used to authenticate & track all API calls.
+              <a class="info" data-tippy-content="The API token is used to authenticate & track all API calls.
               A token can be reused and additional calls and time will be added to the token automatically with the subscription.
               The API token must be kept safe and secret.
-              The only restriction of the token is for it to be between 4 and 240 characters.">API Token </span>
+              The only restriction of the token is for it to be between 4 and 240 characters.">API Token </a>
                                         </label>
                                         <textarea id="api-token" readonly="readonly" v-model="payment.token"
                                                   v-on:click="copyToClipboard"></textarea>
@@ -115,7 +115,7 @@
                                 id="subscribe"
                                 v-bind:class="{ 'success': paymentComplete }" v-on:click="initiatePaymentRequest">
                             <span>Subscribe</span><span v-if="paymentComplete">d</span>
-                            <img src="~/assets/loading.svg" v-if="isProcessing">
+                            <img src="images/loading.svg" v-if="isProcessing">
                         </button>
                     </span>
 
@@ -155,10 +155,10 @@
 
                             <div class="form-group">
                                 <label for="api-token">
-              <span class="info" data-tippy-content="The API token is used to authenticate & track all API calls.
+              <a class="info" data-tippy-content="The API token is used to authenticate & track all API calls.
               A token can be reused and additional calls and time will be added to the token automatically with the subscription.
               The API token must be kept safe and secret.
-              The only restriction of the token is for it to be between 4 and 240 characters.">API Token </span>
+              The only restriction of the token is for it to be between 4 and 240 characters.">API Token </a>
                                 </label>
                                 <textarea id="api-token" v-model="dashboard.token"></textarea>
                             </div>

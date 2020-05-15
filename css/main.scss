@@ -3,7 +3,6 @@
 @import 'normalize';
 @import 'bootstrap';
 
-
 /* ---------------------
   Global Styles
   --------------------*/
@@ -47,7 +46,6 @@ nav {
   background-color: $color-gray-000;
   position: fixed;
   font-weight: bold;
-  margin-top: 8rem;
   padding: 1.4rem;
   z-index: 30;
 
@@ -183,8 +181,6 @@ nav {
       &:first-of-type {
         margin-top: 0;
       }
-
-      margin-top: 8rem;
     }
   }
 
@@ -211,32 +207,66 @@ nav {
   Accents & Special
   --------------------*/
 .content {
-  .info {
-    color: $color-blue-100;
-    cursor: help;
-    border-bottom: 1px dotted $color-blue-100;
 
-    &:after {
-      content: '\1F6C8';
-      vertical-align: text-bottom;
-      font-size: 0.8em;
-      margin-left: 2px;
-    }
-  }
+  // External && info
+  a.external, a.info {
 
-  a {
     display: inline-block;
     color: $color-blue-100;
 
+    &:after {
+      font-family: icons;
+      vertical-align: top;
+      font-size: 0.7em;
+      margin-left: 4px;
+    }
+
+    &.info {
+      color: $color-blue-100;
+      cursor: help;
+      border-bottom: 1px dotted $color-blue-100;
+
+      &:after {
+        content: '\e101';
+      }
+    }
+
     &.external {
       &:after {
-        content: '\2BAD';
-        font-size: 0.8em;
-        margin-left: 2px;
+        content: '\e100';
       }
 
-      &:hover {
-        color: $color-green-100;
+      /* Effect */
+      & {
+        padding: 0 4px;
+        position: relative;
+        display: inline-block;
+        -webkit-transition: color 0.3s;
+        -moz-transition: color 0.3s;
+        transition: color 0.3s;
+
+        &::before {
+          position: absolute;
+          top: 60%;
+          left: 50%;
+          color: transparent;
+          content: '•';
+          text-shadow: 0 0 transparent;
+          font-size: 1em;
+          -webkit-transition: text-shadow 0.3s, color 0.3s;
+          -moz-transition: text-shadow 0.3s, color 0.3s;
+          transition: text-shadow 0.3s, color 0.3s;
+          -webkit-transform: translateX(-50%);
+          -moz-transform: translateX(-50%);
+          transform: translateX(-50%);
+          pointer-events: none;
+        }
+
+        &:hover::before,
+        &:focus::before {
+          color: $color-blue-100;
+          text-shadow: 10px 0 $color-blue-100, -10px 0 $color-blue-100;
+        }
       }
     }
   }
@@ -442,14 +472,14 @@ form {
 
   // Styles
   &[data-theme~='zurianalytics'] {
-    background-color: $color-blue-800;
-    color: $color-gray-000;
+    background-color: $color-gray-100;
+    color: $color-gray-900;
 
     &[data-placement^='top'] > .tippy-arrow::before,
     &[data-placement^='bottom'] > .tippy-arrow::before,
     &[data-placement^='left'] > .tippy-arrow::before,
     &[data-placement^='right'] > .tippy-arrow::before {
-      border-top-color: $color-blue-800;
+      border-top-color: $color-gray-100;
     }
   }
 

@@ -18,7 +18,7 @@
                     </a>
                     <div class="representation">
                         <a href="https://zurianalytics.com/">
-                            <img class="logo" src="~/assets/logo.png"/>
+                            <img class="logo" src="images/logo.png"/>
                             <div><span class="accent-blue">ETF</span> Data API</div>
                         </a>
                     </div>

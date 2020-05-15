@@ -142,7 +142,7 @@
         methods:
             {
                 getFund: function () {
-                    let url = process.env.api + "fund/" + this.isin;
+                    let url = process.env.api + "/fund/" + this.isin;
 
                     console.log("Loading fund on: " + url);
 

@@ -37,6 +37,18 @@ $color-orange-400-subtle: #f4d2d4 !default;
 
 // FONTS
 ////////////////////
+// Icon font
+@font-face {
+  font-family: 'icons';
+  src: url('/font/icons.eot');
+  src: url('/font/icons.eot#iefix') format('embedded-opentype'),
+  url('/font/icons.woff') format('woff'),
+  url('/font/icons.ttf') format('truetype'),
+  url('/font/icons.svg#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
 %header-font {
   font-weight: bold;
 }
@@ -57,3 +69,4 @@ $color-orange-400-subtle: #f4d2d4 !default;
   word-break: break-all;
   hyphens: auto;
 }
+
