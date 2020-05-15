@@ -2,7 +2,8 @@
   "name": "my-app",
   "scripts": {
     "dev": "nuxt",
-    "generate": "nuxt generate"
+    "generate": "nuxt generate",
+    "analyze": "nuxt build -a"
   },
   "dependencies": {
     "axios": "^0.19.2",
@@ -13,7 +14,9 @@
     "vue-observe-visibility": "^0.4.6"
   },
   "devDependencies": {
+    "@nuxtjs/moment": "^1.6.1",
     "node-sass": "^4.14.1",
+    "nuxt-compress": "^1.1.0",
     "sass-loader": "^8.0.2"
   }
 }

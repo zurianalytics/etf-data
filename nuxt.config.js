@@ -8,6 +8,26 @@ export default {
         '~/plugins/json-renderer'
     ],
     build: {
-        publicPath: ''
-    }
+        publicPath: '',
+        analyze: {
+            analyzerMode: 'static'
+        }
+    },
+    buildModules: [
+        // Simple usage
+        '@nuxtjs/moment'
+    ],
+    modules: [
+        [
+            "nuxt-compress",
+            {
+                gzip: {
+                    cache: true
+                },
+                brotli: {
+                    threshold: 10240
+                }
+            }
+        ]
+    ]
 }
