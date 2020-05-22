@@ -3,7 +3,6 @@ export default {
         api: 'https://test.api.etf.zurianalytics.com'
     },
     plugins: [
-        '~/plugins/vue-observable',
         '~/plugins/tippy',
         '~/plugins/json-renderer'
     ],
