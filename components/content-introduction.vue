@@ -1,10 +1,9 @@
 <template>
-    <div class="container-fluid">
+    <div class="container-fluid" id="introduction" menu-item="Introduction" top>
 
-        <h1 id="introduction" menu-item>Introduction</h1>
+        <h1>Introduction</h1>
 
-        <div class="row"
-             v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, 'introduction')">
+        <div class="row">
             <div class="col-md-6">
 
                 <p>

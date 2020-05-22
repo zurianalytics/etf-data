@@ -1,8 +1,7 @@
 <template>
-    <div class="container-fluid"
-         v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, 'authentication')">
+    <div class="container-fluid" menu-item = "Authentication" id="authentication" top>
 
-        <h1 id="authentication" menu-item>Authentication</h1>
+        <h1>Authentication</h1>
 
         <div class="row">
 

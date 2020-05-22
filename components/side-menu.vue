@@ -18,7 +18,7 @@
 
         data() {
             return {
-                menuItems: []
+                menuItems: [],
             }
         },
 
@@ -29,7 +29,20 @@
                 e.preventDefault() 
                 // Scroll
                 target.scrollIntoView({ behavior: 'smooth' });
-            }
+            },
+
+            applyIntersectStyles(entries, observer)
+            {
+                console.log("I'm moving!");
+
+                entries.forEach(e =>
+                {
+                    if (e.intersectionRatio > 0)
+                        document.querySelector('a[href="#' + e.target.id + '"]').parentElement.classList.add("active")
+                    else
+                        document.querySelector('a[href="#' + e.target.id + '"]').parentElement.classList.remove("active")
+                })
+            },
         },
 
         /**
@@ -37,20 +50,39 @@
          */
         mounted()
         {
+            // Create observer to change active / inactive links
+            let observer = new IntersectionObserver(this.applyIntersectStyles, {
+                    root: document,
+                    rootMargin: "0px"
+            })
+
             // Add smooth scroll to the selected link
-            document.querySelectorAll('[menu-item]').forEach(link => link.addEventListener('click', this.smoothScrollToLink));
+            document.querySelectorAll('[menu-item][top]').forEach(link => link.addEventListener('click', this.smoothScrollToLink));
 
             // Create a drop down for for each menu-item
-            document.querySelectorAll('h1[menu-item]').forEach(header =>
+            document.querySelectorAll('[menu-item][top]').forEach(topLevel =>
             {
-                let h = new Object({'id': header.id, 'content': header.innerText, 'subs': [], 'linkTo': header});
+                observer.observe(topLevel);
+
+                let h = new Object({
+                    'id': topLevel.id, 
+                    'content': topLevel.getAttribute("menu-item"), 
+                    'subs': [], 
+                    'linkTo': topLevel});
                 this.menuItems.push(h)
 
-                header
-                    .parentNode
-                    .querySelectorAll('[menu-item]:not(h1)')
-                    .forEach(sub =>
-                    h.subs.push(new Object({'id': sub.id, 'linkTo': sub, 'content': sub.getAttribute("menu-item") ? sub.getAttribute("menu-item") : sub.innerText})))
+                topLevel
+                    .querySelectorAll('[menu-item]:not([top])')
+                    .forEach(subLevel =>
+                    {
+                        observer.observe(subLevel)
+
+                        h.subs.push(new Object({
+                            'id': subLevel.id, 
+                            'linkTo': subLevel, 
+                            'content': subLevel.getAttribute("menu-item")
+                            }))
+                    })
 
             })
 

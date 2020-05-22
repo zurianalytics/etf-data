@@ -1,8 +1,7 @@
 <template>
-    <div class="container-fluid"
-         v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, 'dynamic-search')">
+    <div class="container-fluid" id="dynamic-search" menu-item="Dynamic Search" top>
 
-        <h1 id="dynamic-search" menu-item>Dynamic Search</h1>
+        <h1>Dynamic Search</h1>
 
         <div class="row">
 

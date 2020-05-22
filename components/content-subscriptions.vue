@@ -1,7 +1,6 @@
 <template>
-    <div class="container-fluid"
-         v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, 'subscriptions')">
-        <h1 id="subscriptions" menu-item>Subscriptions</h1>
+    <div class="container-fluid" menu-item = "Subscriptions" top id="subscriptions">
+        <h1>Subscriptions</h1>
 
         <p>
             {{apiName}} can be called for free up to a certain number of requests daily. Thie number of free requests 
@@ -13,11 +12,10 @@
             In the case where these requests are not enough, you will need to subscribe to one of the plans listed below.
         </p>
 
-        <div class="row"
-             v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, 'subscription-plans')">
+        <div class="row" id="subscription-plans" menu-item = "Plans">
             <div class="col-md-12">
 
-                <h2 id="subscription-plans" menu-item>Subscription Plans </h2>
+                <h2>Subscription Plans </h2>
 
                 <div class="row">
                     <div class="col-md-4">
@@ -136,12 +134,11 @@
         </div>
 
 
-        <div class="row"
-             v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, 'manage-subscription')">
+        <div class="row" id="manage-subscription" menu-item = "Manage">
 
             <div class="col-md-6">
 
-                <h2 id="manage-subscription" menu-item>Manage Subscription</h2>
+                <h2>Manage Subscription</h2>
 
                 <p>
                     You can manage your subscription by adding time / changing payment methods / cancelling
