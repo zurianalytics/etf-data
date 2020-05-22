@@ -2,7 +2,7 @@
     <div class="container-fluid"
          v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, 'get-individual-etf')">
 
-        <h1 id="get-individual-etf">Get Individual Product</h1>
+        <h1 id="get-individual-etf" menu-item>Get Individual Product</h1>
 
         <div class="row">
 

@@ -2,7 +2,7 @@
     <div class="container-fluid"
          v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, 'dynamic-search')">
 
-        <h1 id="dynamic-search">Dynamic Search</h1>
+        <h1 id="dynamic-search" menu-item>Dynamic Search</h1>
 
         <div class="row">
 
@@ -52,7 +52,7 @@
         </div>
 
 
-        <div class="row" style = "margin-top: 0">
+        <div class="row" style = "margin-top: 0" menu-item="By Exchange">
             
             <div class="col-md-6">
                 <div class = "list">
@@ -87,10 +87,51 @@
         </div>
 
 
+        <div class="row" style = "margin-top: 0" menu-item="By Factor">
+
+            <div class="col-md-6">
+                <div class = "list">
+                        <code class="accent-bold">factor</code> <code class="accent-gray">Factor</code> <code class="accent-hard">Optional</code>
+                        <p>
+                            Returns products with the given factor. 
+
+                            Factor definitions follow the <a href = "https://www.msci.com/factor-indexes" class = "external">MSCI Factors</a>: 
+                        </p>
+                        <p>
+                            <code class = "inline">VOLATILITY_HIGH</code>
+                            <code class = "inline">VOLATILITY_LOW</code>
+                            <code class = "inline">YIELD</code>
+                            <code class = "inline">QUALITY</code>
+                            <code class = "inline">MOMENTUM</code>
+                            <code class = "inline">VALUE</code>
+                            <code class = "inline">SIZE_BIG</code>
+                            <code class = "inline">SIZE_SMALL</code>
+                            <code class = "inline">MULTIFACTOR</code>
+                        </p>
+                        <p>
+                            In order to search for a product with a specific factor <code class = "accent-green">F</code> write:
+                        </p>
+                        <p>
+                            <code class="inline">{{apiUrl}}/search?<span class = "accent-bold">factor</span>=<span class = "accent-hard">F</span></code>
+                        </p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="accent-box">
+                    <header>
+                        <code>GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">factor</span>=<span class = "accent-hard">MOMENTUM</span></code>
+                    </header>
+                    <div>
+                        <span>Returns a list of products which follow a Momentum factor strategy.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 
-        <div class="row" style = "margin-top: 0">
+        <div class="row" style = "margin-top: 0" menu-item="By Country">
 
             <div class="col-md-6">
                 <div class = "list">
@@ -133,7 +174,7 @@
 
 
 
-        <div class="row" style = "margin-top: 0">
+        <div class="row" style = "margin-top: 0" menu-item="By Sector">
 
             <div class="col-md-6">
                 <div class = "list">
@@ -185,7 +226,7 @@
         </div>
 
 
-        <div class="row" style = "margin-top: 0">
+        <div class="row" style = "margin-top: 0" menu-item="By Fee">
 
             <div class="col-md-6">
                 <div class = "list">
@@ -215,7 +256,7 @@
         </div>
 
 
-        <div class="row" style = "margin-top: 0">
+        <div class="row" style = "margin-top: 0" menu-item="By Domicile">
 
             <div class="col-md-6">
                 <div class = "list">
@@ -246,6 +287,143 @@
             </div>
         </div>
 
+        <div class="row" style = "margin-top: 0" menu-item="By Replication">
+
+            <div class="col-md-6">
+                <div class = "list">
+                        <code class="accent-bold">replicationMethod</code> <code class="accent-gray">ReplicationMethod</code> <code class="accent-hard">Optional</code>
+                        <p>
+                            Returns products with the given replication method. The available replication methods are:
+                        </p>
+                        <p>
+                            <code class = "inline">PHYSICAL</code><code class = "inline">SYNTHETIC</code>
+                        </p>
+                        <p>
+                            In order to search for a product with replication method <code class = "accent-green">REPLICATION_METHOD</code> write:
+                        </p>
+                        <p>
+                            <code class="inline">{{apiUrl}}/search?<span class = "accent-bold">replicationMethod</span>=<span class = "accent-hard">REPLICATION_METHOD</span></code>
+                        </p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="accent-box">
+                    <header>
+                        <code>GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">replicationMethod</span>=<span class = "accent-hard">PHYSICAL</span></code>
+                    </header>
+                    <div>
+                        <span>Returns a list of products which are physically</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style = "margin-top: 0" menu-item="By Distribution">
+
+            <div class="col-md-6">
+                <div class = "list">
+                        <code class="accent-bold">distributionType</code> <code class="accent-gray">DistributionType</code> <code class="accent-hard">Optional</code>
+                        <p>
+                            Returns products with the given distribution type. The available distribution types are:
+                        </p>
+                        <p>
+                            <code class = "inline">DISTRIBUTING</code><code class = "inline">ACCUMULATING</code>
+                        </p>
+                        <p>
+                            In order to search for a product with distribution type <code class = "accent-green">DIST_TYPE</code> write:
+                        </p>
+                        <p>
+                            <code class="inline">{{apiUrl}}/search?<span class = "accent-bold">distributionType</span>=<span class = "accent-hard">DIST_TYPE</span></code>
+                        </p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="accent-box">
+                    <header>
+                        <code>GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">distributionType</span>=<span class = "accent-hard">DISTRIBUTING</span></code>
+                    </header>
+                    <div>
+                        <span>Returns a list of products which distribute their dividends.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style = "margin-top: 0" menu-item="By Product Type">
+
+            <div class="col-md-6">
+                <div class = "list">
+                        <code class="accent-bold">assetClass</code> <code class="accent-gray">AssetClass</code> <code class="accent-hard">Optional</code>
+                        <p>
+                            Returns products with the given asset class. The available asset classes are:
+                        </p>
+                        <p>
+                            <code class = "inline">FIXED_INCOME</code>
+                            <code class = "inline">COMMODITIES</code>
+                            <code class = "inline">REAL_ESTATE</code>
+                            <code class = "inline">EQUITY</code>
+                            <code class = "inline">CURRENCY</code>
+                        </p>
+                        <p>
+                            In order to search for a product with asset class <code class = "accent-green">ASSET</code> write:
+                        </p>
+                        <p>
+                            <code class="inline">{{apiUrl}}/search?<span class = "accent-bold">assetClass</span>=<span class = "accent-hard">ASSET</span></code>
+                        </p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="accent-box">
+                    <header>
+                        <code>GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">assetClass</span>=<span class = "accent-hard">EQUITY</span></code>
+                    </header>
+                    <div>
+                        <span>Returns a list of products with asset class EQUITY (e.g., ETFs and Equity Funds)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style = "margin-top: 0" menu-item="By Asset Class">
+
+            <div class="col-md-6">
+                <div class = "list">
+                        <code class="accent-bold">productType</code> <code class="accent-gray">ProductType</code> <code class="accent-hard">Optional</code>
+                        <p>
+                            Returns products of the given type. The available product types are:
+                        </p>
+                        <p>
+                            <code class = "inline">ETF</code>
+                            <code class = "inline">ETN</code>
+                            <code class = "inline">ETC</code>
+                            <code class = "inline">FUND</code>
+                        </p>
+                        <p>
+                            While the support for ETFs is excelent, support for other product types is still experimental.
+                        </p>
+                        <p>
+                            In order to search for a product from a type <code class = "accent-green">PT</code> write:
+                        </p>
+                        <p>
+                            <code class="inline">{{apiUrl}}/search?<span class = "accent-bold">productType</span>=<span class = "accent-hard">PT</span></code>
+                        </p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="accent-box">
+                    <header>
+                        <code>GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">productType</span>=<span class = "accent-hard">ETF</span></code>
+                    </header>
+                    <div>
+                        <span>Returns a list of ETFs</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </template>
 
