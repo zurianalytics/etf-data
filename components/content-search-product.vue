@@ -32,6 +32,13 @@
                             <code class="inline">BORSA_ITALIANA</code>,
                             <code class="inline">SIX</code>
                         </p>
+                        <p>
+                            To get a list of the ETFs listed on <span class = "accent-green">SIX</span>
+                            write:
+                        </p>
+                        <p>
+                            <code class="inline">{{apiUrl}}/search?<span class = "accent-hard">exchange</span>=<span class = "accent-hard">SIX</span></code>
+                        </p>
                     </li>
                     <li>
                         <code class="accent-bold">[ALPHA3-COUNTRY-CODE]</code> <code class="accent-gray">Numeric</code> <code class="accent-hard">Optional</code>
@@ -58,14 +65,24 @@
                         <p>
                             The available factors are:
 
-                            <code v-for="factor of factors" class = "inline">{{factor}}</code>
+                            <code class = "inline">TECHNOLOGY</code>
+                            <code class = "inline">COMMUNICATION</code>
+                            <code class = "inline">INDUSTRY</code>
+                            <code class = "inline">HEALTHCARE</code>
+                            <code class = "inline">MATERIALS</code>
+                            <code class = "inline">REAL_ESTATE</code>
+                            <code class = "inline">ENERGY</code>
+                            <code class = "inline">CONSUMER_DISCRETIONARY</code>
+                            <code class = "inline">CONSUMER_STAPLES</code>
+                            <code class = "inline">UTILITIES</code>
+                            <code class = "inline">FINANCE</code>
                         </p>
                         <p>
-                            As an example in order to search for products with at least <span class = "accent-green">50%</span> exposure to <span class = "accent-green">Ireland</span>
+                            As an example in order to search for products with at least <span class = "accent-green">40%</span> exposure to <span class = "accent-green">TECHNOLOGY</span>
                             write:
                         </p>
                         <p>
-                            <code class="inline">{{apiUrl}}/search?<span class = "accent-hard">IRL</span>=<span class = "accent-hard">50</span></code>
+                            <code class="inline">{{apiUrl}}/search?<span class = "accent-hard">TECHNOLOGY</span>=<span class = "accent-hard">40</span></code>
                         </p>
                     </li>
                 </ul>
@@ -140,16 +157,9 @@
 
         data() {
             return {
-                apiUrl: process.env.api
+                apiUrl: process.env.api,
             }
         },
-
-
-        async asyncData () {
-            const { data } = await axios.get(this.apiUrl + "/metadata/factors")
-            return { factors: data }
-        }
-
     }
 
 </script>

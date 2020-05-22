@@ -136,8 +136,9 @@
 
                 <p>
                     You can manage your subscription by adding time / changing payment methods / cancelling
-                    subscriptions, etc, by
-                    logging in with your token and email address.
+                    subscriptions, etc, by logging in with your token and email address.
+
+                    For any problems, free feel to contact us at <a class = "external" href ="mailto:support@zurianalytics.com">support@zurianalytics.com</a>
                 </p>
 
                 <form id="manage-subscription-form" method="GET">

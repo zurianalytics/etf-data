@@ -159,8 +159,7 @@
                         <li>
                             <span>
                                 <code class="accent-hard">GET</code>
-                                <code>{{apiUrl}}/fund?exchange=<span class="accent-hard">SIX</span>&ticker=<span
-                                        class="accent-hard">EVOE</span></code>
+                                <code class = "inline">{{apiUrl}}/fund?exchange=<span class="accent-hard">SIX</span>&ticker=<span class="accent-hard">EVOE</span></code>
                             </span>
                             <p>
                                 Retrieves information about <a class="external"
