@@ -38,7 +38,7 @@
                         <p>
                             The ETFs will be filtered for ETFs that have exposure to the provided
 
-                            <code class = 'inline'>Alpha3-Country-Code</code>. The minimum exposure required is the value for this parameter.
+                            <a href = "https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes" class = "external">Alpha3-Country-Code</a>. The minimum exposure required is the value for this parameter.
                         </p>
                         <p>
                             As an example in order to search for products with at least <span class = "accent-green">50%</span> exposure to <span class = "accent-green">Ireland</span>
@@ -49,11 +49,16 @@
                         </p>
                     </li>
                     <li>
-                        <code class="accent-bold">[ALPHA3-COUNTRY-CODE]</code> <code class="accent-gray">Numeric</code> <code class="accent-hard">Optional</code>
+                        <code class="accent-bold">[FACTOR]</code> <code class="accent-gray">Numeric</code> <code class="accent-hard">Optional</code>
                         <p>
                             The ETFs will be filtered for ETFs that have exposure to the provided
 
-                            <code class = 'inline'>Alpha3-Country-Code</code>. The minimum exposure required is the value for this parameter.
+                            <code class = 'inline'>Factor</code>. The minimum exposure required is the value for this parameter.
+                        </p>
+                        <p>
+                            The available factors are:
+
+                            <code v-for="factor of factors" class = "inline">{{factor}}</code>
                         </p>
                         <p>
                             As an example in order to search for products with at least <span class = "accent-green">50%</span> exposure to <span class = "accent-green">Ireland</span>
@@ -128,6 +133,8 @@
 </template>
 
 <script>
+    import axios from 'axios';
+
     export default {
         name: "content-search-product",
 
@@ -135,7 +142,14 @@
             return {
                 apiUrl: process.env.api
             }
+        },
+
+
+        async asyncData () {
+            const { data } = await axios.get(this.apiUrl + "/metadata/factors")
+            return { factors: data }
         }
+
     }
 
 </script>
