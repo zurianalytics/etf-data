@@ -3,7 +3,8 @@
   "scripts": {
     "dev": "nuxt",
     "generate": "nuxt generate",
-    "analyze": "nuxt build -a"
+    "analyze": "nuxt build -a",
+    "deploy": "deploy.sh"
   },
   "dependencies": {
     "axios": "^0.19.2",
