@@ -8,141 +8,241 @@
 
             <div class="col-md-6">
 
-                <p>This endpoint searches ETFs/Funds by dynamic criteria.</p>
+                <p>This endpoint searches products (like ETFs) by dynamic criteria, and retrieves the results in a 
+                    <a class = "info"
+                        data-tippy-content = "The blue box shows the output format for this method call and can be interacted with. 
+                        Feel free to explore the output by expanding / collapsing its components."
+                        >JSON format.</a>
+                </p>
 
                 <p>This endpoint is not meant as a way to extract coprehensive
-                information about the desired ETFs. It will return a list of basic attributes (ISIN & Name). Any further information
+                information about the desired products. It will return a list of basic attributes (ISIN & Name). Any further information
                 needs to be fetched with using the <a class = "internal" href = "#get-individual-etf">Individual Endpoints</a></p>
 
                 <p>
                     All of the parameters listed below can be attached as query parameters in an arbitary order in order to build a request:
                 </p>
                 <p>
-                    <code class="inline">{{apiUrl}}/search?<span class = "accent-hard">param1</span>=v1&amp;<span class = "accent-hard">param2</span>=v2</code>
+                    <code class="inline">{{apiUrl}}/search?<span class = "accent-bold">param1</span>=<span class = "accent-hard">v1</span>&amp;<span class = "accent-bold">param2</span>=<span class = "accent-hard">v2</span></code>
                 </p>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="accent-box">
+                    <header>
+                        <code>GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">exchange</span>=<span class = "accent-hard">SIX</span>&#38;<span class = "accent-bold">USA</span>=<span class = "accent-hard">20</span>&#38;<span class = "accent-bold">TECHNOLOGY</span>=<span class = "accent-hard">30</span></code>
+                    </header>
+                    <code class="json">
+{"content":[{"name":"iShares NASDAQ 100 UCITS ETF USD (Acc)","isin":"IE00B53SZB19"},{"name":"iShares Dow Jones Industrial Average UCITS ETF USD (Acc)","isin":"IE00B53L4350"},{"name":"ComStage MSCI North America UCITS ETF","isin":"LU0392494992"},{"name":"Xtrackers MSCI USA UCITS ETF 1C","isin":"IE00BJ0KDR00"},{"name":"SPDR S&P 500 UCITS ETF","isin":"IE00B6YX5C33"},{"name":"Amundi MSCI World Ex Europe UCITS ETF - EUR (C)","isin":"LU1681045537"},{"name":"iShares Core MSCI World UCITS ETF GBP Hedged (Dist)","isin":"IE00BD45YS76"},{"name":"Lyxor MSCI USA UCITS ETF - Acc","isin":"FR0011363423"},{"name":"iShares Core S&P 500 UCITS ETF USD (Dist)","isin":"IE0031442068"},{"name":"iShares MSCI World ESG Enhanced UCITS ETF USD (Acc)","isin":"IE00BHZPJ569"}],"metaInfo":{"pageNumber":0,"pageSize":10,"totalPages":6,"totalElements":59}}
+                    </code>
+                </div>
 
+
+            </div>
+        </div>
+
+
+
+
+        <div class="row" style = "margin-top: 0">
+
+            <div class="col-md-6">
                 <h3>Parameters</h3>
-                <ul>
-                    <li>
+            </div>
+        </div>
+
+
+        <div class="row" style = "margin-top: 0">
+            
+            <div class="col-md-6">
+                <div class = "list">
                         <code class="accent-bold">exchange</code> <code class="accent-gray">Exchange</code> <code class="accent-hard">Optional</code>
                         <p>
-                            Will filter products only listed on a specific exchange
+                            Will filter products only listed on a specific exchange. The supported exchanges are:
                             <code class="inline">LSE</code>,
                             <code class="inline">XETRA</code>,
                             <code class="inline">BORSA_ITALIANA</code>,
                             <code class="inline">SIX</code>
                         </p>
                         <p>
-                            To get a list of the ETFs listed on <span class = "accent-green">SIX</span>
+                            To get a list of the products listed on an exchange <span class = "accent-hard">EX</span>
                             write:
                         </p>
                         <p>
-                            <code class="inline">{{apiUrl}}/search?<span class = "accent-hard">exchange</span>=<span class = "accent-hard">SIX</span></code>
+                            <code class="inline">{{apiUrl}}/search?<span class = "accent-bold">exchange</span>=<span class = "accent-hard">EX</span></code>
                         </p>
-                    </li>
-                    <li>
-                        <code class="accent-bold">[ALPHA3-COUNTRY-CODE]</code> <code class="accent-gray">Numeric</code> <code class="accent-hard">Optional</code>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="accent-box">
+                    <header>
+                        <code>GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">exchange</span>=<span class = "accent-hard">SIX</span></code>
+                    </header>
+                    <div>
+                        <span>Returns a list of funds listed on SIX</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+        <div class="row" style = "margin-top: 0">
+
+            <div class="col-md-6">
+                <div class = "list">
+                        <code class="accent-bold">[:ALPHA3-COUNTRY-CODE]</code> <code class="accent-gray">Numeric</code> <code class="accent-hard">Optional</code>
                         <p>
-                            The ETFs will be filtered for ETFs that have exposure to the provided
+                            The products will be filtered by exposure to the provided
 
                             <a href = "https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes" class = "external">Alpha3-Country-Code</a>. The minimum exposure required is the value for this parameter.
                         </p>
                         <p>
-                            As an example in order to search for products with at least <span class = "accent-green">50%</span> exposure to <span class = "accent-green">Ireland</span>
+                            In order to search for products with at least <span class = "accent-green">p%</span> exposure to <span class = "accent-blue">country</span>
                             write:
                         </p>
                         <p>
-                            <code class="inline">{{apiUrl}}/search?<span class = "accent-hard">IRL</span>=<span class = "accent-hard">50</span></code>
+                            <code class="inline">{{apiUrl}}/search?<span class = "accent-bold">country</span>=<span class = "accent-hard">P</span></code>
                         </p>
-                    </li>
-                    <li>
-                        <code class="accent-bold">[FACTOR]</code> <code class="accent-gray">Numeric</code> <code class="accent-hard">Optional</code>
-                        <p>
-                            The ETFs will be filtered for ETFs that have exposure to the provided
+                </div>
+            </div>
 
-                            <code class = 'inline'>Factor</code>. The minimum exposure required is the value for this parameter.
+            <div class="col-md-6">
+                <div class="accent-box">
+                    <header>
+                        <code>GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">IRL</span>=<span class = "accent-hard">45</span></code>
+                    </header>
+                    <div>
+                        <span>Returns a list of funds which have at least 45% of their assets invested in Ireland</span>
+                    </div>
+                </div>
+                                <div class="accent-box">
+                    <header>
+                        <code>GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">RUS</span>=<span class = "accent-hard">1</span></code>&<span class = "accent-bold">HUN</span>=<span class = "accent-hard">1</span></code>&<span class = "accent-bold">POL</span>=<span class = "accent-hard">1</span></code>
+                    </header>
+                    <div>
+                        <span>Finds products with some broad eastern europe exposure.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div class="row" style = "margin-top: 0">
+
+            <div class="col-md-6">
+                <div class = "list">
+                    <code class="accent-bold">[:SECTOR]</code> <code class="accent-gray">Numeric</code> <code class="accent-hard">Optional</code>
+                        <p>
+                            The products will be filtered by exposure to the provided
+
+                            <code class = 'inline'>Sector</code>. The minimum exposure required is the value for this parameter.
                         </p>
                         <p>
-                            The available factors are:
-
-                            <code class = "inline">TECHNOLOGY</code>
-                            <code class = "inline">COMMUNICATION</code>
-                            <code class = "inline">INDUSTRY</code>
-                            <code class = "inline">HEALTHCARE</code>
+                            The sectors follow the <a href = "https://www.msci.com/gics" class = "external">Global Industry Classification Stadnard</a>:
+                        </p>
+                        <p>
+                            <code class = "inline">INFORMATION_TECHNOLOGY</code>
+                            <code class = "inline">COMMUNICATION_SERVICES</code>
+                            <code class = "inline">INDUSTRIALS</code>
+                            <code class = "inline">HEALTH_CARE</code>
                             <code class = "inline">MATERIALS</code>
                             <code class = "inline">REAL_ESTATE</code>
                             <code class = "inline">ENERGY</code>
                             <code class = "inline">CONSUMER_DISCRETIONARY</code>
                             <code class = "inline">CONSUMER_STAPLES</code>
                             <code class = "inline">UTILITIES</code>
-                            <code class = "inline">FINANCE</code>
+                            <code class = "inline">FINANCIALS</code>
                         </p>
                         <p>
-                            As an example in order to search for products with at least <span class = "accent-green">40%</span> exposure to <span class = "accent-green">TECHNOLOGY</span>
+                            In order to search for products with at least <span class = "accent-green">p%</span> exposure to a <span class = "accent-blue">sector</span>
                             write:
                         </p>
                         <p>
-                            <code class="inline">{{apiUrl}}/search?<span class = "accent-hard">TECHNOLOGY</span>=<span class = "accent-hard">40</span></code>
+                            <code class="inline">{{apiUrl}}/search?<span class = "accent-bold">sector</span>=<span class = "accent-hard">p</span></code>
                         </p>
-                    </li>
-                </ul>
-
+                </div>
             </div>
+
             <div class="col-md-6">
                 <div class="accent-box">
                     <header>
-                        <code>GET</code><code>{{apiUrl}}/fund/:isin</code>
+                        <code>GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">ENERGY</span>=<span class = "accent-hard">30</span>&<span class = "accent-bold">FINANCIALS</span>=<span class = "accent-hard">30</span></code>
                     </header>
 
-
-                    <div><code class="json">
-
-                        {
-                        "totalFee":0.5,
-                        "indexName":"BofA Merrill Lynch Diversified Pref Securities NTR Index",
-                        "indexProvider":"Merrill Lynch",
-                        "name":"Invesco Preferred Shares UCITS ETF Acc",
-                        "isin":"IE00BG482169",
-                        "provider":"Invesco",
-                        "domicile":"IRL",
-                        "baseCurrency":"USD",
-                        "assetClass":"EQUITY",
-                        "replicationMethod":"PHYSICAL_OPTIMIZED",
-                        "productType":"ETF",
-                        "factor":null,
-                        "distributionFrequency":null,
-                        "distributionType":null,
-                        "listings":[
-                        {
-                        "currency":"USD",
-                        "exchange":"SIX",
-                        "ticker":"PRAC",
-                        "reutersTicker":"PRAC.S",
-                        "bloombergTicker":"PRAC SE"
-                        },
-                        {
-                        "currency":"USD",
-                        "exchange":"LSE",
-                        "ticker":"PRAC",
-                        "reutersTicker":null,
-                        "bloombergTicker":null
-                        }
-                        ],
-                        "regions":[
-                        {
-                        "country":"USA",
-                        "percentage":100.0
-                        }
-                        ],
-                        "sectors":[
-
-                        ]
-                        }
-                    </code>
-                    </div>
+                    <p>
+                        Returns products with at least 30% exposure to Energy and 30% exposure to Financials.
+                    </p>
                 </div>
 
 
+            </div>
+        </div>
+
+
+        <div class="row" style = "margin-top: 0">
+
+            <div class="col-md-6">
+                <div class = "list">
+                        <code class="accent-bold">totalFee</code> <code class="accent-gray">Numeric</code> <code class="accent-hard">Optional</code>
+                        <p>
+                            Will filter products that have at most the total fee provided.
+                        </p>
+                        <p>
+                            To get a list of the products that have at most <span class = "accent-green">p%</span> fee write: 
+                        </p>
+                        <p>
+                            <code class="inline">{{apiUrl}}/search?<span class = "accent-bold">totalFee</span>=<span class = "accent-hard">p</span></code>
+                        </p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="accent-box">
+                    <header>
+                        <code>GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">totalFee</span>=<span class = "accent-hard">4.5</span></code>
+                    </header>
+                    <div>
+                        <span>Returns a list of products that have at most 4.5% fee. For instance all ETFs with TERS smaller or equal than 4.5 will be included here.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row" style = "margin-top: 0">
+
+            <div class="col-md-6">
+                <div class = "list">
+                        <code class="accent-bold">domicile</code> <code class="accent-gray">ALPHA3-COUNTRY-CODE</code> <code class="accent-hard">Optional</code>
+                        <p>
+                            Returns products which are domiciles in the provided country. The country provided should be in a 
+
+                            <a href = "https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes" class = "external">Alpha3-Country-Code</a> format.
+                        </p>
+                        <p>
+                            To get a list of the products that are domiciled in country <span class = "accent-green">CTY</span> write: 
+                        </p>
+                        <p>
+                            <code class="inline">{{apiUrl}}/search?<span class = "accent-bold">domicile</span>=<span class = "accent-hard">CTY</span></code>
+                        </p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="accent-box">
+                    <header>
+                        <code>GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">domicile</span>=<span class = "accent-hard">LUX</span></code>
+                    </header>
+                    <div>
+                        <span>Returns a list of products that are domiciled in Luxembourg</span>
+                    </div>
+                </div>
             </div>
         </div>
 

@@ -3,6 +3,15 @@
          v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, 'subscriptions')">
         <h1 id="subscriptions">Subscriptions</h1>
 
+        <p>
+            {{apiName}} can be called for free up to a certain number of requests daily. Thie number of free requests 
+            may change day-to-day, as we closelly monitor abuse.
+        </p>
+
+        <p>
+            Nevertheless it should always be enough for someone just exploring the API and doing small individual research. 
+            In the case where these requests are not enough, you will need to subscribe to one of the plans listed below.
+        </p>
 
         <div class="row"
              v-observe-visibility="(isVisible, entry) => visibilityChanged(isVisible, entry, 'subscription-plans')">
@@ -14,7 +23,7 @@
                     <div class="col-md-4">
                         <h3>Individual</h3>
                         <ul>
-                            <li><span>1000</span> API calls | month</li>
+                            <li><span class = "accent-green">10 000</span> API calls | month</li>
                             <li><a class="info" data-tippy-content="
           For individual research and use in personal investing. Data can not be used to present products to third parties.
           <a href ='https://zurianalytics.com/terms_conditions' class = 'external'>Learn more</a>">Individual</a> Use
@@ -28,7 +37,7 @@
                         <ul>
                             <li><span class="accent-green">500 000</span> API calls | month</li>
                             <li><a class="info" data-tippy-content="
-          For business research and providing data to third parties. Data can be used to present products to third parties.
+          For business research and providing data to third parties.
           <a href ='https://zurianalytics.com/terms_conditions' class = 'external'>Learn more</a>">Business</a> Use
                                 License
                             </li>
@@ -41,7 +50,7 @@
                         <ul>
                             <li><span class="accent-hard">Unlimited</span> API calls | month</li>
                             <li><a class="info" data-tippy-content="
-          For business research and providing data to third parties. Data can be used to present products to third parties.
+          For business research and providing data to third parties.
           <a href ='https://zurianalytics.com/terms_conditions' class = 'external'>Learn more</a>">Business</a> Use
                                 License
                             </li>
@@ -187,6 +196,9 @@
 
         data() {
             return {
+
+                apiName: 'Zuri Analytics API',
+
                 /* =======================================
                  = Payment Props
                  ======================================= */

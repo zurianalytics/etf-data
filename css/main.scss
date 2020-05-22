@@ -199,7 +199,7 @@ nav {
     @extend %code-font;
   }
 
-  li {
+  li, .list {
     border-top: 1px solid $color-gray-100;
     padding: 1rem 0;
   }
@@ -306,6 +306,7 @@ nav {
 
   .accent-bold {
     font-weight: bold;
+    color: $color-blue-100;
   }
 }
 
@@ -319,6 +320,7 @@ nav {
   color: $color-gray-000;
   box-sizing: border-box;
   overflow: hidden;
+  margin-top: 2rem;
   @extend %code-font;
 
   header {

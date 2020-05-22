@@ -8,17 +8,22 @@
             <div class="col-md-6">
 
                 <p>
-                    This API contains all ETFs listed on all major european exchanges.
+                    {{apiName}} contains deep fundamental information about most ETFs, ETNs, ETCs and other fund-like products listed on all major european exchanges.
                 </p>
+
                 <p>
-                    The API provides both manually analyzed information which does not change often, as well as
-                    deep machine-learned fundamental information about the ETFs, such as: sector
-                    allocation, country allocation, dividend yield, investment factors, etc.
+                    {{apiName}} provides basic information such as: 
+                    Domicile, Followed Index, Asset Class, Fee, Currency, Replication Method, Distribution Type & Frequency.
+                    This information is manually analyzed by our team and updated regulary. 
+
+                    Listings of new products are reflected almost immediately.
                 </p>
+                
                 <p>
-                    The information is updated each day and any structural changes, listing, de-listing of an ETF is
-                    available
-                    immediately.
+                    {{apiName}} also provide deep fundamental information derived from the underlying securities such as: <b>Sector Exposre</b>, 
+                    <b>Country Exposure</b>, <b>Factors</b>, <b>Dividend Yield</b> etc.
+
+                    This information is dynamically updated as the underlying securities change or are added / removed from their tracking product. 
                 </p>
             </div>
 
@@ -127,10 +132,11 @@
 
         data() {
             return {
-                isin: "LU1615092217",
+                isin: "LU0378437502",
                 chart: {},
                 fund: {},
-                server: process.env.api + "/fund/"
+                server: process.env.api + "/product/",
+                apiName: 'Zuri Analytics API'
             }
         },
 
@@ -142,7 +148,7 @@
         methods:
             {
                 getFund: function () {
-                    let url = process.env.api + "/fund/" + this.isin;
+                    let url = process.env.api + "/product/" + this.isin;
 
                     console.log("Loading fund on: " + url);
 
