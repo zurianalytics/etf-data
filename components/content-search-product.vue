@@ -52,7 +52,7 @@
         </div>
 
 
-        <div class="row" style = "margin-top: 0" menu-item="By Exchange">
+        <div class="row" style = "margin-top: 0" menu-item="By Exchange" id ="by-exchange">
             
             <div class="col-md-6">
                 <div class = "list">
@@ -87,7 +87,7 @@
         </div>
 
 
-        <div class="row" style = "margin-top: 0" menu-item="By Factor">
+        <div class="row" style = "margin-top: 0" menu-item="By Factor" id ="by-factor">
 
             <div class="col-md-6">
                 <div class = "list">
@@ -131,7 +131,7 @@
 
 
 
-        <div class="row" style = "margin-top: 0" menu-item="By Country">
+        <div class="row" style = "margin-top: 0" menu-item="By Country" id ="by-country">
 
             <div class="col-md-6">
                 <div class = "list">
@@ -171,10 +171,7 @@
             </div>
         </div>
 
-
-
-
-        <div class="row" style = "margin-top: 0" menu-item="By Sector">
+        <div class="row" style = "margin-top: 0" menu-item="By Sector" id = "by-sector">
 
             <div class="col-md-6">
                 <div class = "list">
@@ -226,7 +223,7 @@
         </div>
 
 
-        <div class="row" style = "margin-top: 0" menu-item="By Fee">
+        <div class="row" style = "margin-top: 0" menu-item="By Fee" id = "by-fee">
 
             <div class="col-md-6">
                 <div class = "list">
@@ -256,7 +253,7 @@
         </div>
 
 
-        <div class="row" style = "margin-top: 0" menu-item="By Domicile">
+        <div class="row" style = "margin-top: 0" menu-item="By Domicile" id = "by-domicile">
 
             <div class="col-md-6">
                 <div class = "list">
@@ -287,7 +284,7 @@
             </div>
         </div>
 
-        <div class="row" style = "margin-top: 0" menu-item="By Replication">
+        <div class="row" style = "margin-top: 0" menu-item="By Replication" id = "by-replication">
 
             <div class="col-md-6">
                 <div class = "list">
@@ -319,7 +316,7 @@
             </div>
         </div>
 
-        <div class="row" style = "margin-top: 0" menu-item="By Distribution">
+        <div class="row" style = "margin-top: 0" menu-item="By Distribution" id = "by-dist">
 
             <div class="col-md-6">
                 <div class = "list">
@@ -351,7 +348,7 @@
             </div>
         </div>
 
-        <div class="row" style = "margin-top: 0" menu-item="By Product Type">
+        <div class="row" style = "margin-top: 0" menu-item="By Product Type" id = "by-product-type">
 
             <div class="col-md-6">
                 <div class = "list">
@@ -387,7 +384,7 @@
             </div>
         </div>
 
-        <div class="row" style = "margin-top: 0" menu-item="By Asset Class">
+        <div class="row" style = "margin-top: 0" menu-item="By Asset Class" id = "by-asset-class">
 
             <div class="col-md-6">
                 <div class = "list">
