@@ -1,6 +1,6 @@
 var app = new Vue({
 
-    el: '#subscriptions',
+    el: '#subscriptions-app',
 
 
     data() {

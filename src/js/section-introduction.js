@@ -1,4 +1,4 @@
-var app = new Vue({
+Vue.mixin({
 
     el: '#introduction',
 
@@ -44,11 +44,9 @@ var app = new Vue({
                     })
                     // Free requests have expired
                     .catch(error => {
-                        console.log(error)
-
                         document
                             .querySelector('#demo-content')
-                            .innerHTML = error.response.data.message
+                            .innerHTML = error.response ? error.response.data.message : error
                     })
             },
 

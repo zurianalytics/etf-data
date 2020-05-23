@@ -1,4 +1,4 @@
-var app = new Vue({
+new Vue({
 
     el: '#side-menu',
 
@@ -47,6 +47,7 @@ var app = new Vue({
         document.querySelectorAll('[menu-item][top]').forEach(topLevel =>
         {
             observer.observe(topLevel);
+            console.log(observer, topLevel)
 
             let h = new Object({
                 'id': topLevel.id, 
@@ -54,7 +55,6 @@ var app = new Vue({
                 'subs': [], 
                 'linkTo': topLevel});
             this.menuItems.push(h)
-
             
             topLevel
                 .querySelectorAll('[menu-item]:not([top])')

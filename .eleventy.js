@@ -6,6 +6,7 @@ module.exports = function(eleventyConfig) {
     eleventyConfig.addPassthroughCopy({"src/images": "images"});
     eleventyConfig.addPassthroughCopy({"src/font": "font"});
 
+
     return {
       passthroughFileCopy: true
     }
