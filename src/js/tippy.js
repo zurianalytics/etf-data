@@ -1,7 +1,3 @@
-import Vue from 'vue';
-import tippy from "tippy.js";
-import 'tippy.js/dist/tippy.css';
-
 Vue.mixin({
     methods: {
         initializeTooltips: function () {

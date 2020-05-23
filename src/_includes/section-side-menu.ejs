@@ -1,0 +1,11 @@
+<ul id = "side-menu">
+    <li v-for="i in menuItems">
+        <a :href="'#' + i.id" @click="smoothScrollToLink(i.linkTo, $event)">{{i.content}}</a>
+
+        <ul v-if="i.subs.length > 0">
+            <li v-for="si in i.subs">
+                <a :href = "'#' + si.id" @click="smoothScrollToLink(si.linkTo, $event)">{{si.content}}</a>
+            </li>
+        </ul>
+    </li>
+</ul>

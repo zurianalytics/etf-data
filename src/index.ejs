@@ -1,0 +1,91 @@
+<html>
+<head>
+</head>
+
+<body>
+
+
+    <!-- Styles -->
+    <style>
+         <%- include('../generated/css/main.css') -%>
+    </style>
+    
+    <div class="container" id="app">
+
+        <%
+            // Set global variables
+
+        %>
+
+        <!-- Left Side Menu -->
+        <div class="row">
+            <div class="col-md-2">
+
+                <nav v-bind:class="{ active: interaction.menu }">
+
+                    <a class="puller" href="" v-on:click.prevent="interaction.menu = !interaction.menu">
+                        <span v-if="!interaction.menu">»</span>
+                        <span v-if="interaction.menu">«</span>
+                    </a>
+                    <div class="representation">
+                        <a href="https://zurianalytics.com/">
+                            <img class="logo" src="images/logo.png"/>
+                            <div><span class="accent-blue">ETF</span> Data API</div>
+                        </a>
+                    </div>
+
+                    <% include _includes/section-side-menu %>
+
+                    <footer>
+                        <ul>
+                            <li><a href='#subscription-plans'>Sign Up for a Developer Key</a></li>
+                            <li><a href='https://zurianalytics.com'>This is a ZuriAnalytics API.</a></li>
+                        </ul>
+                    </footer>
+                </nav>
+            </div>
+            <div class="col-md-10">
+                <!-- Main Page Conent -->
+                <div class="content">
+
+                    <!-- Page content -->
+                    <% include _includes/section-introduction %>
+                    <% include _includes/section-single-product %>
+                    <% include _includes/section-search-product %>
+                    <% include _includes/section-authentication %>
+                    <% include _includes/section-subscriptions %>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+<!-- Stripe hosted -->
+<script src="https://js.stripe.com/v3/"></script>
+
+<!-- Axios -->
+<script src = "js/lib-axios.js"></script>
+
+<!-- Json rendering -->
+<script src = "js/lib-vue.js"></script>
+<script src = "js/lib-json-formatter-js.js"></script>
+<script src = "js/json-renderer.js"></script>
+
+<!-- Tippy -->
+<script src = "https://unpkg.com/@popperjs/core@2"></script>
+<script src = "https://unpkg.com/tippy.js@6"></script>
+<script src = "js/tippy.js"></script>
+
+<!-- APP Scripts -->
+<script src = "js/global-variables.js"></script>
+<script src = "js/section-side-menu.js"></script>
+<script src = "js/section-subscriptions.js"></script>
+<script src = "js/section-introduction.js"></script>
+<script src = "js/section-search-product.js"></script>
+<script src = "js/section-single-product.js"></script>
+
+</html>
+

@@ -3,9 +3,9 @@
 @import 'normalize';
 @import 'bootstrap';
 
-/* ---------------------
+/*! ---------------------
   Global Styles
-  --------------------*/
+  --------------------!*/
 html, body {
 
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
@@ -39,9 +39,9 @@ html, body {
 }
 
 
-/* ---------------------
-  Side menu
-  --------------------*/
+/*! ---------------------
+Side menu
+  -------------------- !*/
 nav {
   background-color: $color-gray-000;
   position: fixed;
@@ -146,9 +146,9 @@ nav {
 }
 
 
-/* ---------------------
+/*! ---------------------
   Content formatting styles
-  --------------------*/
+  -------------------- !*/
 .content {
 
   h1 {
@@ -206,9 +206,9 @@ nav {
 }
 
 
-/* ---------------------
+/*! ---------------------
   Accents & Special
-  --------------------*/
+  -------------------- !*/
 .content {
 
   // External && info
@@ -311,9 +311,9 @@ nav {
 }
 
 
-/* ---------------------
+/*! ---------------------
   Dark Box Styles
-  --------------------*/
+  -------------------- !*/
 .content .accent-box {
   background-color: $color-blue-800;
   border-radius: 10px;
@@ -385,9 +385,9 @@ nav {
 }
 
 
-/* ---------------------
+/*! ---------------------
   Form Elements
-  --------------------*/
+  -------------------- !*/
 form {
   margin-top: 3rem;
   background-color: $color-gray-100;
@@ -452,9 +452,9 @@ form {
 }
 
 
-/* ---------------------
+/*! ---------------------
   Tippy
-  --------------------*/
+  -------------------- !*/
 .tippy-box {
   padding: 0.8rem;
 
