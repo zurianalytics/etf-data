@@ -1,4 +1,4 @@
-Vue.mixin({
+new Vue({
 
     el: '#introduction',
 
