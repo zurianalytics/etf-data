@@ -3,3 +3,4 @@
 **/generated/
 .nuxt/
 package-lock.json
+.cache

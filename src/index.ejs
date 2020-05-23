@@ -7,7 +7,7 @@
 
     <!-- Styles -->
     <style>
-         <%- include('../generated/css/main.css') -%>
+         <%- include('../dist/scss/main.css') -%>
     </style>
     
     <div class="container" id="app">
@@ -63,29 +63,24 @@
 
 </body>
 
-<!-- Axios -->
-<script src = "js/lib-axios.js"></script>
+
+<!-- Global Vue (Needed for everything) -->
+<script src = "js/vue.external.js"></script>
+
+
+
+
+<!-- App -->
+<script async src = "js/app.bundle.js"></script>
 
 <!-- Json rendering -->
-<script src = "js/lib-vue.js"></script>
-<script src = "js/lib-json-formatter-js.js"></script>
-<script src = "js/json-renderer.js"></script>
+<script async src = "js/json-renderer.bundle.js"></script>
 
 <!-- Tippy -->
-<script src = "js/lib-popper.js"></script>
-<script src = "js/lib-tippy.js"></script>
-<script src = "js/tippy.js"></script>
-
-<!-- APP Scripts -->
-<script src = "js/global-variables.js"></script>
-<script src = "js/section-introduction.js"></script>
-<script src = "js/section-search-product.js"></script>
-<script src = "js/section-single-product.js"></script>
+<script async src = "js/tippy.bundle.js"></script>
 
 <!-- Stripe hosted -->
-<script src="https://js.stripe.com/v3/"></script>
-<script src = "js/section-subscriptions.js"></script> 
-<script src = "js/section-side-menu.js"></script>
+<script async src="https://js.stripe.com/v3/"></script>
 
 </html>
 

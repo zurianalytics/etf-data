@@ -1,3 +1,5 @@
+import {env} from './global-variables'
+
 new Vue({
 
     el: '#side-menu',
@@ -39,9 +41,6 @@ new Vue({
                 root: document,
                 rootMargin: "0px"
         })
-
-        // Add smooth scroll to the selected link
-        document.querySelectorAll('[menu-item][top]').forEach(link => link.addEventListener('click', this.smoothScrollToLink));
 
         // Create a drop down for for each menu-item
         document.querySelectorAll('[menu-item][top]').forEach(topLevel =>

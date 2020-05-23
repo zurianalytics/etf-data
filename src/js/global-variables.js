@@ -1,3 +1,8 @@
-const envVariableApi = "https://test.api.etf.zurianalytics.com"
-const envVariableName  = "Zuri Analytics API"
-
+module.exports = 
+{
+    env:
+    {
+        api: "https://test.api.etf.zurianalytics.com",
+        name: "Zuri Analytics API"
+    }
+}

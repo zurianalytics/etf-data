@@ -1,3 +1,6 @@
+import {env} from './global-variables'
+import axios from 'axios'
+
 new Vue({
 
     el: '#introduction',
@@ -8,8 +11,8 @@ new Vue({
             isin: "LU0378437502",
             chart: {},
             fund: {},
-            server: envVariableApi + "/product/",
-            apiName: envVariableName
+            server: env.api + "/product/",
+            apiName: env.name
         }
     },
 
@@ -21,7 +24,7 @@ new Vue({
     methods:
         {
             getFund: function () {
-                let url = envVariableApi + "/product/" + this.isin;
+                let url = this.server + "/product/" + this.isin;
 
                 console.log("Loading fund on: " + url);
 

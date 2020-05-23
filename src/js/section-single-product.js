@@ -1,3 +1,5 @@
+import {env} from './global-variables'
+
 new Vue({
 
     el: '#get-individual-etf',
@@ -5,8 +7,8 @@ new Vue({
 
     data() {
         return {
-            apiName: envVariableName,
-            apiUrl: envVariableApi
+            apiName: env.name,
+            apiUrl: env.api
         }
     },
 })

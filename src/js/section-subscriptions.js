@@ -1,4 +1,7 @@
-var app = new Vue({
+import {env} from './global-variables'
+import axios from 'axios'
+
+new Vue({
 
     el: '#subscriptions-app',
 
@@ -6,7 +9,7 @@ var app = new Vue({
     data() {
         return {
 
-            apiName: 'Zuri Analytics API',
+            apiName: env.name,
 
             /* =======================================
              = Payment Props
@@ -59,8 +62,17 @@ var app = new Vue({
     },
 
     mounted() {
-        this.initializeStripe();
         this.initializeToken();
+
+        let pollForStripe = () =>
+        {
+            if (typeof(Stripe) === "undefined")
+                setTimeout(pollForStripe, 250);
+            else 
+                this.initializeStripe();
+        }
+        
+        pollForStripe();
     },
 
     methods:
@@ -81,7 +93,7 @@ var app = new Vue({
 
                 var button = '#' + event.currentTarget.id;
 
-                axios.post(envVariableApi + '/payment/manage',
+                axios.post(env.api + '/payment/manage',
                     {
                         email: this.dashboard.email,
                         token: this.dashboard.token
@@ -114,7 +126,7 @@ var app = new Vue({
             submitToServer: function (result) {
                 var instance = this;
 
-                axios.post(envVariableApi + "/payment/subscribe",
+                axios.post(env.api + "/payment/subscribe",
                     {
                         plan: this.payment.plan,
                         token: this.payment.token,
@@ -199,7 +211,7 @@ var app = new Vue({
 
             initializeToken: function () {
                 return axios
-                    .get(envVariableApi + "/token/")
+                    .get(env.api + "/token/")
                     .then(response => this.payment.token = response.data)
             }
         }
