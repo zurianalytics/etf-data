@@ -1,38 +1,278 @@
-<!doctype html>
-<html data-n-head-ssr>
-  <head>
-    <link rel="preload" href="/_nuxt/d1be39c2f581c6d0812d.js" as="script"><link rel="preload" href="/_nuxt/14e5253dd5c952f73ce1.js" as="script"><link rel="preload" href="/_nuxt/cb8910e9eb0f01c86a74.js" as="script"><link rel="preload" href="/_nuxt/d6f99067b5773fd207b2.js" as="script"><link rel="preload" href="/_nuxt/02f9ad5dc969309dbf30.js" as="script"><style data-vue-ssr-id="23cc9070:0 3191d5ad:0 2e107364:0">.tippy-box[data-animation=fade][data-state=hidden]{opacity:0}[data-tippy-root]{max-width:calc(100vw - 10px)}.tippy-box{position:relative;background-color:#333;color:#fff;border-radius:4px;font-size:14px;line-height:1.4;outline:0;transition-property:transform,visibility,opacity}.tippy-box[data-placement^=top]>.tippy-arrow{bottom:0}.tippy-box[data-placement^=top]>.tippy-arrow:before{bottom:-7px;left:0;border-width:8px 8px 0;border-top-color:initial;transform-origin:center top}.tippy-box[data-placement^=bottom]>.tippy-arrow{top:0}.tippy-box[data-placement^=bottom]>.tippy-arrow:before{top:-7px;left:0;border-width:0 8px 8px;border-bottom-color:initial;transform-origin:center bottom}.tippy-box[data-placement^=left]>.tippy-arrow{right:0}.tippy-box[data-placement^=left]>.tippy-arrow:before{border-width:8px 0 8px 8px;border-left-color:initial;right:-7px;transform-origin:center left}.tippy-box[data-placement^=right]>.tippy-arrow{left:0}.tippy-box[data-placement^=right]>.tippy-arrow:before{left:-7px;border-width:8px 8px 8px 0;border-right-color:initial;transform-origin:center right}.tippy-box[data-inertia][data-state=visible]{transition-timing-function:cubic-bezier(.54,1.5,.38,1.11)}.tippy-arrow{width:16px;height:16px;color:#333}.tippy-arrow:before{content:"";position:absolute;border-color:transparent;border-style:solid}.tippy-content{position:relative;padding:5px 9px;z-index:1}.nuxt-progress{position:fixed;top:0;left:0;right:0;height:2px;width:0;opacity:1;transition:width .1s,opacity .4s;background-color:#000;z-index:999999}.nuxt-progress.nuxt-progress-notransition{transition:none}.nuxt-progress-failed{background-color:red}@font-face{font-family:icons;src:url(/font/icons.eot);src:url(/font/icons.eot#iefix) format("embedded-opentype"),url(/font/icons.woff) format("woff"),url(/font/icons.ttf) format("truetype"),url(/font/icons.svg#icons) format("svg");font-weight:400;font-style:normal}.content h1,.content h2,.content h3,.content h4,.content h5,.content h6{font-weight:700}.content .accent-box,.content code{font-family:Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;font-size:12px;line-height:1.5}.content code{word-break:break-all;-webkit-hyphens:auto;-ms-hyphens:auto;hyphens:auto}/*! normalize.css v3.0.2 | MIT License | git.io/normalize */a{color:inherit;text-decoration:none}abbr[title]{border-bottom:1px dotted}li,ul{padding:0;list-style:none}/*!
+<html>
+<head>
+</head>
+
+<body>
+    <!-- Styles -->
+    <style>
+         @charset "UTF-8";@font-face{font-family:icons;src:url(/icons.2a29e74f.eot);src:url(/icons.2a29e74f.eot#iefix) format("embedded-opentype"),url(/icons.07b749f0.woff) format("woff"),url(/icons.5dc7ab70.ttf) format("truetype"),url(/icons.bc482049.svg#icons) format("svg");font-weight:400;font-style:normal}.content h1,.content h2,.content h3,.content h4,.content h5,.content h6{font-weight:700}.content .accent-box,.content code{font-family:Consolas,Menlo,Monaco,Lucida Console,Liberation Mono,DejaVu Sans Mono,Bitstream Vera Sans Mono,Courier New,monospace,serif;font-size:12px;line-height:1.5}.content code{word-break:break-all;hyphens:auto}
+
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */a{color:inherit;text-decoration:none}abbr[title]{border-bottom:1px dotted}li,ul{padding:0;list-style:none}
+
+/*!
  * Generated using the Bootstrap Customizer (https://getbootstrap.com/docs/3.4/customize/)
- *//*!
+ */
+/*!
  * Bootstrap v3.4.1 (https://getbootstrap.com/)
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- *//*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:none;text-decoration:underline;-webkit-text-decoration:underline dotted;text-decoration:underline dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}*,:after,:before{box-sizing:border-box}html{font-size:10px;-webkit-tap-highlight-color:transparent}body{font-family:Helvetica Neue,Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff}button,input,select,textarea{font-family:inherit;font-size:inherit;line-height:inherit}figure{margin:0}img{vertical-align:middle}.img-responsive{display:block;max-width:100%;height:auto}.img-rounded{border-radius:6px}.img-thumbnail{padding:4px;line-height:1.42857143;background-color:#fff;border:1px solid #ddd;border-radius:4px;transition:all .2s ease-in-out;display:inline-block;max-width:100%;height:auto}.img-circle{border-radius:50%}hr{margin-top:20px;margin-bottom:20px;border:0;border-top:1px solid #eee}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}.sr-only-focusable:active,.sr-only-focusable:focus{position:static;width:auto;height:auto;margin:0;overflow:visible;clip:auto}[role=button]{cursor:pointer}.container{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}@media (min-width:1200px){.container{width:1170px}}@media (min-width:1300px){.container{width:1270px}}.container-fluid{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}.row{margin-right:-15px;margin-left:-15px}.row-no-gutters{margin-right:0;margin-left:0}.row-no-gutters [class*=col-]{padding-right:0;padding-left:0}.col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-sm-1,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-xs-1,.col-xs-10,.col-xs-11,.col-xs-12,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9{position:relative;min-height:1px;padding-right:15px;padding-left:15px}.col-xs-1,.col-xs-10,.col-xs-11,.col-xs-12,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9{float:left}.col-xs-12{width:100%}.col-xs-11{width:91.66666667%}.col-xs-10{width:83.33333333%}.col-xs-9{width:75%}.col-xs-8{width:66.66666667%}.col-xs-7{width:58.33333333%}.col-xs-6{width:50%}.col-xs-5{width:41.66666667%}.col-xs-4{width:33.33333333%}.col-xs-3{width:25%}.col-xs-2{width:16.66666667%}.col-xs-1{width:8.33333333%}.col-xs-pull-12{right:100%}.col-xs-pull-11{right:91.66666667%}.col-xs-pull-10{right:83.33333333%}.col-xs-pull-9{right:75%}.col-xs-pull-8{right:66.66666667%}.col-xs-pull-7{right:58.33333333%}.col-xs-pull-6{right:50%}.col-xs-pull-5{right:41.66666667%}.col-xs-pull-4{right:33.33333333%}.col-xs-pull-3{right:25%}.col-xs-pull-2{right:16.66666667%}.col-xs-pull-1{right:8.33333333%}.col-xs-pull-0{right:auto}.col-xs-push-12{left:100%}.col-xs-push-11{left:91.66666667%}.col-xs-push-10{left:83.33333333%}.col-xs-push-9{left:75%}.col-xs-push-8{left:66.66666667%}.col-xs-push-7{left:58.33333333%}.col-xs-push-6{left:50%}.col-xs-push-5{left:41.66666667%}.col-xs-push-4{left:33.33333333%}.col-xs-push-3{left:25%}.col-xs-push-2{left:16.66666667%}.col-xs-push-1{left:8.33333333%}.col-xs-push-0{left:auto}.col-xs-offset-12{margin-left:100%}.col-xs-offset-11{margin-left:91.66666667%}.col-xs-offset-10{margin-left:83.33333333%}.col-xs-offset-9{margin-left:75%}.col-xs-offset-8{margin-left:66.66666667%}.col-xs-offset-7{margin-left:58.33333333%}.col-xs-offset-6{margin-left:50%}.col-xs-offset-5{margin-left:41.66666667%}.col-xs-offset-4{margin-left:33.33333333%}.col-xs-offset-3{margin-left:25%}.col-xs-offset-2{margin-left:16.66666667%}.col-xs-offset-1{margin-left:8.33333333%}.col-xs-offset-0{margin-left:0}@media (min-width:768px){.col-sm-1,.col-sm-10,.col-sm-11,.col-sm-12,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9{float:left}.col-sm-12{width:100%}.col-sm-11{width:91.66666667%}.col-sm-10{width:83.33333333%}.col-sm-9{width:75%}.col-sm-8{width:66.66666667%}.col-sm-7{width:58.33333333%}.col-sm-6{width:50%}.col-sm-5{width:41.66666667%}.col-sm-4{width:33.33333333%}.col-sm-3{width:25%}.col-sm-2{width:16.66666667%}.col-sm-1{width:8.33333333%}.col-sm-pull-12{right:100%}.col-sm-pull-11{right:91.66666667%}.col-sm-pull-10{right:83.33333333%}.col-sm-pull-9{right:75%}.col-sm-pull-8{right:66.66666667%}.col-sm-pull-7{right:58.33333333%}.col-sm-pull-6{right:50%}.col-sm-pull-5{right:41.66666667%}.col-sm-pull-4{right:33.33333333%}.col-sm-pull-3{right:25%}.col-sm-pull-2{right:16.66666667%}.col-sm-pull-1{right:8.33333333%}.col-sm-pull-0{right:auto}.col-sm-push-12{left:100%}.col-sm-push-11{left:91.66666667%}.col-sm-push-10{left:83.33333333%}.col-sm-push-9{left:75%}.col-sm-push-8{left:66.66666667%}.col-sm-push-7{left:58.33333333%}.col-sm-push-6{left:50%}.col-sm-push-5{left:41.66666667%}.col-sm-push-4{left:33.33333333%}.col-sm-push-3{left:25%}.col-sm-push-2{left:16.66666667%}.col-sm-push-1{left:8.33333333%}.col-sm-push-0{left:auto}.col-sm-offset-12{margin-left:100%}.col-sm-offset-11{margin-left:91.66666667%}.col-sm-offset-10{margin-left:83.33333333%}.col-sm-offset-9{margin-left:75%}.col-sm-offset-8{margin-left:66.66666667%}.col-sm-offset-7{margin-left:58.33333333%}.col-sm-offset-6{margin-left:50%}.col-sm-offset-5{margin-left:41.66666667%}.col-sm-offset-4{margin-left:33.33333333%}.col-sm-offset-3{margin-left:25%}.col-sm-offset-2{margin-left:16.66666667%}.col-sm-offset-1{margin-left:8.33333333%}.col-sm-offset-0{margin-left:0}}@media (min-width:992px){.col-md-1,.col-md-10,.col-md-11,.col-md-12,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9{float:left}.col-md-12{width:100%}.col-md-11{width:91.66666667%}.col-md-10{width:83.33333333%}.col-md-9{width:75%}.col-md-8{width:66.66666667%}.col-md-7{width:58.33333333%}.col-md-6{width:50%}.col-md-5{width:41.66666667%}.col-md-4{width:33.33333333%}.col-md-3{width:25%}.col-md-2{width:16.66666667%}.col-md-1{width:8.33333333%}.col-md-pull-12{right:100%}.col-md-pull-11{right:91.66666667%}.col-md-pull-10{right:83.33333333%}.col-md-pull-9{right:75%}.col-md-pull-8{right:66.66666667%}.col-md-pull-7{right:58.33333333%}.col-md-pull-6{right:50%}.col-md-pull-5{right:41.66666667%}.col-md-pull-4{right:33.33333333%}.col-md-pull-3{right:25%}.col-md-pull-2{right:16.66666667%}.col-md-pull-1{right:8.33333333%}.col-md-pull-0{right:auto}.col-md-push-12{left:100%}.col-md-push-11{left:91.66666667%}.col-md-push-10{left:83.33333333%}.col-md-push-9{left:75%}.col-md-push-8{left:66.66666667%}.col-md-push-7{left:58.33333333%}.col-md-push-6{left:50%}.col-md-push-5{left:41.66666667%}.col-md-push-4{left:33.33333333%}.col-md-push-3{left:25%}.col-md-push-2{left:16.66666667%}.col-md-push-1{left:8.33333333%}.col-md-push-0{left:auto}.col-md-offset-12{margin-left:100%}.col-md-offset-11{margin-left:91.66666667%}.col-md-offset-10{margin-left:83.33333333%}.col-md-offset-9{margin-left:75%}.col-md-offset-8{margin-left:66.66666667%}.col-md-offset-7{margin-left:58.33333333%}.col-md-offset-6{margin-left:50%}.col-md-offset-5{margin-left:41.66666667%}.col-md-offset-4{margin-left:33.33333333%}.col-md-offset-3{margin-left:25%}.col-md-offset-2{margin-left:16.66666667%}.col-md-offset-1{margin-left:8.33333333%}.col-md-offset-0{margin-left:0}}@media (min-width:1200px){.col-lg-1,.col-lg-10,.col-lg-11,.col-lg-12,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9{float:left}.col-lg-12{width:100%}.col-lg-11{width:91.66666667%}.col-lg-10{width:83.33333333%}.col-lg-9{width:75%}.col-lg-8{width:66.66666667%}.col-lg-7{width:58.33333333%}.col-lg-6{width:50%}.col-lg-5{width:41.66666667%}.col-lg-4{width:33.33333333%}.col-lg-3{width:25%}.col-lg-2{width:16.66666667%}.col-lg-1{width:8.33333333%}.col-lg-pull-12{right:100%}.col-lg-pull-11{right:91.66666667%}.col-lg-pull-10{right:83.33333333%}.col-lg-pull-9{right:75%}.col-lg-pull-8{right:66.66666667%}.col-lg-pull-7{right:58.33333333%}.col-lg-pull-6{right:50%}.col-lg-pull-5{right:41.66666667%}.col-lg-pull-4{right:33.33333333%}.col-lg-pull-3{right:25%}.col-lg-pull-2{right:16.66666667%}.col-lg-pull-1{right:8.33333333%}.col-lg-pull-0{right:auto}.col-lg-push-12{left:100%}.col-lg-push-11{left:91.66666667%}.col-lg-push-10{left:83.33333333%}.col-lg-push-9{left:75%}.col-lg-push-8{left:66.66666667%}.col-lg-push-7{left:58.33333333%}.col-lg-push-6{left:50%}.col-lg-push-5{left:41.66666667%}.col-lg-push-4{left:33.33333333%}.col-lg-push-3{left:25%}.col-lg-push-2{left:16.66666667%}.col-lg-push-1{left:8.33333333%}.col-lg-push-0{left:auto}.col-lg-offset-12{margin-left:100%}.col-lg-offset-11{margin-left:91.66666667%}.col-lg-offset-10{margin-left:83.33333333%}.col-lg-offset-9{margin-left:75%}.col-lg-offset-8{margin-left:66.66666667%}.col-lg-offset-7{margin-left:58.33333333%}.col-lg-offset-6{margin-left:50%}.col-lg-offset-5{margin-left:41.66666667%}.col-lg-offset-4{margin-left:33.33333333%}.col-lg-offset-3{margin-left:25%}.col-lg-offset-2{margin-left:16.66666667%}.col-lg-offset-1{margin-left:8.33333333%}.col-lg-offset-0{margin-left:0}}.clearfix:after,.clearfix:before,.container-fluid:after,.container-fluid:before,.container:after,.container:before,.row:after,.row:before{display:table;content:" "}.clearfix:after,.container-fluid:after,.container:after,.row:after{clear:both}.center-block{display:block;margin-right:auto;margin-left:auto}.pull-right{float:right!important}.pull-left{float:left!important}.hide{display:none!important}.show{display:block!important}.invisible{visibility:hidden}.text-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}.hidden{display:none!important}.affix{position:fixed}body,html{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;font-size:15px;line-height:1.6rem;color:#1a2652;padding:0;margin:0;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;background-color:#f3f7f9;height:100%;-webkit-text-size-adjust:none}body #app,html #app{background-color:#fff;box-shadow:0 0 1px 0 rgba(0,0,0,.3);margin-top:5rem;margin-bottom:5rem;padding-top:6rem;padding-bottom:6rem}@media (max-width:1200px){body #app,html #app{margin-top:0;margin-bottom:0}}nav{background-color:#fff;position:fixed;font-weight:700;padding:1.4rem;z-index:30}nav .puller{height:40vh;float:right;display:none;flex-direction:column;justify-content:center;width:22px;border-right:2px solid #7dabf8;color:#7dabf8;font-size:2rem}@media (max-width:1200px){nav{padding:.6rem}}@media (max-width:992px){nav{padding-right:0;transform:translateX(-100%);margin-left:8px;transition:all .3s ease-out}nav.active{transform:translateX(0);margin-left:0}nav .puller{display:flex}}nav footer{border-top:1px solid #f3f7f9;font-size:.7rem}nav .representation{text-align:center}nav .representation .logo{margin-left:auto;margin-right:auto;max-width:80px;margin-bottom:0}nav>ul{line-height:2rem;border-top:1px solid #f3f7f9;font-size:.9rem}nav>ul .active>a{color:#7dabf8}nav>ul li,nav>ul ul{line-height:2rem}nav>ul li{color:#697386}nav>ul li li{padding-left:1rem;font-weight:400;font-size:.85rem}nav>ul li ul{max-height:0;overflow:hidden}nav>ul li.active ul{max-height:400px}nav>ul li li,nav>ul li ul{transition:all .6s 0s}.content h1{font-size:2rem}.content h2{font-size:1.5rem}.content h1,.content h2{padding-top:1rem;padding-bottom:1rem}.content>.container-fluid{border-top:1px solid #f3f7f9;padding-top:3rem;margin-top:12rem}.content>.container-fluid:first-of-type{border-top:none;margin-top:0}.content>.container-fluid>.row{margin-top:8rem}.content>.container-fluid>.row:first-of-type{margin-top:0}.content h3,.content h4,.content h5,.content h6{font-size:1.2rem;margin-top:2.5em;margin-bottom:.8em}.content .list,.content li{border-top:1px solid #f3f7f9;padding:1rem 0}.content a.external,.content a.info,.content a.internal{display:inline-block;color:#7dabf8}.content a.external:after,.content a.info:after,.content a.internal:after{font-family:icons;vertical-align:top;font-size:.7em;margin-left:4px}.content a.external.info,.content a.info.info,.content a.internal.info{color:#7dabf8;cursor:help;border-bottom:1px dotted #7dabf8}.content a.external.info:after,.content a.info.info:after,.content a.internal.info:after{content:"\e101"}.content a.external.external.external:after,.content a.external.internal.external:after,.content a.info.external.external:after,.content a.info.internal.external:after,.content a.internal.external.external:after,.content a.internal.internal.external:after{content:"\e100"}.content a.external.external.internal:after,.content a.external.internal.internal:after,.content a.info.external.internal:after,.content a.info.internal.internal:after,.content a.internal.external.internal:after,.content a.internal.internal.internal:after{content:"\e102"}.content a.external.external,.content a.external.internal,.content a.info.external,.content a.info.internal,.content a.internal.external,.content a.internal.internal{padding:0 4px;position:relative;display:inline-block;transition:color .3s}.content a.external.external:before,.content a.external.internal:before,.content a.info.external:before,.content a.info.internal:before,.content a.internal.external:before,.content a.internal.internal:before{position:absolute;top:60%;left:50%;color:transparent;content:"•";text-shadow:0 0 transparent;font-size:1em;transition:text-shadow .3s,color .3s;transform:translateX(-50%);pointer-events:none}.content a.external.external:focus:before,.content a.external.external:hover:before,.content a.external.internal:focus:before,.content a.external.internal:hover:before,.content a.info.external:focus:before,.content a.info.external:hover:before,.content a.info.internal:focus:before,.content a.info.internal:hover:before,.content a.internal.external:focus:before,.content a.internal.external:hover:before,.content a.internal.internal:focus:before,.content a.internal.internal:hover:before{color:#7dabf8;text-shadow:10px 0 #7dabf8,-10px 0 #7dabf8}.content code.inline{background-color:rgba(244,247,249,.58824);padding:.15rem .3rem;border-radius:4px;border:1px solid rgba(211,225,242,.41961);display:inline-block}.content .accent-blue{color:#7dabf8}.content .accent-green{color:#57ce9a}.content .accent-hard{color:#57ce9a;font-weight:700;text-transform:uppercase}.content .accent-gray{font-weight:700;color:#8297b3}.content .accent-bold{font-weight:700;color:#7dabf8}.content .accent-box{background-color:#212d63;border-radius:10px;color:#fff;box-sizing:border-box;overflow:hidden;margin-top:2rem}.content .accent-box header{background-color:#1a2652;border-top-left-radius:10px;border-top-right-radius:10px}.content .accent-box header>:first-child{color:#57ce9a;font-weight:700;margin-right:10px;-webkit-animation:blinker-text 1.4s linear infinite;animation:blinker-text 1.4s linear infinite}.content .accent-box header input{background:rgba(1,1,1,.3);padding:2px 10px;border:none;border-bottom:1px solid #57ce9a;-webkit-animation:blinker-border 1.4s linear infinite;animation:blinker-border 1.4s linear infinite}@-webkit-keyframes blinker-text{50%{color:#5dd9d7;opacity:.7}}@keyframes blinker-text{50%{color:#5dd9d7;opacity:.7}}@-webkit-keyframes blinker-border{50%{border-bottom-color:#5dd9d7;opacity:.7}}@keyframes blinker-border{50%{border-bottom-color:#5dd9d7;opacity:.7}}.content .accent-box>*{padding:1.2rem 2rem}.content .accent-box .json-formatter-number,.content .accent-box .json-formatter-row,.content .accent-box .json-formatter-row a,.content .accent-box .json-formatter-row a:hover{color:#fff!important}.content .accent-box .json-formatter-bracket,.content .accent-box .json-formatter-key,.content .accent-box label{color:#7dabf8}.content .accent-box .json-formatter-string{color:#57ce9a}.content .accent-box .json-formatter-null{color:#697386}form{margin-top:3rem;background-color:#f3f7f9;padding:1rem}form .StripeElement,form input,form select,form textarea{width:100%;box-sizing:border-box;height:40px;padding:10px 12px;border:1px solid transparent;border-radius:4px;background-color:#fff;box-shadow:0 1px 3px 0 #e6ebf1;transition:box-shadow .15s ease;margin-bottom:1rem}form .StripeElement--focus,form input:focus,form select:focus,form textarea:focus{box-shadow:0 1px 3px 0 #bec7d1}form .StripeElement--invalid,form input:invalid,form select:invalid{border-color:#db8b51}form button{background:#7dabf8;color:#f3f7f9;height:38px;padding:0 14px;border:none;box-shadow:0 4px 6px rgba(50,50,93,.11),0 1px 3px rgba(0,0,0,.08);border-radius:4px}form button>img{height:50%;vertical-align:middle}form button:disabled{background:#697386}form button:disabled.success{background:#57ce9a}form label{display:block;color:#8297b3;font-size:.85rem;margin-bottom:6px}form textarea{height:8rem!important;resize:none}.tippy-box{padding:.8rem}.tippy-box[data-animation=scale][data-placement^=top]{transform-origin:bottom}.tippy-box[data-animation=scale][data-placement^=bottom]{transform-origin:top}.tippy-box[data-animation=scale][data-placement^=left]{transform-origin:right}.tippy-box[data-animation=scale][data-placement^=right]{transform-origin:left}.tippy-box[data-animation=scale][data-state=hidden]{transform:scale(.5);opacity:0}.tippy-box[data-theme~=zurianalytics]{background-color:#f3f7f9;color:#697386}.tippy-box[data-theme~=zurianalytics][data-placement^=bottom]>.tippy-arrow:before,.tippy-box[data-theme~=zurianalytics][data-placement^=left]>.tippy-arrow:before,.tippy-box[data-theme~=zurianalytics][data-placement^=right]>.tippy-arrow:before,.tippy-box[data-theme~=zurianalytics][data-placement^=top]>.tippy-arrow:before{border-top-color:#f3f7f9}.tippy-box[data-theme~=aggressive]{background-color:#db8b51;color:#f4d2d4}.tippy-box[data-theme~=aggressive][data-placement^=bottom]>.tippy-arrow:before,.tippy-box[data-theme~=aggressive][data-placement^=top]>.tippy-arrow:before{border-bottom-color:#db8b51;color:#db8b51}.tippy-box[data-theme~=mild]{background-color:#57ce9a;color:#fff}.tippy-box[data-theme~=mild][data-placement^=bottom]>.tippy-arrow:before,.tippy-box[data-theme~=mild][data-placement^=top]>.tippy-arrow:before{border-bottom-color:#57ce9a;color:#57ce9a}</style>
-  </head>
-  <body>
-    <div data-server-rendered="true" id="__nuxt"><!----><div id="__layout"><div id="app" class="container"><script src="https://js.stripe.com/v3/"></script> <div class="row"><div class="col-md-2"><nav><a href class="puller"><span>»</span> <!----></a> <div class="representation"><a href="https://zurianalytics.com/"><img src="images/logo.png" class="logo"> <div><span class="accent-blue">ETF</span> Data API</div></a></div> <ul></ul> <footer><ul><li><a href="#subscription-plans">Sign Up for a Developer Key</a></li> <li><a href="https://zurianalytics.com">This is a ZuriAnalytics API.</a></li></ul></footer></nav></div> <div class="col-md-10"><div class="content"><div id="introduction" menu-item="Introduction" top="" class="container-fluid"><h1>Introduction</h1> <div class="row"><div class="col-md-6"><p>
-                Zuri Analytics API contains deep fundamental information about most ETFs, ETNs, ETCs and other fund-like products listed on all major european exchanges.
-            </p> <p>
-                Zuri Analytics API provides basic information such as: 
-                Domicile, Followed Index, Asset Class, Fee, Currency, Replication Method, Distribution Type & Frequency.
-                This information is manually analyzed by our team and updated regulary. 
+ */
+/*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */html{font-family:sans-serif;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,details,figcaption,figure,footer,header,hgroup,main,menu,nav,section,summary{display:block}audio,canvas,progress,video{display:inline-block;vertical-align:baseline}audio:not([controls]){display:none;height:0}[hidden],template{display:none}a{background-color:transparent}a:active,a:hover{outline:0}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:700}dfn{font-style:italic}h1{font-size:2em;margin:.67em 0}mark{background:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sup{top:-.5em}sub{bottom:-.25em}img{border:0}svg:not(:root){overflow:hidden}figure{margin:1em 40px}hr{-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box;height:0}pre{overflow:auto}code,kbd,pre,samp{font-family:monospace,monospace;font-size:1em}button,input,optgroup,select,textarea{color:inherit;font:inherit;margin:0}button{overflow:visible}button,select{text-transform:none}button,html input[type=button],input[type=reset],input[type=submit]{-webkit-appearance:button;cursor:pointer}button[disabled],html input[disabled]{cursor:default}button::-moz-focus-inner,input::-moz-focus-inner{border:0;padding:0}input{line-height:normal}input[type=checkbox],input[type=radio]{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;padding:0}input[type=number]::-webkit-inner-spin-button,input[type=number]::-webkit-outer-spin-button{height:auto}input[type=search]{-webkit-appearance:textfield;-webkit-box-sizing:content-box;-moz-box-sizing:content-box;box-sizing:content-box}input[type=search]::-webkit-search-cancel-button,input[type=search]::-webkit-search-decoration{-webkit-appearance:none}fieldset{border:1px solid silver;margin:0 2px;padding:.35em .625em .75em}legend{border:0;padding:0}textarea{overflow:auto}optgroup{font-weight:700}table{border-collapse:collapse;border-spacing:0}td,th{padding:0}*,:after,:before{-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}html{font-size:10px;-webkit-tap-highlight-color:rgba(0,0,0,0)}body{font-family:Helvetica Neue,Helvetica,Arial,sans-serif;font-size:14px;line-height:1.42857143;color:#333;background-color:#fff}button,input,select,textarea{font-family:inherit;font-size:inherit;line-height:inherit}figure{margin:0}img{vertical-align:middle}.img-responsive{display:block;max-width:100%;height:auto}.img-rounded{border-radius:6px}.img-thumbnail{padding:4px;line-height:1.42857143;background-color:#fff;border:1px solid #ddd;border-radius:4px;-webkit-transition:all .2s ease-in-out;-o-transition:all .2s ease-in-out;transition:all .2s ease-in-out;display:inline-block;max-width:100%;height:auto}.img-circle{border-radius:50%}hr{margin-top:20px;margin-bottom:20px;border:0;border-top:1px solid #eee}.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);border:0}.sr-only-focusable:active,.sr-only-focusable:focus{position:static;width:auto;height:auto;margin:0;overflow:visible;clip:auto}[role=button]{cursor:pointer}.container{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}@media (min-width:1200px){.container{width:1170px}}@media (min-width:1300px){.container{width:1270px}}.container-fluid{padding-right:15px;padding-left:15px;margin-right:auto;margin-left:auto}.row{margin-right:-15px;margin-left:-15px}.row-no-gutters{margin-right:0;margin-left:0}.row-no-gutters [class*=col-]{padding-right:0;padding-left:0}.col-lg-1,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-lg-10,.col-lg-11,.col-lg-12,.col-md-1,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-10,.col-md-11,.col-md-12,.col-sm-1,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-sm-10,.col-sm-11,.col-sm-12,.col-xs-1,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9,.col-xs-10,.col-xs-11,.col-xs-12{position:relative;min-height:1px;padding-right:15px;padding-left:15px}.col-xs-1,.col-xs-2,.col-xs-3,.col-xs-4,.col-xs-5,.col-xs-6,.col-xs-7,.col-xs-8,.col-xs-9,.col-xs-10,.col-xs-11,.col-xs-12{float:left}.col-xs-12{width:100%}.col-xs-11{width:91.66666667%}.col-xs-10{width:83.33333333%}.col-xs-9{width:75%}.col-xs-8{width:66.66666667%}.col-xs-7{width:58.33333333%}.col-xs-6{width:50%}.col-xs-5{width:41.66666667%}.col-xs-4{width:33.33333333%}.col-xs-3{width:25%}.col-xs-2{width:16.66666667%}.col-xs-1{width:8.33333333%}.col-xs-pull-12{right:100%}.col-xs-pull-11{right:91.66666667%}.col-xs-pull-10{right:83.33333333%}.col-xs-pull-9{right:75%}.col-xs-pull-8{right:66.66666667%}.col-xs-pull-7{right:58.33333333%}.col-xs-pull-6{right:50%}.col-xs-pull-5{right:41.66666667%}.col-xs-pull-4{right:33.33333333%}.col-xs-pull-3{right:25%}.col-xs-pull-2{right:16.66666667%}.col-xs-pull-1{right:8.33333333%}.col-xs-pull-0{right:auto}.col-xs-push-12{left:100%}.col-xs-push-11{left:91.66666667%}.col-xs-push-10{left:83.33333333%}.col-xs-push-9{left:75%}.col-xs-push-8{left:66.66666667%}.col-xs-push-7{left:58.33333333%}.col-xs-push-6{left:50%}.col-xs-push-5{left:41.66666667%}.col-xs-push-4{left:33.33333333%}.col-xs-push-3{left:25%}.col-xs-push-2{left:16.66666667%}.col-xs-push-1{left:8.33333333%}.col-xs-push-0{left:auto}.col-xs-offset-12{margin-left:100%}.col-xs-offset-11{margin-left:91.66666667%}.col-xs-offset-10{margin-left:83.33333333%}.col-xs-offset-9{margin-left:75%}.col-xs-offset-8{margin-left:66.66666667%}.col-xs-offset-7{margin-left:58.33333333%}.col-xs-offset-6{margin-left:50%}.col-xs-offset-5{margin-left:41.66666667%}.col-xs-offset-4{margin-left:33.33333333%}.col-xs-offset-3{margin-left:25%}.col-xs-offset-2{margin-left:16.66666667%}.col-xs-offset-1{margin-left:8.33333333%}.col-xs-offset-0{margin-left:0}@media (min-width:768px){.col-sm-1,.col-sm-2,.col-sm-3,.col-sm-4,.col-sm-5,.col-sm-6,.col-sm-7,.col-sm-8,.col-sm-9,.col-sm-10,.col-sm-11,.col-sm-12{float:left}.col-sm-12{width:100%}.col-sm-11{width:91.66666667%}.col-sm-10{width:83.33333333%}.col-sm-9{width:75%}.col-sm-8{width:66.66666667%}.col-sm-7{width:58.33333333%}.col-sm-6{width:50%}.col-sm-5{width:41.66666667%}.col-sm-4{width:33.33333333%}.col-sm-3{width:25%}.col-sm-2{width:16.66666667%}.col-sm-1{width:8.33333333%}.col-sm-pull-12{right:100%}.col-sm-pull-11{right:91.66666667%}.col-sm-pull-10{right:83.33333333%}.col-sm-pull-9{right:75%}.col-sm-pull-8{right:66.66666667%}.col-sm-pull-7{right:58.33333333%}.col-sm-pull-6{right:50%}.col-sm-pull-5{right:41.66666667%}.col-sm-pull-4{right:33.33333333%}.col-sm-pull-3{right:25%}.col-sm-pull-2{right:16.66666667%}.col-sm-pull-1{right:8.33333333%}.col-sm-pull-0{right:auto}.col-sm-push-12{left:100%}.col-sm-push-11{left:91.66666667%}.col-sm-push-10{left:83.33333333%}.col-sm-push-9{left:75%}.col-sm-push-8{left:66.66666667%}.col-sm-push-7{left:58.33333333%}.col-sm-push-6{left:50%}.col-sm-push-5{left:41.66666667%}.col-sm-push-4{left:33.33333333%}.col-sm-push-3{left:25%}.col-sm-push-2{left:16.66666667%}.col-sm-push-1{left:8.33333333%}.col-sm-push-0{left:auto}.col-sm-offset-12{margin-left:100%}.col-sm-offset-11{margin-left:91.66666667%}.col-sm-offset-10{margin-left:83.33333333%}.col-sm-offset-9{margin-left:75%}.col-sm-offset-8{margin-left:66.66666667%}.col-sm-offset-7{margin-left:58.33333333%}.col-sm-offset-6{margin-left:50%}.col-sm-offset-5{margin-left:41.66666667%}.col-sm-offset-4{margin-left:33.33333333%}.col-sm-offset-3{margin-left:25%}.col-sm-offset-2{margin-left:16.66666667%}.col-sm-offset-1{margin-left:8.33333333%}.col-sm-offset-0{margin-left:0}}@media (min-width:992px){.col-md-1,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-10,.col-md-11,.col-md-12{float:left}.col-md-12{width:100%}.col-md-11{width:91.66666667%}.col-md-10{width:83.33333333%}.col-md-9{width:75%}.col-md-8{width:66.66666667%}.col-md-7{width:58.33333333%}.col-md-6{width:50%}.col-md-5{width:41.66666667%}.col-md-4{width:33.33333333%}.col-md-3{width:25%}.col-md-2{width:16.66666667%}.col-md-1{width:8.33333333%}.col-md-pull-12{right:100%}.col-md-pull-11{right:91.66666667%}.col-md-pull-10{right:83.33333333%}.col-md-pull-9{right:75%}.col-md-pull-8{right:66.66666667%}.col-md-pull-7{right:58.33333333%}.col-md-pull-6{right:50%}.col-md-pull-5{right:41.66666667%}.col-md-pull-4{right:33.33333333%}.col-md-pull-3{right:25%}.col-md-pull-2{right:16.66666667%}.col-md-pull-1{right:8.33333333%}.col-md-pull-0{right:auto}.col-md-push-12{left:100%}.col-md-push-11{left:91.66666667%}.col-md-push-10{left:83.33333333%}.col-md-push-9{left:75%}.col-md-push-8{left:66.66666667%}.col-md-push-7{left:58.33333333%}.col-md-push-6{left:50%}.col-md-push-5{left:41.66666667%}.col-md-push-4{left:33.33333333%}.col-md-push-3{left:25%}.col-md-push-2{left:16.66666667%}.col-md-push-1{left:8.33333333%}.col-md-push-0{left:auto}.col-md-offset-12{margin-left:100%}.col-md-offset-11{margin-left:91.66666667%}.col-md-offset-10{margin-left:83.33333333%}.col-md-offset-9{margin-left:75%}.col-md-offset-8{margin-left:66.66666667%}.col-md-offset-7{margin-left:58.33333333%}.col-md-offset-6{margin-left:50%}.col-md-offset-5{margin-left:41.66666667%}.col-md-offset-4{margin-left:33.33333333%}.col-md-offset-3{margin-left:25%}.col-md-offset-2{margin-left:16.66666667%}.col-md-offset-1{margin-left:8.33333333%}.col-md-offset-0{margin-left:0}}@media (min-width:1200px){.col-lg-1,.col-lg-2,.col-lg-3,.col-lg-4,.col-lg-5,.col-lg-6,.col-lg-7,.col-lg-8,.col-lg-9,.col-lg-10,.col-lg-11,.col-lg-12{float:left}.col-lg-12{width:100%}.col-lg-11{width:91.66666667%}.col-lg-10{width:83.33333333%}.col-lg-9{width:75%}.col-lg-8{width:66.66666667%}.col-lg-7{width:58.33333333%}.col-lg-6{width:50%}.col-lg-5{width:41.66666667%}.col-lg-4{width:33.33333333%}.col-lg-3{width:25%}.col-lg-2{width:16.66666667%}.col-lg-1{width:8.33333333%}.col-lg-pull-12{right:100%}.col-lg-pull-11{right:91.66666667%}.col-lg-pull-10{right:83.33333333%}.col-lg-pull-9{right:75%}.col-lg-pull-8{right:66.66666667%}.col-lg-pull-7{right:58.33333333%}.col-lg-pull-6{right:50%}.col-lg-pull-5{right:41.66666667%}.col-lg-pull-4{right:33.33333333%}.col-lg-pull-3{right:25%}.col-lg-pull-2{right:16.66666667%}.col-lg-pull-1{right:8.33333333%}.col-lg-pull-0{right:auto}.col-lg-push-12{left:100%}.col-lg-push-11{left:91.66666667%}.col-lg-push-10{left:83.33333333%}.col-lg-push-9{left:75%}.col-lg-push-8{left:66.66666667%}.col-lg-push-7{left:58.33333333%}.col-lg-push-6{left:50%}.col-lg-push-5{left:41.66666667%}.col-lg-push-4{left:33.33333333%}.col-lg-push-3{left:25%}.col-lg-push-2{left:16.66666667%}.col-lg-push-1{left:8.33333333%}.col-lg-push-0{left:auto}.col-lg-offset-12{margin-left:100%}.col-lg-offset-11{margin-left:91.66666667%}.col-lg-offset-10{margin-left:83.33333333%}.col-lg-offset-9{margin-left:75%}.col-lg-offset-8{margin-left:66.66666667%}.col-lg-offset-7{margin-left:58.33333333%}.col-lg-offset-6{margin-left:50%}.col-lg-offset-5{margin-left:41.66666667%}.col-lg-offset-4{margin-left:33.33333333%}.col-lg-offset-3{margin-left:25%}.col-lg-offset-2{margin-left:16.66666667%}.col-lg-offset-1{margin-left:8.33333333%}.col-lg-offset-0{margin-left:0}}.clearfix:after,.clearfix:before,.container-fluid:after,.container-fluid:before,.container:after,.container:before,.row:after,.row:before{display:table;content:" "}.clearfix:after,.container-fluid:after,.container:after,.row:after{clear:both}.center-block{display:block;margin-right:auto;margin-left:auto}.pull-right{float:right!important}.pull-left{float:left!important}.hide{display:none!important}.show{display:block!important}.invisible{visibility:hidden}.text-hide{font:0/0 a;color:transparent;text-shadow:none;background-color:transparent;border:0}.hidden{display:none!important}.affix{position:fixed}
 
-                Listings of new products are reflected almost immediately.
-            </p> <p>
-                Zuri Analytics API also provide deep fundamental information derived from the underlying securities such as: <b>Sector Exposre</b>, 
-                <b>Country Exposure</b>, <b>Factors</b>, <b>Dividend Yield</b> etc.
+/*! ---------------------
+  Global Styles
+  --------------------!*/body,html{font-family:-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;font-size:15px;line-height:1.6rem;color:#1a2652;padding:0;margin:0;-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale;background-color:#f3f7f9;height:100%;-webkit-text-size-adjust:none}body #app,html #app{background-color:#fff;box-shadow:0 0 1px 0 rgba(0,0,0,.3);margin-top:5rem;margin-bottom:5rem;padding-top:6rem;padding-bottom:6rem}@media (max-width:1200px){body #app,html #app{margin-top:0;margin-bottom:0}}
 
-                This information is dynamically updated as the underlying securities change or are added / removed from their tracking product. 
-            </p></div> <div class="col-md-6"><div class="accent-box .light"><header id="demo-header"><code data-tippy-content="Input an ISIN into the field to the right, to check what information we store about the security" class="info">
-                        LIVE DEMO (ISIN):</code><input value="LU0378437502"></header> <div id="demo-content"><div class="row"><div class="col-sm-12"><canvas id="countries" style="width:100%"></canvas></div> <div class="col-sm-12"><canvas id="sectors" style="width:100%"></canvas></div></div> <div class="row"><div class="col-sm-12"><label>Fund Name:</label> <span></span></div></div> <div class="row"><div class="col-sm-4"><label>indexName</label> <span></span></div> <div class="col-sm-4"><label>indexProvider</label> <span></span></div> <div class="col-sm-4"><label>provider</label> <span></span></div></div> <div class="row"><div class="col-sm-4"><label>Asset Class</label> <span></span></div> <div class="col-sm-4"><label>Domicile</label> <span></span></div> <div class="col-sm-4"><label>Base Currency</label> <span></span></div></div> <div class="row"><div class="col-sm-4"><label>ReplicationMethod</label> <span></span></div> <div class="col-sm-4"><label>Distribution Type</label> <span></span></div> <div class="col-sm-4"><label>Distribution Frequency</label> <span></span></div></div> <div class="row"><div class="col-sm-4"><label>Product Type</label> <span></span></div> <div class="col-sm-4"><label>Factor</label> <span></span></div></div></div></div></div></div></div> <div id="get-individual-etf" menu-item="Get Individual Product" top="" class="container-fluid"><h1>Get Individual Product</h1> <div class="row"><div class="col-md-6"><p>This endpoint searches for a product (like ETFs) by its <span data-tippy-content="
+/*! ---------------------
+Side menu
+  -------------------- !*/nav{background-color:#fff;position:fixed;font-weight:700;padding:1.4rem;z-index:30}nav .puller{height:40vh;float:right;display:none;flex-direction:column;justify-content:center;width:22px;border-right:2px solid #7dabf8;color:#7dabf8;font-size:2rem}@media (max-width:1200px){nav{padding:.6rem}}@media (max-width:992px){nav{padding-right:0;transform:translateX(-100%);margin-left:8px;transition:all .3s ease-out}nav.active{transform:translateX(0);margin-left:0}nav .puller{display:flex}}nav footer{border-top:1px solid #f3f7f9;font-size:.7rem}nav .representation{text-align:center}nav .representation .logo{margin-left:auto;margin-right:auto;max-width:80px;margin-bottom:0}nav>ul{line-height:2rem;border-top:1px solid #f3f7f9;font-size:.9rem}nav>ul .active>a{color:#7dabf8}nav>ul li,nav>ul ul{line-height:2rem}nav>ul li{color:#697386}nav>ul li li{padding-left:1rem;font-weight:400;font-size:.85rem}nav>ul li ul{max-height:0;overflow:hidden}nav>ul li.active ul{max-height:400px}nav>ul li li,nav>ul li ul{transition:all .6s 0s}
+
+/*! ---------------------
+  Chart styles
+  -------------------- !*/.left .pie-chart{transform:translate(160px)}.left .chart-legend{transform:translate(0)}.right .pie-chart{transform:translate(-40px)}.right .chart-legend{transform:scaleX(-1)}.right .chart-legend .legend-dataset-text,.right .chart-legend .legend-dot{transform:scaleX(-1) translateX(80%)}.chart-container .legend-dataset-text{fill:#7dabf8;font-weight:600}
+
+/*! ---------------------
+  Content formatting styles
+  -------------------- !*/.content h1{font-size:2rem}.content h2{font-size:1.5rem}.content h1,.content h2{padding-top:1rem;padding-bottom:1rem}.content>.container-fluid{border-top:1px solid #f3f7f9;padding-top:3rem;margin-top:12rem}.content>.container-fluid:first-of-type{border-top:none;margin-top:0}.content>.container-fluid>.row{margin-top:8rem}.content>.container-fluid>.row:first-of-type{margin-top:0}.content h3,.content h4,.content h5,.content h6{font-size:1.2rem;margin-top:2.5em;margin-bottom:.8em}.content .list,.content li{border-top:1px solid #f3f7f9;padding:1rem 0}
+
+/*! ---------------------
+  Accents & Special
+  -------------------- !*/.content a.external,.content a.info,.content a.internal{display:inline-block;color:#7dabf8}.content a.external:after,.content a.info:after,.content a.internal:after{font-family:icons;vertical-align:top;font-size:.7em;margin-left:4px}.content a.external.info,.content a.info.info,.content a.internal.info{color:#7dabf8;cursor:help;border-bottom:1px dotted #7dabf8}.content a.external.info:after,.content a.info.info:after,.content a.internal.info:after{content:""}.content a.external.external.external:after,.content a.external.internal.external:after,.content a.info.external.external:after,.content a.info.internal.external:after,.content a.internal.external.external:after,.content a.internal.internal.external:after{content:""}.content a.external.external.internal:after,.content a.external.internal.internal:after,.content a.info.external.internal:after,.content a.info.internal.internal:after,.content a.internal.external.internal:after,.content a.internal.internal.internal:after{content:""}.content a.external.external,.content a.external.internal,.content a.info.external,.content a.info.internal,.content a.internal.external,.content a.internal.internal{padding:0 4px;position:relative;display:inline-block;-webkit-transition:color .3s;-moz-transition:color .3s;transition:color .3s}.content a.external.external:before,.content a.external.internal:before,.content a.info.external:before,.content a.info.internal:before,.content a.internal.external:before,.content a.internal.internal:before{position:absolute;top:60%;left:50%;color:transparent;content:"•";text-shadow:0 0 transparent;font-size:1em;-webkit-transition:text-shadow .3s,color .3s;-moz-transition:text-shadow .3s,color .3s;transition:text-shadow .3s,color .3s;-webkit-transform:translateX(-50%);-moz-transform:translateX(-50%);transform:translateX(-50%);pointer-events:none}.content a.external.external:focus:before,.content a.external.external:hover:before,.content a.external.internal:focus:before,.content a.external.internal:hover:before,.content a.info.external:focus:before,.content a.info.external:hover:before,.content a.info.internal:focus:before,.content a.info.internal:hover:before,.content a.internal.external:focus:before,.content a.internal.external:hover:before,.content a.internal.internal:focus:before,.content a.internal.internal:hover:before{color:#7dabf8;text-shadow:10px 0 #7dabf8,-10px 0 #7dabf8}.content code.inline{background-color:rgba(244,247,249,.59);padding:.15rem .3rem;border-radius:4px;border:1px solid rgba(211,225,242,.42);display:inline-block}.content .accent-blue{color:#7dabf8}.content .accent-green{color:#57ce9a}.content .accent-hard{color:#57ce9a;font-weight:700;text-transform:uppercase}.content .accent-gray{font-weight:700;color:#8297b3}.content .accent-bold{font-weight:700;color:#7dabf8}
+
+/*! ---------------------
+  Dark Box Styles
+  -------------------- !*/.content .accent-box{background-color:#212d63;border-radius:10px;color:#fff;box-sizing:border-box;overflow:hidden;margin-top:2rem}.content .accent-box #demo-content h6{margin-top:0}.content .accent-box #demo-content .row{padding:.3rem}.content .accent-box header{background-color:#1a2652;border-top-left-radius:10px;border-top-right-radius:10px}.content .accent-box header>:first-child{color:#57ce9a;font-weight:700;margin-right:10px;animation:blinker-text 1.4s linear infinite}.content .accent-box header input{background:rgba(1,1,1,.3);padding:2px 10px;border:none;border-bottom:1px solid #57ce9a;animation:blinker-border 1.4s linear infinite}@keyframes blinker-text{50%{color:#5dd9d7;opacity:.7}}@keyframes blinker-border{50%{border-bottom-color:#5dd9d7;opacity:.7}}.content .accent-box>*{padding:1.2rem 2rem}.content .accent-box .json-formatter-number,.content .accent-box .json-formatter-row,.content .accent-box .json-formatter-row a,.content .accent-box .json-formatter-row a:hover{color:#fff!important}.content .accent-box .json-formatter-bracket,.content .accent-box .json-formatter-key,.content .accent-box label{color:#7dabf8}.content .accent-box .json-formatter-string{color:#57ce9a}.content .accent-box .json-formatter-null{color:#697386}
+
+/*! ---------------------
+  Form Elements
+  -------------------- !*/form{margin-top:3rem;background-color:#f3f7f9;padding:1rem}form .StripeElement,form input,form select,form textarea{width:100%;box-sizing:border-box;height:40px;padding:10px 12px;border:1px solid transparent;border-radius:4px;background-color:#fff;box-shadow:0 1px 3px 0 #e6ebf1;-webkit-transition:box-shadow .15s ease;transition:box-shadow .15s ease;margin-bottom:1rem}form .StripeElement--focus,form input:focus,form select:focus,form textarea:focus{box-shadow:0 1px 3px 0 #bec7d1}form .StripeElement--invalid,form input:invalid,form select:invalid{border-color:#db8b51}form button{background:#7dabf8;color:#f3f7f9;height:38px;padding:0 14px;border:none;box-shadow:0 4px 6px rgba(50,50,93,.11),0 1px 3px rgba(0,0,0,.08);border-radius:4px}form button>img{height:50%;vertical-align:middle}form button:disabled{background:#697386}form button:disabled.success{background:#57ce9a}form label{display:block;color:#8297b3;font-size:.85rem;margin-bottom:6px}form textarea{height:8rem!important;resize:none}
+
+/*! ---------------------
+  Tippy
+  -------------------- !*/.tippy-box{padding:.8rem}.tippy-box[data-animation=scale][data-placement^=top]{transform-origin:bottom}.tippy-box[data-animation=scale][data-placement^=bottom]{transform-origin:top}.tippy-box[data-animation=scale][data-placement^=left]{transform-origin:right}.tippy-box[data-animation=scale][data-placement^=right]{transform-origin:left}.tippy-box[data-animation=scale][data-state=hidden]{transform:scale(.5);opacity:0}.tippy-box[data-theme~=zurianalytics]{background-color:#f3f7f9;color:#697386}.tippy-box[data-theme~=zurianalytics][data-placement^=bottom]>.tippy-arrow:before,.tippy-box[data-theme~=zurianalytics][data-placement^=left]>.tippy-arrow:before,.tippy-box[data-theme~=zurianalytics][data-placement^=right]>.tippy-arrow:before,.tippy-box[data-theme~=zurianalytics][data-placement^=top]>.tippy-arrow:before{border-top-color:#f3f7f9}.tippy-box[data-theme~=aggressive]{background-color:#db8b51;color:#f4d2d4}.tippy-box[data-theme~=aggressive][data-placement^=bottom]>.tippy-arrow:before,.tippy-box[data-theme~=aggressive][data-placement^=top]>.tippy-arrow:before{border-bottom-color:#db8b51;color:#db8b51}.tippy-box[data-theme~=mild]{background-color:#57ce9a;color:#fff}.tippy-box[data-theme~=mild][data-placement^=bottom]>.tippy-arrow:before,.tippy-box[data-theme~=mild][data-placement^=top]>.tippy-arrow:before{border-bottom-color:#57ce9a;color:#57ce9a}
+
+/*# sourceMappingURL=/main.css.map */         .tippy-box[data-animation=fade][data-state=hidden]{opacity:0}[data-tippy-root]{max-width:calc(100vw - 10px)}.tippy-box{position:relative;background-color:#333;color:#fff;border-radius:4px;font-size:14px;line-height:1.4;outline:0;transition-property:transform,visibility,opacity}.tippy-box[data-placement^=top]>.tippy-arrow{bottom:0}.tippy-box[data-placement^=top]>.tippy-arrow:before{bottom:-7px;left:0;border-width:8px 8px 0;border-top-color:initial;transform-origin:center top}.tippy-box[data-placement^=bottom]>.tippy-arrow{top:0}.tippy-box[data-placement^=bottom]>.tippy-arrow:before{top:-7px;left:0;border-width:0 8px 8px;border-bottom-color:initial;transform-origin:center bottom}.tippy-box[data-placement^=left]>.tippy-arrow{right:0}.tippy-box[data-placement^=left]>.tippy-arrow:before{border-width:8px 0 8px 8px;border-left-color:initial;right:-7px;transform-origin:center left}.tippy-box[data-placement^=right]>.tippy-arrow{left:0}.tippy-box[data-placement^=right]>.tippy-arrow:before{left:-7px;border-width:8px 8px 8px 0;border-right-color:initial;transform-origin:center right}.tippy-box[data-inertia][data-state=visible]{transition-timing-function:cubic-bezier(.54,1.5,.38,1.11)}.tippy-arrow{width:16px;height:16px;color:#333}.tippy-arrow:before{content:"";position:absolute;border-color:transparent;border-style:solid}.tippy-content{position:relative;padding:5px 9px;z-index:1}
+/*# sourceMappingURL=/tippy.bundle.css.map */    </style>
+    
+    <div class="container" id="app">
+
+        <!-- Left Side Menu -->
+        <div class="row">
+
+            <div class="col-md-2">
+                    
+<nav v-bind:class="{ active: interaction.menu }" id = "side-menu">
+
+    <a class="puller" href="" v-on:click.prevent="interaction.menu = !interaction.menu">
+        <span v-if="!interaction.menu">»</span>
+        <span v-if="interaction.menu">«</span>
+    </a>
+    <div class="representation">
+        <a href="https://zurianalytics.com/">
+            <img class="logo" src="images/logo.png"/>
+            <div><span class="accent-blue">ETF</span> Data API</div>
+        </a>
+    </div>
+
+    <ul>
+        <li v-for="i in menuItems">
+            <a :href="'#' + i.id" @click="smoothScrollToLink(i.linkTo, $event)">{{i.content}}</a>
+
+            <ul v-if="i.subs.length > 0">
+                <li v-for="si in i.subs">
+                    <a :href = "'#' + si.id" @click="smoothScrollToLink(si.linkTo, $event)">{{si.content}}</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <footer>
+        <ul>
+            <li><a href='#subscription-plans'>Sign Up for a Developer Key</a></li>
+            <li><a href='https://zurianalytics.com'>This is a ZuriAnalytics API.</a></li>
+        </ul>
+    </footer>
+</nav>
+
+            </div>
+
+            <div class="col-md-10">
+                <!-- Main Page Conent -->
+                <div class="content">
+
+                    <!-- Page content -->
+                    
+    <div class="container-fluid" id="introduction" menu-item="Introduction" top>
+
+        <h1>Introduction</h1>
+
+        <div class="row">
+            <div class="col-md-6">
+
+                <p>
+                    {{apiName}} contains deep fundamental information about most ETFs, ETNs, ETCs and other fund-like products listed on all major european exchanges.
+                </p>
+
+                <p>
+                    {{apiName}} provides basic information such as: 
+                    Domicile, Followed Index, Asset Class, Fee, Currency, Replication Method, Distribution Type & Frequency.
+                    This information is manually analyzed by our team and updated regulary. 
+
+                    Listings of new products are reflected almost immediately.
+                </p>
+                
+                <p>
+                    {{apiName}} also provide deep fundamental information derived from the underlying securities such as: <b>Sector Exposre</b>, 
+                    <b>Country Exposure</b>, <b>Factors</b>, <b>Dividend Yield</b> etc.
+
+                    This information is dynamically updated as the underlying securities change or are added / removed from their tracking product. 
+                </p>
+            </div>
+
+
+            <div class="col-md-6">
+                <div class="accent-box .light">
+
+                    <header id="demo-header">
+                        <code class="info"
+                              data-tippy-content="Input an ISIN into the field to the right, to check what information we store about the security">
+                            LIVE DEMO (ISIN):</code><input v-model="isin" v-on:change="getFund()"/>
+                    </header>
+
+
+                    <div id="demo-content">
+                        <div class="row">
+                            <div class="col-xs-12">
+                                <h6 class = "accent-blue">{{ fund.name }}</h6>
+                            </div>
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col-sm-12">
+                                <div id="sectors" style="width: 100%;" class = "left"></div>
+                            </div>
+
+                            <div class="col-sm-12">
+                                <div id="countries" style="width: 100%;" class = "right"></div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <label>ISIN</label><br/>
+                                <span>{{ fund.isin }}</span>
+                            </div>
+                            <div class="col-xs-4">
+                                <label>Asset Class</label><br/>
+                                <span>{{ fund.assetClass }}</span>
+                            </div>
+                            <div class="col-xs-4">
+                                <label>Product</label><br/>
+                                <span>{{ fund.productType }}</span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <label>Factor</label><br/>
+                                <span>{{ fund.factor }}</span>
+                            </div>
+                            <div class="col-xs-4">
+                                <label>Domicile</label><br/>
+                                <span>{{ fund.domicile }}</span>
+                            </div>
+                            <div class="col-xs-4">
+                                <label>Base Currency</label><br/>
+                                <span>{{ fund.baseCurrency }}</span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <label>Replication</label><br/>
+                                <span>{{ fund.replicationMethod }}</span>
+                            </div>
+                            <div class="col-xs-4">
+                                <label>Type</label><br/>
+                                <span>{{ fund.distributionType }}</span>
+                            </div>
+                            <div class="col-xs-4">
+                                <label>Frequency</label><br/>
+                                <span>{{ fund.distributionFrequency }}</span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-xs-4">
+                                <label>Index</label><br/>
+                                <span>{{ fund.indexName }}</span>
+                            </div>
+                            <div class="col-xs-4">
+                                <label>Provider</label><br/>
+                                <span>{{ fund.provider }}</span>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+                    
+    <div class="container-fluid" id="get-individual-etf" menu-item="Get Individual Product" top>
+
+        <h1>Get Individual Product</h1>
+
+        <div class="row">
+
+            <div class="col-md-6">
+
+                    <p>This endpoint searches for a product (like ETFs) by its <span class="info" data-tippy-content="
           An International Securities Identification Number (ISIN)
-          uniquely identifies a security. It can be safely reused across applications" class="info">ISIN</span></p> <p>
-                        Retrieves all of the information known for a specific product in a <a data-tippy-content="The blue box shows the output format for this method call and can be interacted with. 
-                        Feel free to explore the output by expanding / collapsing its components." class="info">JSON format.</a></p> <p>
-                            In order to search for a product with a specific <span class="accent-green">ISIN</span> write:
-                        </p> <p><code class="inline">https://test.api.etf.zurianalytics.com/product/<span class="accent-hard">ISIN</span></code></p> <h3>Parameters</h3> <ul><li><code class="accent-bold">isin</code> <code class="accent-gray">String</code> <code class="accent-hard">Mandatory</code> <p>
+          uniquely identifies a security. It can be safely reused across applications">ISIN</span>
+                    </p>
+
+                    <p>
+                        Retrieves all of the information known for a specific product in a <a class = "info"
+                        data-tippy-content = "The blue box shows the output format for this method call and can be interacted with. 
+                        Feel free to explore the output by expanding / collapsing its components."
+                        >JSON format.</a>
+                    </p>
+
+                        <p>
+                            In order to search for a product with a specific <span class = "accent-green">ISIN</span> write:
+                        </p>
+                        <p>
+                            <code class="inline">{{apiUrl}}/product/<span class="accent-hard">ISIN</span></code>
+                        </p>
+
+                    <h3>Parameters</h3>
+                    <ul>
+                        <li>
+                            <code class="accent-bold">isin</code> <code class="accent-gray">String</code> <code
+                                class="accent-hard">Mandatory</code>
+                            <p>
                                 The ISIN that distinctly identifies the product.
-                            </p></li></ul></div> <div class="col-md-6"><div class="accent-box"><header><code>GET</code><code>https://test.api.etf.zurianalytics.com/product/<span class="accent-green">LU0378437502</span></code></header> <div><code class="json">
+                            </p>
+                        </li>
+                    </ul>
+
+            </div>
+
+
+            <div class="col-md-6">
+                <div class="accent-box">
+                    <header>
+                        <code>GET</code><code>{{apiUrl}}/product/<span class = "accent-green">LU0378437502</span></code>
+                    </header>
+
+
+                    <div><code class="json">
 {
    "totalFee":0.45,
    "indexName":"DJ Industrial Average Index",
@@ -115,126 +355,681 @@
       }
    ]
 }                   
-</code></div></div></div></div></div> <div id="dynamic-search" menu-item="Dynamic Search" top="" class="container-fluid"><h1>Dynamic Search</h1> <div class="row"><div class="col-md-6"><p>This endpoint searches products (like ETFs) by dynamic criteria, and retrieves the results in a 
-                    <a data-tippy-content="The blue box shows the output format for this method call and can be interacted with. 
-                        Feel free to explore the output by expanding / collapsing its components." class="info">JSON format.</a></p> <p>This endpoint is not meant as a way to extract coprehensive
+</code>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+
+                    
+    <div class="container-fluid" id="dynamic-search" menu-item="Dynamic Search" top>
+
+        <h1>Dynamic Search</h1>
+
+        <div class="row">
+
+            <div class="col-md-6">
+
+                <p>This endpoint searches products (like ETFs) by dynamic criteria, and retrieves the results in a 
+                    <a class = "info"
+                        data-tippy-content = "The blue box shows the output format for this method call and can be interacted with. 
+                        Feel free to explore the output by expanding / collapsing its components."
+                        >JSON format.</a>
+                </p>
+
+                <p>This endpoint is not meant as a way to extract coprehensive
                 information about the desired products. It will return a list of basic attributes (ISIN & Name). Any further information
-                needs to be fetched with using the <a href="#get-individual-etf" class="internal">Individual Endpoints</a></p> <p>
+                needs to be fetched with using the <a class = "internal" href = "#get-individual-etf">Individual Endpoints</a></p>
+
+                <p>
                     All of the parameters listed below can be attached as query parameters in an arbitary order in order to build a request:
-                </p> <p><code class="inline">https://test.api.etf.zurianalytics.com/search?<span class="accent-bold">param1</span>=<span class="accent-hard">v1</span>&<span class="accent-bold">param2</span>=<span class="accent-hard">v2</span></code></p></div> <div class="col-md-6"><div class="accent-box"><header><code>GET</code><code>https://test.api.etf.zurianalytics.com/search?<span class="accent-bold">exchange</span>=<span class="accent-hard">SIX</span>&<span class="accent-bold">USA</span>=<span class="accent-hard">20</span>&<span class="accent-bold">TECHNOLOGY</span>=<span class="accent-hard">30</span></code></header> <code class="json">
+                </p>
+                <p>
+                    <code class="inline">{{apiUrl}}/search?<span class = "accent-bold">param1</span>=<span class = "accent-hard">v1</span>&amp;<span class = "accent-bold">param2</span>=<span class = "accent-hard">v2</span></code>
+                </p>
+            </div>
+            
+            <div class="col-md-6">
+                <div class="accent-box">
+                    <header>
+                        <code>GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">exchange</span>=<span class = "accent-hard">SIX</span>&#38;<span class = "accent-bold">USA</span>=<span class = "accent-hard">20</span>&#38;<span class = "accent-bold">TECHNOLOGY</span>=<span class = "accent-hard">30</span></code>
+                    </header>
+                    <code class="json">
 {"content":[{"name":"iShares NASDAQ 100 UCITS ETF USD (Acc)","isin":"IE00B53SZB19"},{"name":"iShares Dow Jones Industrial Average UCITS ETF USD (Acc)","isin":"IE00B53L4350"},{"name":"ComStage MSCI North America UCITS ETF","isin":"LU0392494992"},{"name":"Xtrackers MSCI USA UCITS ETF 1C","isin":"IE00BJ0KDR00"},{"name":"SPDR S&P 500 UCITS ETF","isin":"IE00B6YX5C33"},{"name":"Amundi MSCI World Ex Europe UCITS ETF - EUR (C)","isin":"LU1681045537"},{"name":"iShares Core MSCI World UCITS ETF GBP Hedged (Dist)","isin":"IE00BD45YS76"},{"name":"Lyxor MSCI USA UCITS ETF - Acc","isin":"FR0011363423"},{"name":"iShares Core S&P 500 UCITS ETF USD (Dist)","isin":"IE0031442068"},{"name":"iShares MSCI World ESG Enhanced UCITS ETF USD (Acc)","isin":"IE00BHZPJ569"}],"metaInfo":{"pageNumber":0,"pageSize":10,"totalPages":6,"totalElements":59}}
-                    </code></div></div></div> <div class="row" style="margin-top:0"><div class="col-md-6"><h3>Parameters</h3></div></div> <div menu-item="By Exchange" id="by-exchange" class="row" style="margin-top:0"><div class="col-md-6"><div class="list"><code class="accent-bold">exchange</code> <code class="accent-gray">Exchange</code> <code class="accent-hard">Optional</code> <p>
+                    </code>
+                </div>
+
+
+            </div>
+        </div>
+
+
+
+
+        <div class="row" style = "margin-top: 0">
+
+            <div class="col-md-6">
+                <h3>Parameters</h3>
+            </div>
+        </div>
+
+
+        <div class="row" style = "margin-top: 0" menu-item="By Exchange" id ="by-exchange">
+            
+            <div class="col-md-6">
+                <div class = "list">
+                        <code class="accent-bold">exchange</code> <code class="accent-gray">Exchange</code> <code class="accent-hard">Optional</code>
+                        <p>
                             Will filter products only listed on a specific exchange. The supported exchanges are:
                             <code class="inline">LSE</code>,
                             <code class="inline">XETRA</code>,
                             <code class="inline">BORSA_ITALIANA</code>,
-                            <code class="inline">SIX</code></p> <p>
-                            To get a list of the products listed on an exchange <span class="accent-hard">EX</span>
+                            <code class="inline">SIX</code>
+                        </p>
+                        <p>
+                            To get a list of the products listed on an exchange <span class = "accent-hard">EX</span>
                             write:
-                        </p> <p><code class="inline">https://test.api.etf.zurianalytics.com/search?<span class="accent-bold">exchange</span>=<span class="accent-hard">EX</span></code></p></div></div> <div class="col-md-6"><div class="accent-box"><header><code>GET</code><code>https://test.api.etf.zurianalytics.com/search?<span class="accent-bold">exchange</span>=<span class="accent-hard">SIX</span></code></header> <div><span>Returns a list of funds listed on SIX</span></div></div></div></div> <div menu-item="By Factor" id="by-factor" class="row" style="margin-top:0"><div class="col-md-6"><div class="list"><code class="accent-bold">factor</code> <code class="accent-gray">Factor</code> <code class="accent-hard">Optional</code> <p>
+                        </p>
+                        <p>
+                            <code class="inline">{{apiUrl}}/search?<span class = "accent-bold">exchange</span>=<span class = "accent-hard">EX</span></code>
+                        </p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="accent-box">
+                    <header>
+                        <code>GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">exchange</span>=<span class = "accent-hard">SIX</span></code>
+                    </header>
+                    <div>
+                        <span>Returns a list of funds listed on SIX</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row" style = "margin-top: 0" menu-item="By Factor" id ="by-factor">
+
+            <div class="col-md-6">
+                <div class = "list">
+                        <code class="accent-bold">factor</code> <code class="accent-gray">Factor</code> <code class="accent-hard">Optional</code>
+                        <p>
                             Returns products with the given factor. 
 
-                            Factor definitions follow the <a href="https://www.msci.com/factor-indexes" class="external">MSCI Factors</a>: 
-                        </p> <p><code class="inline">VOLATILITY_HIGH</code> <code class="inline">VOLATILITY_LOW</code> <code class="inline">YIELD</code> <code class="inline">QUALITY</code> <code class="inline">MOMENTUM</code> <code class="inline">VALUE</code> <code class="inline">SIZE_BIG</code> <code class="inline">SIZE_SMALL</code> <code class="inline">MULTIFACTOR</code></p> <p>
-                            In order to search for a product with a specific factor <code class="accent-green">F</code> write:
-                        </p> <p><code class="inline">https://test.api.etf.zurianalytics.com/search?<span class="accent-bold">factor</span>=<span class="accent-hard">F</span></code></p></div></div> <div class="col-md-6"><div class="accent-box"><header><code>GET</code><code>https://test.api.etf.zurianalytics.com/search?<span class="accent-bold">factor</span>=<span class="accent-hard">MOMENTUM</span></code></header> <div><span>Returns a list of products which follow a Momentum factor strategy.</span></div></div></div></div> <div menu-item="By Country" id="by-country" class="row" style="margin-top:0"><div class="col-md-6"><div class="list"><code class="accent-bold">[:ALPHA3-COUNTRY-CODE]</code> <code class="accent-gray">Numeric</code> <code class="accent-hard">Optional</code> <p>
+                            Factor definitions follow the <a href = "https://www.msci.com/factor-indexes" class = "external">MSCI Factors</a>: 
+                        </p>
+                        <p>
+                            <code class = "inline">VOLATILITY_HIGH</code>
+                            <code class = "inline">VOLATILITY_LOW</code>
+                            <code class = "inline">YIELD</code>
+                            <code class = "inline">QUALITY</code>
+                            <code class = "inline">MOMENTUM</code>
+                            <code class = "inline">VALUE</code>
+                            <code class = "inline">SIZE_BIG</code>
+                            <code class = "inline">SIZE_SMALL</code>
+                            <code class = "inline">MULTIFACTOR</code>
+                        </p>
+                        <p>
+                            In order to search for a product with a specific factor <code class = "accent-green">F</code> write:
+                        </p>
+                        <p>
+                            <code class="inline">{{apiUrl}}/search?<span class = "accent-bold">factor</span>=<span class = "accent-hard">F</span></code>
+                        </p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="accent-box">
+                    <header>
+                        <code>GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">factor</span>=<span class = "accent-hard">MOMENTUM</span></code>
+                    </header>
+                    <div>
+                        <span>Returns a list of products which follow a Momentum factor strategy.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <div class="row" style = "margin-top: 0" menu-item="By Country" id ="by-country">
+
+            <div class="col-md-6">
+                <div class = "list">
+                        <code class="accent-bold">[:ALPHA3-COUNTRY-CODE]</code> <code class="accent-gray">Numeric</code> <code class="accent-hard">Optional</code>
+                        <p>
                             The products will be filtered by exposure to the provided
 
-                            <a href="https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes" class="external">Alpha3-Country-Code</a>. The minimum exposure required is the value for this parameter.
-                        </p> <p>
-                            In order to search for products with at least <span class="accent-green">p%</span> exposure to <span class="accent-blue">country</span>
+                            <a href = "https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes" class = "external">Alpha3-Country-Code</a>. The minimum exposure required is the value for this parameter.
+                        </p>
+                        <p>
+                            In order to search for products with at least <span class = "accent-green">p%</span> exposure to <span class = "accent-blue">country</span>
                             write:
-                        </p> <p><code class="inline">https://test.api.etf.zurianalytics.com/search?<span class="accent-bold">country</span>=<span class="accent-hard">P</span></code></p></div></div> <div class="col-md-6"><div class="accent-box"><header><code>GET</code><code>https://test.api.etf.zurianalytics.com/search?<span class="accent-bold">IRL</span>=<span class="accent-hard">45</span></code></header> <div><span>Returns a list of funds which have at least 45% of their assets invested in Ireland</span></div></div> <div class="accent-box"><header><code>GET</code><code>https://test.api.etf.zurianalytics.com/search?<span class="accent-bold">RUS</span>=<span class="accent-hard">1</span></code>&<span class="accent-bold">HUN</span>=<span class="accent-hard">1</span>&<span class="accent-bold">POL</span>=<span class="accent-hard">1</span></header> <div><span>Finds products with some broad eastern europe exposure.</span></div></div></div></div> <div menu-item="By Sector" id="by-sector" class="row" style="margin-top:0"><div class="col-md-6"><div class="list"><code class="accent-bold">[:SECTOR]</code> <code class="accent-gray">Numeric</code> <code class="accent-hard">Optional</code> <p>
+                        </p>
+                        <p>
+                            <code class="inline">{{apiUrl}}/search?<span class = "accent-bold">country</span>=<span class = "accent-hard">P</span></code>
+                        </p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="accent-box">
+                    <header>
+                        <code>GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">IRL</span>=<span class = "accent-hard">45</span></code>
+                    </header>
+                    <div>
+                        <span>Returns a list of funds which have at least 45% of their assets invested in Ireland</span>
+                    </div>
+                </div>
+                                <div class="accent-box">
+                    <header>
+                        <code>GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">RUS</span>=<span class = "accent-hard">1</span></code>&<span class = "accent-bold">HUN</span>=<span class = "accent-hard">1</span></code>&<span class = "accent-bold">POL</span>=<span class = "accent-hard">1</span></code>
+                    </header>
+                    <div>
+                        <span>Finds products with some broad eastern europe exposure.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style = "margin-top: 0" menu-item="By Sector" id = "by-sector">
+
+            <div class="col-md-6">
+                <div class = "list">
+                    <code class="accent-bold">[:SECTOR]</code> <code class="accent-gray">Numeric</code> <code class="accent-hard">Optional</code>
+                        <p>
                             The products will be filtered by exposure to the provided
 
-                            <code class="inline">Sector</code>. The minimum exposure required is the value for this parameter.
-                        </p> <p>
-                            The sectors follow the <a href="https://www.msci.com/gics" class="external">Global Industry Classification Stadnard</a>:
-                        </p> <p><code class="inline">INFORMATION_TECHNOLOGY</code> <code class="inline">COMMUNICATION_SERVICES</code> <code class="inline">INDUSTRIALS</code> <code class="inline">HEALTH_CARE</code> <code class="inline">MATERIALS</code> <code class="inline">REAL_ESTATE</code> <code class="inline">ENERGY</code> <code class="inline">CONSUMER_DISCRETIONARY</code> <code class="inline">CONSUMER_STAPLES</code> <code class="inline">UTILITIES</code> <code class="inline">FINANCIALS</code></p> <p>
-                            In order to search for products with at least <span class="accent-green">p%</span> exposure to a <span class="accent-blue">sector</span>
+                            <code class = 'inline'>Sector</code>. The minimum exposure required is the value for this parameter.
+                        </p>
+                        <p>
+                            The sectors follow the <a href = "https://www.msci.com/gics" class = "external">Global Industry Classification Stadnard</a>:
+                        </p>
+                        <p>
+                            <code class = "inline">INFORMATION_TECHNOLOGY</code>
+                            <code class = "inline">COMMUNICATION_SERVICES</code>
+                            <code class = "inline">INDUSTRIALS</code>
+                            <code class = "inline">HEALTH_CARE</code>
+                            <code class = "inline">MATERIALS</code>
+                            <code class = "inline">REAL_ESTATE</code>
+                            <code class = "inline">ENERGY</code>
+                            <code class = "inline">CONSUMER_DISCRETIONARY</code>
+                            <code class = "inline">CONSUMER_STAPLES</code>
+                            <code class = "inline">UTILITIES</code>
+                            <code class = "inline">FINANCIALS</code>
+                        </p>
+                        <p>
+                            In order to search for products with at least <span class = "accent-green">p%</span> exposure to a <span class = "accent-blue">sector</span>
                             write:
-                        </p> <p><code class="inline">https://test.api.etf.zurianalytics.com/search?<span class="accent-bold">sector</span>=<span class="accent-hard">p</span></code></p></div></div> <div class="col-md-6"><div class="accent-box"><header><code>GET</code><code>https://test.api.etf.zurianalytics.com/search?<span class="accent-bold">ENERGY</span>=<span class="accent-hard">30</span>&<span class="accent-bold">FINANCIALS</span>=<span class="accent-hard">30</span></code></header> <p>
+                        </p>
+                        <p>
+                            <code class="inline">{{apiUrl}}/search?<span class = "accent-bold">sector</span>=<span class = "accent-hard">p</span></code>
+                        </p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="accent-box">
+                    <header>
+                        <code>GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">ENERGY</span>=<span class = "accent-hard">30</span>&<span class = "accent-bold">FINANCIALS</span>=<span class = "accent-hard">30</span></code>
+                    </header>
+
+                    <p>
                         Returns products with at least 30% exposure to Energy and 30% exposure to Financials.
-                    </p></div></div></div> <div menu-item="By Fee" id="by-fee" class="row" style="margin-top:0"><div class="col-md-6"><div class="list"><code class="accent-bold">totalFee</code> <code class="accent-gray">Numeric</code> <code class="accent-hard">Optional</code> <p>
+                    </p>
+                </div>
+
+
+            </div>
+        </div>
+
+
+        <div class="row" style = "margin-top: 0" menu-item="By Fee" id = "by-fee">
+
+            <div class="col-md-6">
+                <div class = "list">
+                        <code class="accent-bold">totalFee</code> <code class="accent-gray">Numeric</code> <code class="accent-hard">Optional</code>
+                        <p>
                             Will filter products that have at most the total fee provided.
-                        </p> <p>
-                            To get a list of the products that have at most <span class="accent-green">p%</span> fee write: 
-                        </p> <p><code class="inline">https://test.api.etf.zurianalytics.com/search?<span class="accent-bold">totalFee</span>=<span class="accent-hard">p</span></code></p></div></div> <div class="col-md-6"><div class="accent-box"><header><code>GET</code><code>https://test.api.etf.zurianalytics.com/search?<span class="accent-bold">totalFee</span>=<span class="accent-hard">4.5</span></code></header> <div><span>Returns a list of products that have at most 4.5% fee. For instance all ETFs with TERS smaller or equal than 4.5 will be included here.</span></div></div></div></div> <div menu-item="By Domicile" id="by-domicile" class="row" style="margin-top:0"><div class="col-md-6"><div class="list"><code class="accent-bold">domicile</code> <code class="accent-gray">ALPHA3-COUNTRY-CODE</code> <code class="accent-hard">Optional</code> <p>
+                        </p>
+                        <p>
+                            To get a list of the products that have at most <span class = "accent-green">p%</span> fee write: 
+                        </p>
+                        <p>
+                            <code class="inline">{{apiUrl}}/search?<span class = "accent-bold">totalFee</span>=<span class = "accent-hard">p</span></code>
+                        </p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="accent-box">
+                    <header>
+                        <code>GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">totalFee</span>=<span class = "accent-hard">4.5</span></code>
+                    </header>
+                    <div>
+                        <span>Returns a list of products that have at most 4.5% fee. For instance all ETFs with TERS smaller or equal than 4.5 will be included here.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="row" style = "margin-top: 0" menu-item="By Domicile" id = "by-domicile">
+
+            <div class="col-md-6">
+                <div class = "list">
+                        <code class="accent-bold">domicile</code> <code class="accent-gray">ALPHA3-COUNTRY-CODE</code> <code class="accent-hard">Optional</code>
+                        <p>
                             Returns products which are domiciles in the provided country. The country provided should be in a 
 
-                            <a href="https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes" class="external">Alpha3-Country-Code</a> format.
-                        </p> <p>
-                            To get a list of the products that are domiciled in country <span class="accent-green">CTY</span> write: 
-                        </p> <p><code class="inline">https://test.api.etf.zurianalytics.com/search?<span class="accent-bold">domicile</span>=<span class="accent-hard">CTY</span></code></p></div></div> <div class="col-md-6"><div class="accent-box"><header><code>GET</code><code>https://test.api.etf.zurianalytics.com/search?<span class="accent-bold">domicile</span>=<span class="accent-hard">LUX</span></code></header> <div><span>Returns a list of products that are domiciled in Luxembourg</span></div></div></div></div> <div menu-item="By Replication" id="by-replication" class="row" style="margin-top:0"><div class="col-md-6"><div class="list"><code class="accent-bold">replicationMethod</code> <code class="accent-gray">ReplicationMethod</code> <code class="accent-hard">Optional</code> <p>
+                            <a href = "https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes" class = "external">Alpha3-Country-Code</a> format.
+                        </p>
+                        <p>
+                            To get a list of the products that are domiciled in country <span class = "accent-green">CTY</span> write: 
+                        </p>
+                        <p>
+                            <code class="inline">{{apiUrl}}/search?<span class = "accent-bold">domicile</span>=<span class = "accent-hard">CTY</span></code>
+                        </p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="accent-box">
+                    <header>
+                        <code>GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">domicile</span>=<span class = "accent-hard">LUX</span></code>
+                    </header>
+                    <div>
+                        <span>Returns a list of products that are domiciled in Luxembourg</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style = "margin-top: 0" menu-item="By Replication" id = "by-replication">
+
+            <div class="col-md-6">
+                <div class = "list">
+                        <code class="accent-bold">replicationMethod</code> <code class="accent-gray">ReplicationMethod</code> <code class="accent-hard">Optional</code>
+                        <p>
                             Returns products with the given replication method. The available replication methods are:
-                        </p> <p><code class="inline">PHYSICAL</code><code class="inline">SYNTHETIC</code></p> <p>
-                            In order to search for a product with replication method <code class="accent-green">REPLICATION_METHOD</code> write:
-                        </p> <p><code class="inline">https://test.api.etf.zurianalytics.com/search?<span class="accent-bold">replicationMethod</span>=<span class="accent-hard">REPLICATION_METHOD</span></code></p></div></div> <div class="col-md-6"><div class="accent-box"><header><code>GET</code><code>https://test.api.etf.zurianalytics.com/search?<span class="accent-bold">replicationMethod</span>=<span class="accent-hard">PHYSICAL</span></code></header> <div><span>Returns a list of products which are physically</span></div></div></div></div> <div menu-item="By Distribution" id="by-dist" class="row" style="margin-top:0"><div class="col-md-6"><div class="list"><code class="accent-bold">distributionType</code> <code class="accent-gray">DistributionType</code> <code class="accent-hard">Optional</code> <p>
+                        </p>
+                        <p>
+                            <code class = "inline">PHYSICAL</code><code class = "inline">SYNTHETIC</code>
+                        </p>
+                        <p>
+                            In order to search for a product with replication method <code class = "accent-green">REPLICATION_METHOD</code> write:
+                        </p>
+                        <p>
+                            <code class="inline">{{apiUrl}}/search?<span class = "accent-bold">replicationMethod</span>=<span class = "accent-hard">REPLICATION_METHOD</span></code>
+                        </p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="accent-box">
+                    <header>
+                        <code>GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">replicationMethod</span>=<span class = "accent-hard">PHYSICAL</span></code>
+                    </header>
+                    <div>
+                        <span>Returns a list of products which are physically</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style = "margin-top: 0" menu-item="By Distribution" id = "by-dist">
+
+            <div class="col-md-6">
+                <div class = "list">
+                        <code class="accent-bold">distributionType</code> <code class="accent-gray">DistributionType</code> <code class="accent-hard">Optional</code>
+                        <p>
                             Returns products with the given distribution type. The available distribution types are:
-                        </p> <p><code class="inline">DISTRIBUTING</code><code class="inline">ACCUMULATING</code></p> <p>
-                            In order to search for a product with distribution type <code class="accent-green">DIST_TYPE</code> write:
-                        </p> <p><code class="inline">https://test.api.etf.zurianalytics.com/search?<span class="accent-bold">distributionType</span>=<span class="accent-hard">DIST_TYPE</span></code></p></div></div> <div class="col-md-6"><div class="accent-box"><header><code>GET</code><code>https://test.api.etf.zurianalytics.com/search?<span class="accent-bold">distributionType</span>=<span class="accent-hard">DISTRIBUTING</span></code></header> <div><span>Returns a list of products which distribute their dividends.</span></div></div></div></div> <div menu-item="By Product Type" id="by-product-type" class="row" style="margin-top:0"><div class="col-md-6"><div class="list"><code class="accent-bold">assetClass</code> <code class="accent-gray">AssetClass</code> <code class="accent-hard">Optional</code> <p>
+                        </p>
+                        <p>
+                            <code class = "inline">DISTRIBUTING</code><code class = "inline">ACCUMULATING</code>
+                        </p>
+                        <p>
+                            In order to search for a product with distribution type <code class = "accent-green">DIST_TYPE</code> write:
+                        </p>
+                        <p>
+                            <code class="inline">{{apiUrl}}/search?<span class = "accent-bold">distributionType</span>=<span class = "accent-hard">DIST_TYPE</span></code>
+                        </p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="accent-box">
+                    <header>
+                        <code>GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">distributionType</span>=<span class = "accent-hard">DISTRIBUTING</span></code>
+                    </header>
+                    <div>
+                        <span>Returns a list of products which distribute their dividends.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style = "margin-top: 0" menu-item="By Product Type" id = "by-product-type">
+
+            <div class="col-md-6">
+                <div class = "list">
+                        <code class="accent-bold">assetClass</code> <code class="accent-gray">AssetClass</code> <code class="accent-hard">Optional</code>
+                        <p>
                             Returns products with the given asset class. The available asset classes are:
-                        </p> <p><code class="inline">FIXED_INCOME</code> <code class="inline">COMMODITIES</code> <code class="inline">REAL_ESTATE</code> <code class="inline">EQUITY</code> <code class="inline">CURRENCY</code></p> <p>
-                            In order to search for a product with asset class <code class="accent-green">ASSET</code> write:
-                        </p> <p><code class="inline">https://test.api.etf.zurianalytics.com/search?<span class="accent-bold">assetClass</span>=<span class="accent-hard">ASSET</span></code></p></div></div> <div class="col-md-6"><div class="accent-box"><header><code>GET</code><code>https://test.api.etf.zurianalytics.com/search?<span class="accent-bold">assetClass</span>=<span class="accent-hard">EQUITY</span></code></header> <div><span>Returns a list of products with asset class EQUITY (e.g., ETFs and Equity Funds)</span></div></div></div></div> <div menu-item="By Asset Class" id="by-asset-class" class="row" style="margin-top:0"><div class="col-md-6"><div class="list"><code class="accent-bold">productType</code> <code class="accent-gray">ProductType</code> <code class="accent-hard">Optional</code> <p>
+                        </p>
+                        <p>
+                            <code class = "inline">FIXED_INCOME</code>
+                            <code class = "inline">COMMODITIES</code>
+                            <code class = "inline">REAL_ESTATE</code>
+                            <code class = "inline">EQUITY</code>
+                            <code class = "inline">CURRENCY</code>
+                        </p>
+                        <p>
+                            In order to search for a product with asset class <code class = "accent-green">ASSET</code> write:
+                        </p>
+                        <p>
+                            <code class="inline">{{apiUrl}}/search?<span class = "accent-bold">assetClass</span>=<span class = "accent-hard">ASSET</span></code>
+                        </p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="accent-box">
+                    <header>
+                        <code>GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">assetClass</span>=<span class = "accent-hard">EQUITY</span></code>
+                    </header>
+                    <div>
+                        <span>Returns a list of products with asset class EQUITY (e.g., ETFs and Equity Funds)</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row" style = "margin-top: 0" menu-item="By Asset Class" id = "by-asset-class">
+
+            <div class="col-md-6">
+                <div class = "list">
+                        <code class="accent-bold">productType</code> <code class="accent-gray">ProductType</code> <code class="accent-hard">Optional</code>
+                        <p>
                             Returns products of the given type. The available product types are:
-                        </p> <p><code class="inline">ETF</code> <code class="inline">ETN</code> <code class="inline">ETC</code> <code class="inline">FUND</code></p> <p>
+                        </p>
+                        <p>
+                            <code class = "inline">ETF</code>
+                            <code class = "inline">ETN</code>
+                            <code class = "inline">ETC</code>
+                            <code class = "inline">FUND</code>
+                        </p>
+                        <p>
                             While the support for ETFs is excelent, support for other product types is still experimental.
-                        </p> <p>
-                            In order to search for a product from a type <code class="accent-green">PT</code> write:
-                        </p> <p><code class="inline">https://test.api.etf.zurianalytics.com/search?<span class="accent-bold">productType</span>=<span class="accent-hard">PT</span></code></p></div></div> <div class="col-md-6"><div class="accent-box"><header><code>GET</code><code>https://test.api.etf.zurianalytics.com/search?<span class="accent-bold">productType</span>=<span class="accent-hard">ETF</span></code></header> <div><span>Returns a list of ETFs</span></div></div></div></div></div> <div menu-item="Authentication" id="authentication" top="" class="container-fluid"><h1>Authentication</h1> <div class="row"><div class="col-md-6"><p>
-                Zuri Analytics API uses tokens to authenticate requests. These tokens are computed automatically by
-                Zuri Analytics API when the page is visited.
-                Tokens are loaded with time and calls when you <a href="#subscriptions" class="internal">subscribe</a>.
-            </p> <p>
+                        </p>
+                        <p>
+                            In order to search for a product from a type <code class = "accent-green">PT</code> write:
+                        </p>
+                        <p>
+                            <code class="inline">{{apiUrl}}/search?<span class = "accent-bold">productType</span>=<span class = "accent-hard">PT</span></code>
+                        </p>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="accent-box">
+                    <header>
+                        <code>GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">productType</span>=<span class = "accent-hard">ETF</span></code>
+                    </header>
+                    <div>
+                        <span>Returns a list of ETFs</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+                    
+<div class="container-fluid" menu-item = "Authentication" id="authentication" top>
+
+    <h1>Authentication</h1>
+
+    <div class="row">
+
+        <div class="col-md-6">
+            <p>
+                {{apiName}} uses tokens to authenticate requests. These tokens are computed automatically by
+                {{apiName}} when the page is visited.
+                Tokens are loaded with time and calls when you <a class="internal"
+                                                                    href="#subscriptions">subscribe</a>.
+            </p>
+            <p>
                 Once a token has been loaded, it can be <a href="#manage-subscription">renewed, cancelled and
-                managed.</a></p> <p>
+                managed.</a>
+            </p>
+            <p>
                 To make an request, just pass the token in the query string as follows:
-            </p> <p><code class="inline">https://api-url?token=<span class="accent-hard">YOUR_TOKEN</span></code></p> <p>
+            </p>
+            <p>
+                <code class="inline">https://api-url?token=<span class="accent-hard">YOUR_TOKEN</span></code>
+            </p>
+
+            <p>
                 Your tokens carry many privileges, so be sure to keep them secure! Do not share your token in
                 publicly accessible areas such as GitHub, client-side code, and so forth.
-            </p> <p>
+            </p>
+            <p>
                 All API requests must be made over HTTPS. Calls made over plain HTTP will fail. API requests without
                 authentication will also fail.
                 There is a daily limit of a few unauthenticated calls which can be used to test the API.
-            </p></div></div></div> <div menu-item="Subscriptions" top="" id="subscriptions" class="container-fluid" data-v-1fcd6e1c><h1 data-v-1fcd6e1c>Subscriptions</h1> <p data-v-1fcd6e1c>
-        Zuri Analytics API can be called for free up to a certain number of requests daily. Thie number of free requests 
+            </p>
+        </div>
+    </div>
+</div>
+                    
+
+<div id = "subscriptions-app" class="container-fluid" menu-item = "Subscriptions" top id="subscriptions">
+    <h1>Subscriptions</h1>
+
+    <p>
+        {{apiName}} can be called for free up to a certain number of requests daily. Thie number of free requests 
         may change day-to-day, as we closelly monitor abuse.
-    </p> <p data-v-1fcd6e1c>
+    </p>
+
+    <p>
         Nevertheless it should always be enough for someone just exploring the API and doing small individual research. 
         In the case where these requests are not enough, you will need to subscribe to one of the plans listed below.
-    </p> <div id="subscription-plans" menu-item="Plans" class="row" data-v-1fcd6e1c><div class="col-md-12" data-v-1fcd6e1c><h2 data-v-1fcd6e1c>Subscription Plans </h2> <div class="row" data-v-1fcd6e1c><div class="col-md-4" data-v-1fcd6e1c><h3 data-v-1fcd6e1c>Individual</h3> <ul data-v-1fcd6e1c><li data-v-1fcd6e1c><span class="accent-green" data-v-1fcd6e1c>10 000</span> API calls | month</li> <li data-v-1fcd6e1c><a data-tippy-content="
-      For individual research and use in personal investing. Data can not be used to present products to third parties.
-      <a href ='https://zurianalytics.com/terms_conditions' class = 'external'>Learn more</a>" class="info" data-v-1fcd6e1c>Individual</a> Use
+    </p>
+
+    <div class="row" id="subscription-plans" menu-item = "Plans">
+        <div class="col-md-12">
+
+            <h2>Subscription Plans </h2>
+
+            <div class="row">
+                <div class="col-md-4">
+                    <h3>Individual</h3>
+                    <ul>
+                        <li><span class = "accent-green">10 000</span> API calls | month</li>
+                        <li><a class="info" data-tippy-content="
+        For individual research and use in personal investing. Data can not be used to present products to third parties.
+        <a href ='https://zurianalytics.com/terms_conditions' class = 'external'>Learn more</a>">Individual</a> Use
                             License
-                        </li> <li data-v-1fcd6e1c><span class="accent-hard" data-v-1fcd6e1c>5</span> <span data-v-1fcd6e1c>€ | month</span></li></ul></div> <div class="col-md-4" data-v-1fcd6e1c><h3 data-v-1fcd6e1c>Business</h3> <ul data-v-1fcd6e1c><li data-v-1fcd6e1c><span class="accent-green" data-v-1fcd6e1c>500 000</span> API calls | month</li> <li data-v-1fcd6e1c><a data-tippy-content="
-      For business research and providing data to third parties.
-      <a href ='https://zurianalytics.com/terms_conditions' class = 'external'>Learn more</a>" class="info" data-v-1fcd6e1c>Business</a> Use
+                        </li>
+                        <li><span class="accent-hard">5</span> <span>&euro; | month</span></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3>Business</h3>
+                    <ul>
+                        <li><span class="accent-green">500 000</span> API calls | month</li>
+                        <li><a class="info" data-tippy-content="
+        For business research and providing data to third parties.
+        <a href ='https://zurianalytics.com/terms_conditions' class = 'external'>Learn more</a>">Business</a> Use
                             License
-                        </li> <li data-v-1fcd6e1c>Integration Support</li> <li data-v-1fcd6e1c><span class="accent-hard" data-v-1fcd6e1c>377</span> <span data-v-1fcd6e1c>€ | month</span></li></ul></div> <div class="col-md-4" data-v-1fcd6e1c><h3 data-v-1fcd6e1c>Enterprise</h3> <ul data-v-1fcd6e1c><li data-v-1fcd6e1c><span class="accent-hard" data-v-1fcd6e1c>Unlimited</span> API calls | month</li> <li data-v-1fcd6e1c><a data-tippy-content="
-      For business research and providing data to third parties.
-      <a href ='https://zurianalytics.com/terms_conditions' class = 'external'>Learn more</a>" class="info" data-v-1fcd6e1c>Business</a> Use
+                        </li>
+                        <li>Integration Support</li>
+                        <li><span class="accent-hard">377</span> <span>&euro; | month</span></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h3>Enterprise</h3>
+                    <ul>
+                        <li><span class="accent-hard">Unlimited</span> API calls | month</li>
+                        <li><a class="info" data-tippy-content="
+        For business research and providing data to third parties.
+        <a href ='https://zurianalytics.com/terms_conditions' class = 'external'>Learn more</a>">Business</a> Use
                             License
-                        </li> <li data-v-1fcd6e1c>Integration Support</li> <li data-v-1fcd6e1c><span data-v-1fcd6e1c>Custom Data Feeds</span> (e.g., <span class="accent-hard" data-v-1fcd6e1c>CSV</span>, <span class="accent-hard" data-v-1fcd6e1c>XLSX</span>)
-                        </li> <li data-v-1fcd6e1c>Get In Touch: <br data-v-1fcd6e1c><a href="mailto:contact@zurianalytics.com" class="external" data-v-1fcd6e1c>contact@zurianalytics.com</a></li></ul></div></div> <div class="row" data-v-1fcd6e1c><div class="col-md-8" data-v-1fcd6e1c><form id="payment-form" data-v-1fcd6e1c><div class="row" data-v-1fcd6e1c><div class="col-md-6" data-v-1fcd6e1c><div class="form-group" data-v-1fcd6e1c><label for="card-element" data-v-1fcd6e1c>
+                        </li>
+                        <li>Integration Support</li>
+                        <li><span>Custom Data Feeds</span> (e.g., <span class="accent-hard">CSV</span>, <span
+                                class="accent-hard">XLSX</span>)
+                        </li>
+                        <li>Get In Touch: <br/><a class="external" href="mailto:contact@zurianalytics.com">contact@zurianalytics.com</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-8">
+                    <form id="payment-form">
+
+                        <div class="row">
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="card-element">
                                         Credit or debit card
-                                    </label> <div id="card-element" data-v-1fcd6e1c></div></div> <div class="form-group" data-v-1fcd6e1c><label for="api-token" data-v-1fcd6e1c><a data-tippy-content="The API token is used to authenticate & track all API calls.
-          A token can be reused and additional calls and time will be added to the token automatically with the subscription.
-          The API token must be kept safe and secret.
-          The only restriction of the token is for it to be between 4 and 240 characters." class="info" data-v-1fcd6e1c>API Token </a></label> <textarea id="api-token" readonly data-v-1fcd6e1c></textarea></div></div> <div class="col-md-6" data-v-1fcd6e1c><div class="form-group" data-v-1fcd6e1c><label for="plan" data-v-1fcd6e1c>
+                                    </label>
+                                    <div id="card-element"><!-- A Stripe Element will be inserted here. --></div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="api-token">
+            <a class="info" data-tippy-content="The API token is used to authenticate & track all API calls.
+            A token can be reused and additional calls and time will be added to the token automatically with the subscription.
+            The API token must be kept safe and secret.
+            The only restriction of the token is for it to be between 4 and 240 characters.">API Token </a>
+                                    </label>
+                                    <textarea id="api-token" readonly="readonly" v-model="payment.token"
+                                                v-on:click="copyToClipboard"></textarea>
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-6">
+
+
+                                <div class="form-group">
+
+                                    <label for="plan">
                                         Select Plan
-                                    </label> <select id="plan" selected data-v-1fcd6e1c><option value="individual" data-v-1fcd6e1c>Individual</option> <option value="business" data-v-1fcd6e1c>Business</option></select></div> <div class="form-group" data-v-1fcd6e1c><label for="email" data-v-1fcd6e1c>
+                                    </label>
+                                    <select id="plan" selected="individual" v-model="payment.plan">
+                                        <option value="individual">Individual</option>
+                                        <option value="business">Business</option>
+                                    </select>
+
+                                </div>
+
+
+                                <div class="form-group">
+                                    <label for="email">
                                         Email Address
-                                    </label> <input id="email" placeholder="Enter email" class="form-control" data-v-1fcd6e1c></div></div></div> <span id="subscribe-wrapper" data-v-1fcd6e1c><button disabled id="subscribe" data-v-1fcd6e1c><span data-v-1fcd6e1c>Subscribe</span><!----> <!----></button></span></form></div></div></div></div> <div id="manage-subscription" menu-item="Manage" class="row" data-v-1fcd6e1c><div class="col-md-6" data-v-1fcd6e1c><h2 data-v-1fcd6e1c>Manage Subscription</h2> <p data-v-1fcd6e1c>
+                                    </label>
+                                    <input class="form-control" id="email" placeholder="Enter email" type="text"
+                                            v-model="payment.email">
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <span id="subscribe-wrapper">
+                    <button :disabled='!isComplete || isProcessing || paymentComplete'
+                            id="subscribe"
+                            v-bind:class="{ 'success': paymentComplete }" v-on:click="initiatePaymentRequest">
+                        <span>Subscribe</span><span v-if="paymentComplete">d</span>
+                        <img src="images/loading.svg" v-if="isProcessing">
+                    </button>
+                </span>
+
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    <div class="row" id="manage-subscription" menu-item = "Manage">
+
+        <div class="col-md-6">
+
+            <h2>Manage Subscription</h2>
+
+            <p>
                 You can manage your subscription by adding time / changing payment methods / cancelling
                 subscriptions, etc, by logging in with your token and email address.
 
-                For any problems, free feel to contact us at <a href="mailto:support@zurianalytics.com" class="external" data-v-1fcd6e1c>support@zurianalytics.com</a></p> <form id="manage-subscription-form" data-v-1fcd6e1c><div class="row" data-v-1fcd6e1c><div class="col-md-6" data-v-1fcd6e1c><div class="form-group" data-v-1fcd6e1c><label for="email" data-v-1fcd6e1c>
+                For any problems, free feel to contact us at <a class = "external" href ="mailto:support@zurianalytics.com">support@zurianalytics.com</a>
+            </p>
+
+            <form id="manage-subscription-form" method="GET">
+
+                <div class="row">
+                    <div class="col-md-6">
+
+                        <div class="form-group">
+                            <label for="email">
                                 Email Address
-                            </label> <input id="email" placeholder="Enter email" type="email" class="form-control" data-v-1fcd6e1c></div> <div class="form-group" data-v-1fcd6e1c><label for="api-token" data-v-1fcd6e1c><a data-tippy-content="The API token is used to authenticate & track all API calls.
-          A token can be reused and additional calls and time will be added to the token automatically with the subscription.
-          The API token must be kept safe and secret.
-          The only restriction of the token is for it to be between 4 and 240 characters." class="info" data-v-1fcd6e1c>API Token </a></label> <textarea id="api-token" data-v-1fcd6e1c></textarea></div></div></div> <button disabled id="management-portal" data-v-1fcd6e1c><span data-v-1fcd6e1c>Manage Subscription</span></button></form></div></div></div></div></div></div></div></div></div><script>window.__NUXT__={layout:"default",data:[{}],fetch:[],error:null,serverRendered:!0,routePath:"/"}</script><script src="/_nuxt/d1be39c2f581c6d0812d.js" defer></script><script src="/_nuxt/02f9ad5dc969309dbf30.js" defer></script><script src="/_nuxt/14e5253dd5c952f73ce1.js" defer></script><script src="/_nuxt/cb8910e9eb0f01c86a74.js" defer></script><script src="/_nuxt/d6f99067b5773fd207b2.js" defer></script>
-  </body>
+                            </label>
+                            <input class="form-control" id="email" placeholder="Enter email" type="email"
+                                    v-model="dashboard.email">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="api-token">
+            <a class="info" data-tippy-content="The API token is used to authenticate & track all API calls.
+            A token can be reused and additional calls and time will be added to the token automatically with the subscription.
+            The API token must be kept safe and secret.
+            The only restriction of the token is for it to be between 4 and 240 characters.">API Token </a>
+                            </label>
+                            <textarea id="api-token" v-model="dashboard.token"></textarea>
+                        </div>
+
+                    </div>
+                </div>
+
+                <button :disabled='!dashboard.email || !dashboard.token' id="management-portal"
+                        v-on:click="managementDashboardLogin">
+                    <span>Manage Subscription</span>
+                </button>
+
+            </form>
+
+        </div>
+    </div>
+</div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<!-- Global Vue (Needed for everything) -->
+<script src = "js/vue.external.js"></script>
+
+<!-- Tippy -->
+<script src = "js/tippy.bundle.js"></script>
+
+<!-- App -->
+<script async src = "js/app.bundle.js"></script>
+
+<!-- Stripe hosted -->
+<script async src="https://js.stripe.com/v3/"></script>
+
 </html>
+
