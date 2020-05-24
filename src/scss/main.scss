@@ -89,11 +89,19 @@ nav {
   // Section at the bottom
   footer {
     border-top: 1px solid $color-gray-100;
-    font-size: 0.7rem;
+  }
+
+  .note 
+  {
+    font-size: 0.8rem;
+    line-height: 1rem;
+    font-weight: bold;
+    color: $color-gray-400;
   }
 
   // Top header
   .representation {
+    
     text-align: center;
 
     .logo {
