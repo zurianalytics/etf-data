@@ -9,9 +9,12 @@ new Vue({
 
     data() {
         return {
-            isin: "LU0378437502",
+            isin: "DE000A0F5UG3",
             chart: {},
-            fund: {},
+            fund: {
+                sectors: [], 
+                regions: []
+            },
             server: env.api + "/product/",
             apiName: env.name
         }
@@ -31,35 +34,39 @@ new Vue({
             getFund: function () {
                 let url = this.server + this.isin;
 
-                console.log("Loading fund on: " + url);
+                console.info("Loading fund on: " + url);
 
                 // Get fund
                 axios
                     .get(url)
                     .then(response => {
                         this.fund = response.data
-
-                        let sectors = response.data.sectors;
-                        let regions = response.data.regions;
-
-                        if (this.chart.sectors)
-                            this.chart.sectors.destroy();
-                        this.chart.sectors = this.drawChart("sectors", sectors, "sector")
-
-                        if (this.chart.regions)
-                            this.chart.regions.destroy();
-                        this.chart.regions = this.drawChart("countries", regions, "country")
+                        this.drawChart("sectors", response.data.sectors, "sector")
+                        this.drawChart("countries", response.data.regions, "country")
                     })
                     // Free requests have expired
                     .catch(error => {
-                        document
-                            .querySelector('#demo-content')
-                            .innerHTML = error.response ? error.response.data.message : error
+                        console.error(error)
+                        let text = "Unspecified error occured."
+                        if (typeof error.response === "undefined")
+                            text = "Unspecified error occured."
+                        else if (error && error.response.status == 404)
+                            text = "Unfortunatelly the product provided could not be found. Did you try with a correct ISIN?"
+                        else if (error && error.response.status == 401)
+                            text = "Unfortunatelly your free requests have expired."+ 
+                            " Please feel free to visit again tomorrow, or <a href = '#subscription-plans' class = 'internal'>subscribe</a>" +
+                            " to the API for a price of a coffee."
+                        
+                        document.querySelector('#demo-content').innerHTML = text
                     })
             },
 
             drawChart: function (element, data, attr) {
-                console.log("Drawing charts")
+
+                if (data.length === 0)
+                    document.querySelector('#' + element).style.display = "none"
+                else 
+                    document.querySelector('#' + element).style.display = "block"
 
                 let dataS = {
                     labels: data.map(d => d[attr]),
