@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "axios": "^0.19.2",
-    "chart.js": "^2.9.3",
+    "frappe-charts": "^1.4.1",
     "json-formatter-js": "^2.3.4",
     "tippy.js": "^6.2.3"
   },

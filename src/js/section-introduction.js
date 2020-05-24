@@ -1,5 +1,6 @@
 import {env} from './global-variables'
 import axios from 'axios'
+import { Chart } from "frappe-charts/dist/frappe-charts.min.esm"
 
 new Vue({
 
@@ -18,13 +19,17 @@ new Vue({
 
     mounted() {
         this.getFund()
+        window.addEventListener('resize', e=>
+        {
+            e.stopImmediatePropagation()
+        })
     },
 
 
     methods:
         {
             getFund: function () {
-                let url = this.server + "/product/" + this.isin;
+                let url = this.server + this.isin;
 
                 console.log("Loading fund on: " + url);
 
@@ -54,43 +59,32 @@ new Vue({
             },
 
             drawChart: function (element, data, attr) {
-                let el = document.getElementById(element);
+                console.log("Drawing charts")
 
-                // Take first 9 elements
-                data = data.slice(0, 9)
+                let dataS = {
+                    labels: data.map(d => d[attr]),
+                    datasets: [{values: data.map(d => d.percentage)}]
+                }
 
-                // Hide canvas
-                if (data.length === 0) {
-                    el.style.display = "none";
-                    return
-                } else
-                    el.style.display = "block"
+                new Chart('#' + element, {  
+                    data: dataS,
+                    type: 'pie', // or 'bar', 'line', 'scatter', 'pie', 'percentage'
+                    height: 280,
+                    colors: []
+                })
 
-                return new Chart(el.getContext('2d'), {
-                    type: 'pie',
-                    data: {
-                        labels: data.map(function (c) {
-                            return c[attr]
-                        }),
-                        datasets: [{
-                            label: '# of Votes',
-                            data: data.map(function (c) {
-                                return c["percentage"]
-                            }),
-                            backgroundColor: palette('cb-Blues', data.length).map(function (hex) {
-                                return '#' + hex;
-                            }),
-                            borderColor: "rgba(0, 0, 0, 0)",
-                            borderWidth: 8
-                        }]
-                    },
-                    options: {
-                        legend: {
-                            position: (element === 'sectors') ? 'left' : 'right',
-                            labels: {fontColor: '#a4cdfe', fontSize: 10}, align: 'end'
-                        }
-                    }
-                });
+                this.resizeChart(element);
+            },
+
+            resizeChart: function(element)
+            {
+                // Resize 
+                let holder = document.querySelector('#' + element).querySelector('.frappe-chart')
+                holder.setAttribute("height", 200)
+                let pixels = 0;
+                holder.querySelector('.pie-chart').removeAttribute("transform")
+                holder.querySelectorAll('.chart-legend').forEach(l => l.removeAttribute("transform"))
+                holder.querySelectorAll('.chart-legend > *').forEach(l => l.setAttribute("transform", "translate(10, " + (pixels += 17) + ")"))
             }
         }
 })

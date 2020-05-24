@@ -8,14 +8,10 @@
     <!-- Styles -->
     <style>
          <%- include('../dist/scss/main.css') -%>
+         <%- include('../dist/js/tippy.bundle.css') -%>
     </style>
     
     <div class="container" id="app">
-
-        <%
-            // Set global variables
-
-        %>
 
         <!-- Left Side Menu -->
         <div class="row">
@@ -67,17 +63,11 @@
 <!-- Global Vue (Needed for everything) -->
 <script src = "js/vue.external.js"></script>
 
-
-
+<!-- Tippy -->
+<script src = "js/tippy.bundle.js"></script>
 
 <!-- App -->
 <script async src = "js/app.bundle.js"></script>
-
-<!-- Json rendering -->
-<script async src = "js/json-renderer.bundle.js"></script>
-
-<!-- Tippy -->
-<script async src = "js/tippy.bundle.js"></script>
 
 <!-- Stripe hosted -->
 <script async src="https://js.stripe.com/v3/"></script>

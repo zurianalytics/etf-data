@@ -1,6 +1,7 @@
 import tippy from 'tippy.js';
 import 'tippy.js/dist/tippy.css';
 
+
 Vue.mixin({
     methods: {
         initializeTooltips: function () {
@@ -27,7 +28,8 @@ Vue.mixin({
         },
     },
 
-    mounted() {
+    created() {
+        console.log("aa")
         this.initializeTooltips()
     }
 })

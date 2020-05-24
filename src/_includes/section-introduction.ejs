@@ -38,76 +38,76 @@
 
 
                     <div id="demo-content">
-
                         <div class="row">
                             <div class="col-sm-12">
-                                <canvas id="countries" style="width: 100%;"></canvas>
-                            </div>
-                            <div class="col-sm-12">
-                                <canvas id="sectors" style="width: 100%;"></canvas>
+                                <h6 class = "accent-blue">{{ fund.name }}</h6>
                             </div>
                         </div>
 
                         <div class="row">
-                            <div class="col-sm-12">
-                                <label>Fund Name:</label>
-                                <span>{{ fund.name }}</span>
-                            </div>
-                        </div>
 
-                        <div class="row">
-                            <div class="col-sm-4">
-                                <label>indexName</label>
-                                <span>{{ fund.indexName }}</span>
+                            <div class="col-sm-12">
+                                <div id="sectors" style="width: 100%;" class = "left"></div>
                             </div>
-                            <div class="col-sm-4">
-                                <label>indexProvider</label>
-                                <span>{{ fund.indexProvider }}</span>
-                            </div>
-                            <div class="col-sm-4">
-                                <label>provider</label>
-                                <span>{{ fund.provider }}</span>
+
+                            <div class="col-sm-12">
+                                <div id="countries" style="width: 100%;" class = "right"></div>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-sm-4">
-                                <label>Asset Class</label>
+                                <label>ISIN</label><br/>
+                                <span>{{ fund.isin }}</span>
+                            </div>
+                            <div class="col-sm-4">
+                                <label>Asset Class</label><br/>
                                 <span>{{ fund.assetClass }}</span>
                             </div>
                             <div class="col-sm-4">
-                                <label>Domicile</label>
+                                <label>Product</label><br/>
+                                <span>{{ fund.productType }}</span>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-sm-4">
+                                <label>Factor</label><br/>
+                                <span>{{ fund.factor }}</span>
+                            </div>
+                            <div class="col-sm-4">
+                                <label>Domicile</label><br/>
                                 <span>{{ fund.domicile }}</span>
                             </div>
                             <div class="col-sm-4">
-                                <label>Base Currency</label>
+                                <label>Base Currency</label><br/>
                                 <span>{{ fund.baseCurrency }}</span>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-sm-4">
-                                <label>ReplicationMethod</label>
+                                <label>Replication</label><br/>
                                 <span>{{ fund.replicationMethod }}</span>
                             </div>
                             <div class="col-sm-4">
-                                <label>Distribution Type</label>
+                                <label>Type</label><br/>
                                 <span>{{ fund.distributionType }}</span>
                             </div>
                             <div class="col-sm-4">
-                                <label>Distribution Frequency</label>
+                                <label>Frequency</label><br/>
                                 <span>{{ fund.distributionFrequency }}</span>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-sm-4">
-                                <label>Product Type</label>
-                                <span>{{ fund.productType }}</span>
+                                <label>Index</label><br/>
+                                <span>{{ fund.indexName }}</span>
                             </div>
                             <div class="col-sm-4">
-                                <label>Factor</label>
-                                <span>{{ fund.factor }}</span>
+                                <label>Provider</label><br/>
+                                <span>{{ fund.provider }}</span>
                             </div>
                         </div>
 

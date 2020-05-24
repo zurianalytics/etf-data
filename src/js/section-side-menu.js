@@ -46,7 +46,6 @@ new Vue({
         document.querySelectorAll('[menu-item][top]').forEach(topLevel =>
         {
             observer.observe(topLevel);
-            console.log(observer, topLevel)
 
             let h = new Object({
                 'id': topLevel.id, 
