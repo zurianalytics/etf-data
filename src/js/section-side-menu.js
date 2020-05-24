@@ -7,6 +7,10 @@ new Vue({
     data() {
         return {
             menuItems: [],
+            interaction: 
+            {
+                menu: false
+            }
         }
     },
 

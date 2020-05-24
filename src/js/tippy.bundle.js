@@ -28,8 +28,7 @@ Vue.mixin({
         },
     },
 
-    created() {
-        console.log("aa")
+    mounted() {
         this.initializeTooltips()
     }
 })

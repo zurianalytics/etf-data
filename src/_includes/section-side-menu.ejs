@@ -1,13 +1,33 @@
 
-<ul id = "side-menu">
-    <li v-for="i in menuItems">
-        <a :href="'#' + i.id" @click="smoothScrollToLink(i.linkTo, $event)">{{i.content}}</a>
+<nav v-bind:class="{ active: interaction.menu }" id = "side-menu">
 
-        <ul v-if="i.subs.length > 0">
-            <li v-for="si in i.subs">
-                <a :href = "'#' + si.id" @click="smoothScrollToLink(si.linkTo, $event)">{{si.content}}</a>
-            </li>
+    <a class="puller" href="" v-on:click.prevent="interaction.menu = !interaction.menu">
+        <span v-if="!interaction.menu">»</span>
+        <span v-if="interaction.menu">«</span>
+    </a>
+    <div class="representation">
+        <a href="https://zurianalytics.com/">
+            <img class="logo" src="images/logo.png"/>
+            <div><span class="accent-blue">ETF</span> Data API</div>
+        </a>
+    </div>
+
+    <ul>
+        <li v-for="i in menuItems">
+            <a :href="'#' + i.id" @click="smoothScrollToLink(i.linkTo, $event)">{{i.content}}</a>
+
+            <ul v-if="i.subs.length > 0">
+                <li v-for="si in i.subs">
+                    <a :href = "'#' + si.id" @click="smoothScrollToLink(si.linkTo, $event)">{{si.content}}</a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <footer>
+        <ul>
+            <li><a href='#subscription-plans'>Sign Up for a Developer Key</a></li>
+            <li><a href='https://zurianalytics.com'>This is a ZuriAnalytics API.</a></li>
         </ul>
-    </li>
-</ul>
-
+    </footer>
+</nav>
