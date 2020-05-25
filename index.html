@@ -902,13 +902,6 @@ Side menu
 
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <label for="card-element">
-                                        Credit or debit card
-                                    </label>
-                                    <div id="card-element"><!-- A Stripe Element will be inserted here. --></div>
-                                </div>
-
-                                <div class="form-group">
                                     <label>
             <a class="info" data-tippy-content="The API token is used to authenticate & track all API calls.
             A token can be reused and additional calls and time will be added to the token automatically with the subscription.
@@ -923,9 +916,7 @@ Side menu
 
                             <div class="col-md-6">
 
-
                                 <div class="form-group">
-
                                     <label for="plan">
                                         Select Plan
                                     </label>
@@ -933,16 +924,6 @@ Side menu
                                         <option value="individual">Individual</option>
                                         <option value="business">Business</option>
                                     </select>
-
-                                </div>
-
-
-                                <div class="form-group">
-                                    <label for="email">
-                                        Email Address
-                                    </label>
-                                    <input class="form-control" id="email" placeholder="Enter email" type="text"
-                                            v-model="payment.email">
                                 </div>
 
                             </div>
@@ -950,11 +931,11 @@ Side menu
                         </div>
 
                         <span id="subscribe-wrapper">
-                    <button :disabled='!isComplete || isProcessing || paymentComplete'
+                    <button :disabled='!payment.plan || payment.processing'
                             id="subscribe"
-                            v-bind:class="{ 'success': paymentComplete }" v-on:click="initiatePaymentRequest">
-                        <span>Subscribe</span><span v-if="paymentComplete">d</span>
-                        <img src="images/loading.svg" v-if="isProcessing">
+                            v-on:click="selfCheckout">
+                        <span>Subscribe</span>
+                        <img src="images/loading.svg" v-if="payment.processing">
                     </button>
                 </span>
 
