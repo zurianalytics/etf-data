@@ -40,16 +40,11 @@ new Vue({
      */
     mounted()
     {
-        // Create observer to change active / inactive links
-        let observer = new IntersectionObserver(this.applyIntersectStyles, {
-                root: document,
-                rootMargin: "0px"
-        })
 
         // Create a drop down for for each menu-item
         document.querySelectorAll('[menu-item][top]').forEach(topLevel =>
         {
-            observer.observe(topLevel);
+            new IntersectionObserver(this.applyIntersectStyles).observe(topLevel);
 
             let h = new Object({
                 'id': topLevel.id, 
@@ -62,7 +57,7 @@ new Vue({
                 .querySelectorAll('[menu-item]:not([top])')
                 .forEach(subLevel =>
                 {
-                    observer.observe(subLevel)
+                    new IntersectionObserver(this.applyIntersectStyles).observe(subLevel);
 
                     h.subs.push(new Object({
                         'id': subLevel.id, 
