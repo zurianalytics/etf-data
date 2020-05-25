@@ -78,13 +78,13 @@
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="api-token">
+                                    <label>
             <a class="info" data-tippy-content="The API token is used to authenticate & track all API calls.
             A token can be reused and additional calls and time will be added to the token automatically with the subscription.
             The API token must be kept safe and secret.
             The only restriction of the token is for it to be between 4 and 240 characters.">API Token </a>
                                     </label>
-                                    <textarea id="api-token" readonly="readonly" v-model="payment.token"
+                                    <textarea id="api-token-create" readonly="readonly" v-model="payment.token"
                                                 v-on:click="copyToClipboard"></textarea>
                                 </div>
 
@@ -162,13 +162,13 @@
                         </div>
 
                         <div class="form-group">
-                            <label for="api-token">
+                            <label>
             <a class="info" data-tippy-content="The API token is used to authenticate & track all API calls.
             A token can be reused and additional calls and time will be added to the token automatically with the subscription.
             The API token must be kept safe and secret.
             The only restriction of the token is for it to be between 4 and 240 characters.">API Token </a>
                             </label>
-                            <textarea id="api-token" v-model="dashboard.token"></textarea>
+                            <textarea id="api-token-manage" v-model="dashboard.token"></textarea>
                         </div>
 
                     </div>

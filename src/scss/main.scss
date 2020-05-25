@@ -474,6 +474,8 @@ form {
 
   .StripeElement--focus, input:focus, select:focus, textarea:focus {
     box-shadow: 0 1px 3px 0 #bec7d1;
+    border: none;
+    outline: none;
   }
 
   .StripeElement--invalid, input:invalid, select:invalid {
@@ -549,25 +551,22 @@ form {
 
   // Styles
   &[data-theme~='zurianalytics'] {
-    background-color: $color-gray-100;
-    color: $color-gray-900;
+    background-color: $color-blue-800;
+    color: $color-gray-000;
 
-    &[data-placement^='top'] > .tippy-arrow::before,
-    &[data-placement^='bottom'] > .tippy-arrow::before,
-    &[data-placement^='left'] > .tippy-arrow::before,
-    &[data-placement^='right'] > .tippy-arrow::before {
-      border-top-color: $color-gray-100;
+    & > .tippy-arrow::before {
+      border-top-color: $color-blue-800 !important;
+      border-bottom-color: $color-blue-800 !important;
     }
   }
 
   &[data-theme~='aggressive'] {
     background-color: $color-orange-400;
-    color: $color-orange-400-subtle;
+    color: $color-gray-000;
 
-    &[data-placement^='bottom'] > .tippy-arrow::before,
-    &[data-placement^='top'] > .tippy-arrow::before {
-      border-bottom-color: $color-orange-400;
-      color: $color-orange-400;
+    & > .tippy-arrow::before {
+      border-top-color: $color-orange-400 !important;
+      border-bottom-color: $color-orange-400 !important;
     }
   }
 
@@ -575,11 +574,9 @@ form {
     background-color: $color-green-100;
     color: $color-gray-000;
 
-    &[data-placement^='bottom'] > .tippy-arrow::before,
-    &[data-placement^='top'] > .tippy-arrow::before {
-      border-bottom-color: $color-green-100;
-      color: $color-green-100;
+    & > .tippy-arrow::before {
+      border-top-color: $color-green-100 !important;
+      border-bottom-color: $color-green-100 !important;
     }
   }
-
 }
