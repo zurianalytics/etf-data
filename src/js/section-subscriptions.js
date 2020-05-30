@@ -68,7 +68,7 @@ new Vue({
 
                 axios.post(env.api + '/payment/manage',
                     {
-                        email: this.dashboard.email
+                        token: this.dashboard.token
                     })
                     .then(result => {
                         console.dir("Management Dashboard Session returned: ", result.data);
