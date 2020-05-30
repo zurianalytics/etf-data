@@ -72,12 +72,12 @@ new Vue({
                 let delta = 100 - data.map(d => d.percentage).reduce((a, b) => a + b, 0);
 
                 if (delta > 0)
-                {
-                    let other = new Object()
-                    other[attr] = 'Other'
-                    other['percentage'] = delta
-                    data.push(other)
-                }
+                    data.push(new Object(
+                        {
+                            'country': 'OTH',
+                            'sector': 'OTHER',
+                            'percentage': delta
+                        }))
                 
                 let dataS = {
                     labels: data.map(d => d[attr]),
