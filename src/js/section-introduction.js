@@ -67,7 +67,18 @@ new Vue({
                     document.querySelector('#' + element).style.display = "none"
                 else 
                     document.querySelector('#' + element).style.display = "block"
+                
+                // Add other 
+                let delta = 100 - data.map(d => d.percentage).reduce((a, b) => a + b, 0);
 
+                if (delta > 0)
+                {
+                    let other = new Object()
+                    other[attr] = 'Other'
+                    orher['percentage'] = delta
+                    data.push(other)
+                }
+                
                 let dataS = {
                     labels: data.map(d => d[attr]),
                     datasets: [{values: data.map(d => d.percentage)}]
