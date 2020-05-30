@@ -76,7 +76,7 @@ new Vue({
                         {
                             'country': 'OTH',
                             'sector': 'OTHER',
-                            'percentage': delta.toFixed(2)
+                            'percentage': Number(delta.toFixed(2))
                         }))
                 
                 let dataS = {
