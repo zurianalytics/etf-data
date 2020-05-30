@@ -1,5 +1,6 @@
 @charset "utf-8";
 @import 'variables';
+@import '_brand';
 @import 'normalize';
 @import 'bootstrap';
 
@@ -8,17 +9,12 @@
   --------------------!*/
 html, body {
 
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  font-size: 15px;
-  line-height: 1.6rem;
-  color: $color-blue-1000;
+  @include typography-6;
+  color: $color-blue-400;
   padding: 0;
   margin: 0;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
   background-color: $color-gray-100;
   height: 100%;
-  -webkit-text-size-adjust: none; /* Never autoresize text */
 
   #app {
     background-color: $color-gray-000;
@@ -35,6 +31,30 @@ html, body {
       margin-top: 0;
       margin-bottom: 0;
     }
+  }
+
+  .accent-blue {
+    color: $color-blue-200;
+  }
+
+  .accent-green {
+    color: $color-green-100;
+  }
+
+  .accent-hard {
+    color: $color-green-100;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  .accent-gray {
+    font-weight: bold;
+    color: $color-gray-400;
+  }
+
+  .accent-bold {
+    font-weight: bold;
+    color: $color-blue-200;
   }
 }
 
@@ -56,8 +76,8 @@ nav {
     flex-direction: column;
     justify-content: center;
     width: 22px;
-    border-right: 2px solid $color-blue-100;
-    color: $color-blue-100;
+    border-right: 2px solid $color-blue-200;
+    color: $color-blue-200;
     font-size: 2rem;
   }
 
@@ -93,10 +113,9 @@ nav {
 
   .note 
   {
-    font-size: 0.8rem;
-    line-height: 1rem;
+    @include typography-footnote;
     font-weight: bold;
-    color: $color-gray-400;
+    color: $color-gray-300;
   }
 
   // Top header
@@ -119,7 +138,7 @@ nav {
     font-size: 0.9rem;
 
     .active > a {
-      color: $color-blue-100;
+      color: $color-blue-200;
     }
 
     // First level headers
@@ -128,7 +147,7 @@ nav {
     }
 
     li {
-      color: $color-gray-900;
+      color: $color-gray-400;
 
       // Second level headers
       li {
@@ -194,7 +213,7 @@ nav {
 }
 
 .chart-container .legend-dataset-text {
-  fill: $color-blue-100;
+  fill: $color-blue-200;
   font-weight: 600;
 }
 
@@ -206,13 +225,12 @@ nav {
 .content {
 
   h1 {
-    @extend %header-font;
-    font-size: 2rem;
+    @include typography-2;
+    color: $color-blue-500;
   }
 
   h2 {
-    @extend %header-font;
-    font-size: 1.5rem;
+    @include typography-4;
   }
 
   h1, h2 {
@@ -242,8 +260,7 @@ nav {
   }
 
   h3, h4, h5, h6 {
-    @extend %header-font;
-    font-size: 1.2rem;
+    @include typography-5;
     margin-top: 2.5em;
     margin-bottom: 0.8em;
   }
@@ -269,7 +286,7 @@ nav {
   a.external, a.info, a.internal {
 
     display: inline-block;
-    color: $color-blue-100;
+    color: $color-blue-200;
 
     &:after {
       font-family: icons;
@@ -279,9 +296,9 @@ nav {
     }
 
     &.info {
-      color: $color-blue-100;
+      color: $color-blue-200;
       cursor: help;
-      border-bottom: 1px dotted $color-blue-100;
+      border-bottom: 1px dotted $color-blue-200;
 
       &:after {
         content: '\e101';
@@ -324,8 +341,8 @@ nav {
 
         &:hover::before,
         &:focus::before {
-          color: $color-blue-100;
-          text-shadow: 10px 0 $color-blue-100, -10px 0 $color-blue-100;
+          color: $color-blue-200;
+          text-shadow: 10px 0 $color-blue-200, -10px 0 $color-blue-200;
         }
       }
     }
@@ -338,30 +355,6 @@ nav {
     border: 1px solid #d3e1f26b;
     display:inline-block;
   }
-
-  .accent-blue {
-    color: $color-blue-100;
-  }
-
-  .accent-green {
-    color: $color-green-100;
-  }
-
-  .accent-hard {
-    color: $color-green-100;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-
-  .accent-gray {
-    font-weight: bold;
-    color: $color-gray-400;
-  }
-
-  .accent-bold {
-    font-weight: bold;
-    color: $color-blue-100;
-  }
 }
 
 
@@ -369,7 +362,7 @@ nav {
   Dark Box Styles
   -------------------- !*/
 .content .accent-box {
-  background-color: $color-blue-800;
+  background-color: $color-blue-400;
   border-radius: 10px;
   color: $color-gray-000;
   box-sizing: border-box;
@@ -389,7 +382,7 @@ nav {
 
   
   header {
-    background-color: $color-blue-1000;
+    background-color: $color-blue-500;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 
@@ -437,7 +430,7 @@ nav {
   label,
   .json-formatter-key,
   .json-formatter-bracket {
-    color: $color-blue-100;
+    color: $color-blue-200;
   }
 
   .json-formatter-string {
@@ -445,7 +438,7 @@ nav {
   }
 
   .json-formatter-null {
-    color: $color-gray-900;
+    color: $color-gray-400;
   }
 }
 
@@ -483,7 +476,7 @@ form {
   }
 
   button {
-    background: $color-blue-100;
+    background: $color-blue-200;
     color: $color-gray-100;
     height: 38px;
     padding: 0 14px;
@@ -497,7 +490,7 @@ form {
     }
 
     &:disabled {
-      background: $color-gray-900;
+      background: $color-gray-400;
 
       &.success {
         background: $color-green-100;
@@ -507,8 +500,8 @@ form {
 
   label {
     display: block;
-    color: $color-gray-400;
-    font-size: 0.85rem;
+    @include typography-footnote;
+    color: $color-gray-300;
     margin-bottom: 6px;
   }
 
@@ -551,12 +544,12 @@ form {
 
   // Styles
   &[data-theme~='zurianalytics'] {
-    background-color: $color-blue-800;
+    background-color: $color-blue-500;
     color: $color-gray-000;
 
     & > .tippy-arrow::before {
-      border-top-color: $color-blue-800 !important;
-      border-bottom-color: $color-blue-800 !important;
+      border-top-color: $color-blue-500 !important;
+      border-bottom-color: $color-blue-500 !important;
     }
   }
 

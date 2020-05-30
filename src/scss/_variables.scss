@@ -1,35 +1,4 @@
-/*
-Copyright 2008-2013 Concur Technologies, Inc.
 
-Licensed under the Apache License, Version 2.0 (the "License"); you may
-not use this file except in compliance with the License. You may obtain
-a copy of the License at
-
-  http://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software
-distributed under the License is distributed on an "AS IS" BASIS, WITHOUT
-WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied. See the
-License for the specific language governing permissions and limitations
-under the License.
-*/
-
-
-////////////////////////////////////////////////////////////////////////////////
-// Main Colors
-////////////////////////////////////////////////////////////////////////////////
-// Blues
-$color-blue-000: #a4cdfe !default;
-$color-blue-100: #7dabf8;
-$color-blue-800: #212d63 !default;
-$color-blue-1000: #1a2652 !default;
-// Grayscales
-$color-gray-000: #fff !default;
-$color-gray-100: #F3F7F9 !default;
-$color-gray-400: #8297b3 !default;
-$color-gray-900: #697386 !default;
-// Greens
-$color-green-100: #57ce9a !default;
 // Other accents
 $color-orange-400: #db8b51 !default;
 $color-orange-400-subtle: #f4d2d4 !default;
@@ -47,10 +16,6 @@ $color-orange-400-subtle: #f4d2d4 !default;
        url('font/icons.svg#icons') format('svg');
   font-weight: normal;
   font-style: normal;
-}
-
-%header-font {
-  font-weight: bold;
 }
 
 %code-font {
