@@ -75,7 +75,7 @@ new Vue({
                 {
                     let other = new Object()
                     other[attr] = 'Other'
-                    orher['percentage'] = delta
+                    other['percentage'] = delta
                     data.push(other)
                 }
                 
