@@ -347,7 +347,7 @@
             </div>
         </div>
 
-        <div class="row" style = "margin-top: 0" menu-item="By Product Type" id = "by-product-type">
+        <div class="row" style = "margin-top: 0" menu-item="By Asset Class" id = "by-asset-class">
 
             <div class="col-md-6">
                 <div class = "list">
@@ -378,44 +378,6 @@
                     </header>
                     <div>
                         <span>Returns a list of products with asset class EQUITY (e.g., ETFs and Equity Funds)</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row" style = "margin-top: 0" menu-item="By Asset Class" id = "by-asset-class">
-
-            <div class="col-md-6">
-                <div class = "list">
-                        <code class="accent-bold">productType</code> <code class="accent-gray">ProductType</code> <code class="accent-hard">Optional</code>
-                        <p>
-                            Returns products of the given type. The available product types are:
-                        </p>
-                        <p>
-                            <code class = "inline">ETF</code>
-                            <code class = "inline">ETN</code>
-                            <code class = "inline">ETC</code>
-                            <code class = "inline">FUND</code>
-                        </p>
-                        <p>
-                            While the support for ETFs is excelent, support for other product types is still experimental.
-                        </p>
-                        <p>
-                            In order to search for a product from a type <code class = "accent-green">PT</code> write:
-                        </p>
-                        <p>
-                            <code class="inline">{{apiUrl}}/search?<span class = "accent-bold">productType</span>=<span class = "accent-hard">PT</span></code>
-                        </p>
-                </div>
-            </div>
-
-            <div class="col-md-6">
-                <div class="accent-box">
-                    <header>
-                        <code>GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">productType</span>=<span class = "accent-hard">ETF</span></code>
-                    </header>
-                    <div>
-                        <span>Returns a list of ETFs</span>
                     </div>
                 </div>
             </div>
