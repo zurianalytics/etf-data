@@ -1,3 +1,5 @@
+// ============= Brand Colors =============
+// ======================================
 // Blues
 $color-blue-000: hsla(227, 50%, 95%, 1);
 $color-blue-200: hsla(227, 60%, 70%, 1); 
@@ -17,33 +19,37 @@ $color-green-100: hsla(154, 55%, 57%, 1);
 
 
 
-// Typography starting big to small
+// ============= Brand Typography =============
+// ======================================
+@mixin typography-header 
+{
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  font-display: swap;
+}
+
 @mixin typography-1 {
   font-size: 2.6rem;
   line-height: 2.8rem;
-  font-family: "Montserrat", sans-serif;
-font-weight: bold;
+  @include typography-header;
 }
 
 @mixin typography-2 {
   font-size: 2rem;
   line-height: 2.2rem;
-  font-family: "Montserrat", sans-serif;
-font-weight: bold;
+  @include typography-header;
 }
 
 @mixin typography-4 {
   font-size: 1.6rem;
   line-height: 2rem;
-  font-weight: bold;
-  font-family: "Montserrat", sans-serif;
+  @include typography-header;
 }
 
 @mixin typography-5 {
   font-size: 1rem;
   line-height: 1.4rem;
-  font-weight: bold;
-  font-family: "Montserrat", sans-serif;
+  @include typography-header;
 }
 
 @mixin typography-6 {
