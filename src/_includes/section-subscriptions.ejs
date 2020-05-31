@@ -4,12 +4,12 @@
     <h1>Subscriptions</h1>
 
     <p>
-        {{apiName}} can be called for free up to a certain number of requests daily. Thie number of free requests 
-        may change day-to-day, as we closelly monitor abuse.
+        {{apiName}} can be called for free up to a certain number of requests daily. The number of free requests 
+        may change day-to-day, as we closely monitor abuse.
     </p>
 
     <p>
-        Nevertheless it should always be enough for someone just exploring the API and doing small individual research. 
+        Nevertheless, it should always be enough for someone just exploring the API and doing small individual research. 
         In the case where these requests are not enough, you will need to subscribe to one of the plans listed below.
     </p>
 
@@ -20,28 +20,28 @@
 
             <div class="row">
                 <div class="col-md-4">
-                    <h3>Individual</h3>
+                    <h3>Professional</h3>
                     <ul>
-                        <li><span class = "accent-green">10 000</span> API calls | month</li>
+                        <li><span class = "accent-green">50 000</span> API calls | month</li>
                         <li><a class="info" data-tippy-content="
         For individual research and use in personal investing. Data can not be used to present products to third parties.
         <a href ='https://zurianalytics.com/terms_conditions' class = 'external'>Learn more</a>">Individual</a> Use
                             License
                         </li>
-                        <li><span class="accent-hard">5</span> <span>&euro; | month</span></li>
+                        <li><span class="accent-hard">17</span> <span>&euro; | month</span></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
                     <h3>Business</h3>
                     <ul>
-                        <li><span class="accent-green">500 000</span> API calls | month</li>
+                        <li><span class="accent-green">1 000 000</span> API calls | month</li>
                         <li><a class="info" data-tippy-content="
         For business research and providing data to third parties.
         <a href ='https://zurianalytics.com/terms_conditions' class = 'external'>Learn more</a>">Business</a> Use
                             License
                         </li>
                         <li>Integration Support</li>
-                        <li><span class="accent-hard">377</span> <span>&euro; | month</span></li>
+                        <li><span class="accent-hard">345</span> <span>&euro; | month</span></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
@@ -54,7 +54,7 @@
                             License
                         </li>
                         <li>Integration Support</li>
-                        <li><span>Custom Data Feeds</span> (e.g., <span class="accent-hard">CSV</span>, <span
+                        <li><span>Custom Data Feeds</span> (e.g. <span class="accent-hard">CSV</span>, <span
                                 class="accent-hard">XLSX</span>)
                         </li>
                         <li>Get In Touch: <br/><a class="external" href="mailto:contact@zurianalytics.com">contact@zurianalytics.com</a>
@@ -87,10 +87,11 @@
 
                                 <div class="form-group">
                                     <label for="plan">
-                                        Select Plan
+                                        Select Plan*
                                     </label>
                                     <select id="plan" selected="individual" v-model="payment.plan">
-                                        <option value="individual">Individual</option>
+                                        <option value="price_HNHSicEhz1eIa9">Test plan</option>
+                                        <option value="price_HNHC3mOYyMYhAt">Professional</option>
                                         <option value="business">Business</option>
                                     </select>
                                 </div>
@@ -123,10 +124,10 @@
             <h2>Manage Subscription</h2>
 
             <p>
-                You can manage your subscription by adding time / changing payment methods / cancelling
-                subscriptions, etc, by logging in with your token and email address.
+                You can manage your subscription by adding time/ changing payment methods/ cancelling
+                subscriptions, etc. by logging in with your token.
 
-                For any problems, free feel to contact us at <a class = "external" href ="mailto:support@zurianalytics.com">support@zurianalytics.com</a>
+                In case of any issues, please don't hesitate to contact us at <a class = "external" href ="mailto:support@zurianalytics.com">support@zurianalytics.com</a>
             </p>
 
             <form id="manage-subscription-form" method="GET">

@@ -14,12 +14,12 @@
                         >JSON format.</a>
                 </p>
 
-                <p>This endpoint is not meant as a way to extract coprehensive
+                <p>This endpoint is not meant as a way to extract comprehensive
                 information about the desired products. It will return a list of basic attributes (ISIN & Name). Any further information
                 needs to be fetched with using the <a class = "internal" href = "#get-individual-etf">Individual Endpoints</a></p>
 
                 <p>
-                    All of the parameters listed below can be attached as query parameters in an arbitary order in order to build a request:
+                    All of the parameters listed below can be attached as query parameters in an arbitrary order in order to build a request:
                 </p>
                 <p>
                     <code class="inline">{{apiUrl}}/search?<span class = "accent-bold">param1</span>=<span class = "accent-hard">v1</span>&amp;<span class = "accent-bold">param2</span>=<span class = "accent-hard">v2</span></code>
@@ -58,14 +58,14 @@
                         <code class="accent-bold">exchange</code> <code class="accent-gray">Exchange</code> <code class="accent-hard">Optional</code>
                         <p>
                             Will filter products only listed on a specific exchange. The supported exchanges are:
-                            <code class="inline">LSE</code>,
-                            <code class="inline">XETRA</code>,
-                            <code class="inline">BORSA_ITALIANA</code>,
+                            <code class="inline">LSE</code>
+                            <code class="inline">XETRA</code>
+                            <code class="inline">BORSA_ITALIANA</code>
                             <code class="inline">SIX</code>
                         </p>
                         <p>
                             To get a list of the products listed on an exchange <span class = "accent-hard">EX</span>
-                            write:
+                            use:
                         </p>
                         <p>
                             <code class="inline">{{apiUrl}}/search?<span class = "accent-bold">exchange</span>=<span class = "accent-hard">EX</span></code>
@@ -79,7 +79,7 @@
                         <code>GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">exchange</span>=<span class = "accent-hard">SIX</span></code>
                     </header>
                     <div>
-                        <span>Returns a list of funds listed on SIX</span>
+                        <span>Returns a list of funds listed on SIX.</span>
                     </div>
                 </div>
             </div>
@@ -97,18 +97,18 @@
                             Factor definitions follow the <a href = "https://www.msci.com/factor-indexes" class = "external">MSCI Factors</a>: 
                         </p>
                         <p>
-                            <code class = "inline">VOLATILITY_HIGH</code>
-                            <code class = "inline">VOLATILITY_LOW</code>
-                            <code class = "inline">YIELD</code>
-                            <code class = "inline">QUALITY</code>
-                            <code class = "inline">MOMENTUM</code>
-                            <code class = "inline">VALUE</code>
-                            <code class = "inline">SIZE_BIG</code>
-                            <code class = "inline">SIZE_SMALL</code>
+                            <code class = "inline">VOLATILITY_HIGH</code> 
+                            <code class = "inline">VOLATILITY_LOW</code> 
+                            <code class = "inline">YIELD</code> 
+                            <code class = "inline">QUALITY</code> 
+                            <code class = "inline">MOMENTUM</code> 
+                            <code class = "inline">VALUE</code> 
+                            <code class = "inline">SIZE_BIG</code> 
+                            <code class = "inline">SIZE_SMALL</code> 
                             <code class = "inline">MULTIFACTOR</code>
                         </p>
                         <p>
-                            In order to search for a product with a specific factor <code class = "accent-green">F</code> write:
+                            In order to search for a product with a specific factor <code class = "accent-green">F</code> use:
                         </p>
                         <p>
                             <code class="inline">{{apiUrl}}/search?<span class = "accent-bold">factor</span>=<span class = "accent-hard">F</span></code>
@@ -142,7 +142,7 @@
                         </p>
                         <p>
                             In order to search for products with at least <span class = "accent-green">p%</span> exposure to <span class = "accent-blue">country</span>
-                            write:
+                            use:
                         </p>
                         <p>
                             <code class="inline">{{apiUrl}}/search?<span class = "accent-bold">country</span>=<span class = "accent-hard">P</span></code>
@@ -156,7 +156,7 @@
                         <code>GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">IRL</span>=<span class = "accent-hard">45</span></code>
                     </header>
                     <div>
-                        <span>Returns a list of funds which have at least 45% of their assets invested in Ireland</span>
+                        <span>Returns a list of funds which have at least 45% of their assets invested in Ireland.</span>
                     </div>
                 </div>
                                 <div class="accent-box">
@@ -164,7 +164,7 @@
                         <code>GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">RUS</span>=<span class = "accent-hard">1</span></code>&<span class = "accent-bold">HUN</span>=<span class = "accent-hard">1</span></code>&<span class = "accent-bold">POL</span>=<span class = "accent-hard">1</span></code>
                     </header>
                     <div>
-                        <span>Finds products with some broad eastern europe exposure.</span>
+                        <span>Finds products with some broad Eastern Europe exposure.</span>
                     </div>
                 </div>
             </div>
@@ -181,24 +181,24 @@
                             <code class = 'inline'>Sector</code>. The minimum exposure required is the value for this parameter.
                         </p>
                         <p>
-                            The sectors follow the <a href = "https://www.msci.com/gics" class = "external">Global Industry Classification Stadnard</a>:
+                            The sectors follow the <a href = "https://www.msci.com/gics" class = "external">Global Industry Classification Standard</a>:
                         </p>
                         <p>
-                            <code class = "inline">INFORMATION_TECHNOLOGY</code>
-                            <code class = "inline">COMMUNICATION_SERVICES</code>
-                            <code class = "inline">INDUSTRIALS</code>
-                            <code class = "inline">HEALTH_CARE</code>
-                            <code class = "inline">MATERIALS</code>
-                            <code class = "inline">REAL_ESTATE</code>
-                            <code class = "inline">ENERGY</code>
-                            <code class = "inline">CONSUMER_DISCRETIONARY</code>
-                            <code class = "inline">CONSUMER_STAPLES</code>
-                            <code class = "inline">UTILITIES</code>
+                            <code class = "inline">INFORMATION_TECHNOLOGY</code> 
+                            <code class = "inline">COMMUNICATION_SERVICES</code> 
+                            <code class = "inline">INDUSTRIALS</code> 
+                            <code class = "inline">HEALTH_CARE</code> 
+                            <code class = "inline">MATERIALS</code> 
+                            <code class = "inline">REAL_ESTATE</code> 
+                            <code class = "inline">ENERGY</code> 
+                            <code class = "inline">CONSUMER_DISCRETIONARY</code> 
+                            <code class = "inline">CONSUMER_STAPLES</code> 
+                            <code class = "inline">UTILITIES</code> 
                             <code class = "inline">FINANCIALS</code>
                         </p>
                         <p>
                             In order to search for products with at least <span class = "accent-green">p%</span> exposure to a <span class = "accent-blue">sector</span>
-                            write:
+                            use:
                         </p>
                         <p>
                             <code class="inline">{{apiUrl}}/search?<span class = "accent-bold">sector</span>=<span class = "accent-hard">p</span></code>
@@ -231,7 +231,7 @@
                             Will filter products that have at most the total fee provided.
                         </p>
                         <p>
-                            To get a list of the products that have at most <span class = "accent-green">p%</span> fee write: 
+                            To get a list of the products that have at most <span class = "accent-green">p%</span> fee use: 
                         </p>
                         <p>
                             <code class="inline">{{apiUrl}}/search?<span class = "accent-bold">totalFee</span>=<span class = "accent-hard">p</span></code>
@@ -245,7 +245,7 @@
                         <code>GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">totalFee</span>=<span class = "accent-hard">4.5</span></code>
                     </header>
                     <div>
-                        <span>Returns a list of products that have at most 4.5% fee. For instance all ETFs with TERS smaller or equal than 4.5 will be included here.</span>
+                        <span>Returns a list of products that have at most 4.5% fee. For instance all ETFs with TERS smaller than or equal to 4.5% will be included here.</span>
                     </div>
                 </div>
             </div>
@@ -258,12 +258,12 @@
                 <div class = "list">
                         <code class="accent-bold">domicile</code> <code class="accent-gray">ALPHA3-COUNTRY-CODE</code> <code class="accent-hard">Optional</code>
                         <p>
-                            Returns products which are domiciles in the provided country. The country provided should be in a 
+                            Returns products which are domiciles in the provided country. The country provided should be in an 
 
                             <a href = "https://en.wikipedia.org/wiki/List_of_ISO_3166_country_codes" class = "external">Alpha3-Country-Code</a> format.
                         </p>
                         <p>
-                            To get a list of the products that are domiciled in country <span class = "accent-green">CTY</span> write: 
+                            To get a list of the products that are domiciled in country <span class = "accent-green">CTY</span> use: 
                         </p>
                         <p>
                             <code class="inline">{{apiUrl}}/search?<span class = "accent-bold">domicile</span>=<span class = "accent-hard">CTY</span></code>
@@ -277,7 +277,7 @@
                         <code>GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">domicile</span>=<span class = "accent-hard">LUX</span></code>
                     </header>
                     <div>
-                        <span>Returns a list of products that are domiciled in Luxembourg</span>
+                        <span>Returns a list of products that are domiciled in Luxembourg.</span>
                     </div>
                 </div>
             </div>
@@ -292,10 +292,10 @@
                             Returns products with the given replication method. The available replication methods are:
                         </p>
                         <p>
-                            <code class = "inline">PHYSICAL</code><code class = "inline">SYNTHETIC</code>
+                            <code class = "inline">PHYSICAL</code> <code class = "inline">SYNTHETIC</code>
                         </p>
                         <p>
-                            In order to search for a product with replication method <code class = "accent-green">REPLICATION_METHOD</code> write:
+                            In order to search for a product with replication method <code class = "accent-green">REPLICATION_METHOD</code> use:
                         </p>
                         <p>
                             <code class="inline">{{apiUrl}}/search?<span class = "accent-bold">replicationMethod</span>=<span class = "accent-hard">REPLICATION_METHOD</span></code>
@@ -309,7 +309,7 @@
                         <code>GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">replicationMethod</span>=<span class = "accent-hard">PHYSICAL</span></code>
                     </header>
                     <div>
-                        <span>Returns a list of products which are physically</span>
+                        <span>Returns a list of products which are physically replicated.</span>
                     </div>
                 </div>
             </div>
@@ -324,10 +324,10 @@
                             Returns products with the given distribution type. The available distribution types are:
                         </p>
                         <p>
-                            <code class = "inline">DISTRIBUTING</code><code class = "inline">ACCUMULATING</code>
+                            <code class = "inline">DISTRIBUTING</code> <code class = "inline">ACCUMULATING</code>
                         </p>
                         <p>
-                            In order to search for a product with distribution type <code class = "accent-green">DIST_TYPE</code> write:
+                            In order to search for a product with distribution type <code class = "accent-green">DIST_TYPE</code> use:
                         </p>
                         <p>
                             <code class="inline">{{apiUrl}}/search?<span class = "accent-bold">distributionType</span>=<span class = "accent-hard">DIST_TYPE</span></code>
@@ -363,7 +363,7 @@
                             <code class = "inline">CURRENCY</code>
                         </p>
                         <p>
-                            In order to search for a product with asset class <code class = "accent-green">ASSET</code> write:
+                            In order to search for a product with asset class <code class = "accent-green">ASSET</code> use:
                         </p>
                         <p>
                             <code class="inline">{{apiUrl}}/search?<span class = "accent-bold">assetClass</span>=<span class = "accent-hard">ASSET</span></code>
@@ -377,7 +377,7 @@
                         <code>GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">assetClass</span>=<span class = "accent-hard">EQUITY</span></code>
                     </header>
                     <div>
-                        <span>Returns a list of products with asset class EQUITY (e.g., ETFs and Equity Funds)</span>
+                        <span>Returns a list of products with asset class EQUITY (e.g. ETFs and Equity Funds)</span>
                     </div>
                 </div>
             </div>
