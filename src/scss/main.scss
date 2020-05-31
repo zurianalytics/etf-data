@@ -1,8 +1,21 @@
 @charset "utf-8";
-@import 'variables';
 @import '_brand';
 @import 'normalize';
-@import 'bootstrap';
+@import '_layout';
+
+/**
+ Icon font 
+ **/
+@font-face {
+  font-family: 'icons';
+  src: url('font/icons.eot');
+  src: url('font/icons.eot#iefix') format('embedded-opentype'),
+       url('font/icons.woff') format('woff'),
+       url('font/icons.ttf') format('truetype'),
+       url('font/icons.svg#icons') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
 
 /*! ---------------------
   Global Styles
@@ -265,9 +278,12 @@ nav {
     margin-bottom: 0.8em;
   }
 
-  code {
-    @extend %break-words;
-    @extend %code-font;
+  code, .accent-box {
+    font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
+    font-size: 12px;
+    line-height: 1.5;
+    word-break: break-all;
+    hyphens: auto;
   }
 
   li, .list {
@@ -349,10 +365,11 @@ nav {
   }
 
   code.inline {
-    background-color: #f4f7f996;
+    background-color: $color-gray-100;
     padding: 0.15rem 0.3rem;
     border-radius: 4px;
-    border: 1px solid #d3e1f26b;
+    border: 1px solid $color-gray-200;
+    color: $color-gray-400;
     display:inline-block;
   }
 }
@@ -368,7 +385,6 @@ nav {
   box-sizing: border-box;
   overflow: hidden;
   margin-top: 2rem;
-  @extend %code-font;
 
   #demo-content h6
   {
