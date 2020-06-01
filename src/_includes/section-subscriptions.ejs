@@ -1,160 +1,210 @@
+<div
+  id="subscriptions-app"
+  class="container-fluid"
+  menu-item="Subscriptions"
+  top
+  id="subscriptions"
+>
+  <div class="row">
+    <div class="col-md-6">
+      <h1>Subscriptions<i class="zuri-icon invoice size-l"></i></h1>
 
+      <p>
+        {{ apiName }} can be called for free up to a certain number of requests
+        daily. The number of free requests may change day-to-day, as we closely
+        monitor abuse.
+      </p>
 
-<div id = "subscriptions-app" class="container-fluid" menu-item = "Subscriptions" top id="subscriptions">
-    <h1>Subscriptions</h1>
+      <p>
+        Nevertheless, it should always be enough for someone just exploring the
+        API and doing small individual research. In the case where these
+        requests are not enough, you will need to subscribe to one of the plans
+        listed below.
+      </p>
+    </div>
+  </div>
 
-    <p>
-        {{apiName}} can be called for free up to a certain number of requests daily. The number of free requests 
-        may change day-to-day, as we closely monitor abuse.
-    </p>
+  <div class="row" id="subscription-plans" menu-item="Plans">
+    <div class="col-md-12">
+      <h2>Subscription Plans</h2>
 
-    <p>
-        Nevertheless, it should always be enough for someone just exploring the API and doing small individual research. 
-        In the case where these requests are not enough, you will need to subscribe to one of the plans listed below.
-    </p>
-
-    <div class="row" id="subscription-plans" menu-item = "Plans">
-        <div class="col-md-12">
-
-            <h2>Subscription Plans </h2>
-
-            <div class="row">
-                <div class="col-md-4">
-                    <h3>Professional</h3>
-                    <ul>
-                        <li><span class = "accent-green">50 000</span> API calls | month</li>
-                        <li><a class="info" data-tippy-content="
+      <div class="row">
+        <div class="col-md-4">
+          <h3>Professional</h3>
+          <ul>
+            <li><span class="accent-green">50 000</span> API calls | month</li>
+            <li>
+              <a
+                class="info"
+                data-tippy-content="
         For individual research and use in personal investing. Data can not be used to present products to third parties.
-        <a href ='https://zurianalytics.com/terms_conditions' class = 'external'>Learn more</a>">Individual</a> Use
-                            License
-                        </li>
-                        <li><span class="accent-hard">17</span> <span>&euro; | month</span></li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h3>Business</h3>
-                    <ul>
-                        <li><span class="accent-green">1 000 000</span> API calls | month</li>
-                        <li><a class="info" data-tippy-content="
+        <a href ='https://zurianalytics.com/terms_conditions' class = 'external'>Learn more</a>"
+                >Individual</a
+              >
+              Use License
+            </li>
+            <li>
+              <span class="accent-hard">17</span> <span>&euro; | month</span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h3>Business</h3>
+          <ul>
+            <li>
+              <span class="accent-green">1 000 000</span> API calls | month
+            </li>
+            <li>
+              <a
+                class="info"
+                data-tippy-content="
         For business research and providing data to third parties.
-        <a href ='https://zurianalytics.com/terms_conditions' class = 'external'>Learn more</a>">Business</a> Use
-                            License
-                        </li>
-                        <li>Integration Support</li>
-                        <li><span class="accent-hard">345</span> <span>&euro; | month</span></li>
-                    </ul>
-                </div>
-                <div class="col-md-4">
-                    <h3>Enterprise</h3>
-                    <ul>
-                        <li><span class="accent-hard">Unlimited</span> API calls | month</li>
-                        <li><a class="info" data-tippy-content="
+        <a href ='https://zurianalytics.com/terms_conditions' class = 'external'>Learn more</a>"
+                >Business</a
+              >
+              Use License
+            </li>
+            <li>Integration Support</li>
+            <li>
+              <span class="accent-hard">345</span> <span>&euro; | month</span>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-4">
+          <h3>Enterprise</h3>
+          <ul>
+            <li>
+              <span class="accent-hard">Unlimited</span> API calls | month
+            </li>
+            <li>
+              <a
+                class="info"
+                data-tippy-content="
         For business research and providing data to third parties.
-        <a href ='https://zurianalytics.com/terms_conditions' class = 'external'>Learn more</a>">Business</a> Use
-                            License
-                        </li>
-                        <li>Integration Support</li>
-                        <li><span>Custom Data Feeds</span> (e.g. <span class="accent-hard">CSV</span>, <span
-                                class="accent-hard">XLSX</span>)
-                        </li>
-                        <li>Get In Touch: <br/><a class="external" href="mailto:contact@zurianalytics.com">contact@zurianalytics.com</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
+        <a href ='https://zurianalytics.com/terms_conditions' class = 'external'>Learn more</a>"
+                >Business</a
+              >
+              Use License
+            </li>
+            <li>Integration Support</li>
+            <li>
+              <span>Custom Data Feeds</span> (e.g.
+              <span class="accent-hard">CSV</span>,
+              <span class="accent-hard">XLSX</span>)
+            </li>
+            <li>
+              Get In Touch: <br /><a
+                class="external"
+                href="mailto:contact@zurianalytics.com"
+                >contact@zurianalytics.com</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
 
+      <div class="row">
+        <div class="col-md-8">
+          <form id="payment-form">
             <div class="row">
-                <div class="col-md-8">
-                    <form id="payment-form">
-
-                        <div class="row">
-
-                            <div class="col-md-6">
-                                <div class="form-group">
-                                    <label>
-            <a class="info" data-tippy-content="The API token is used to authenticate & track all API calls.
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label>
+                    <a
+                      class="info"
+                      data-tippy-content="The API token is used to authenticate & track all API calls.
             A token can be reused and additional calls and time will be added to the token automatically with the subscription.
             The API token must be kept safe and secret.
-            The only restriction of the token is for it to be between 4 and 240 characters.">API Token </a>
-                                    </label>
-                                    <textarea id="api-token-create" readonly="readonly" v-model="payment.token"
-                                                v-on:click="copyToClipboard"></textarea>
-                                </div>
-
-                            </div>
-
-                            <div class="col-md-6">
-
-                                <div class="form-group">
-                                    <label for="plan">
-                                        Select Plan*
-                                    </label>
-                                    <select id="plan" selected="individual" v-model="payment.plan">
-                                        <option value="price_HNHSicEhz1eIa9">Test plan</option>
-                                        <option value="price_HNHC3mOYyMYhAt">Professional</option>
-                                        <option value="business">Business</option>
-                                    </select>
-                                </div>
-
-                            </div>
-
-                        </div>
-
-                        <span id="subscribe-wrapper">
-                    <button :disabled='!payment.plan || payment.processing'
-                            id="subscribe"
-                            v-on:click="selfCheckout">
-                        <span>Subscribe</span>
-                        <img src="images/loading.svg" v-if="payment.processing">
-                    </button>
-                </span>
-
-                    </form>
+            The only restriction of the token is for it to be between 4 and 240 characters."
+                      >API Token
+                    </a>
+                  </label>
+                  <textarea
+                    id="api-token-create"
+                    readonly="readonly"
+                    v-model="payment.token"
+                    v-on:click="copyToClipboard"
+                  ></textarea>
                 </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="form-group">
+                  <label for="plan">
+                    Select Plan*
+                  </label>
+                  <select
+                    id="plan"
+                    selected="individual"
+                    v-model="payment.plan"
+                  >
+                    <option value="price_HNHSicEhz1eIa9">Test plan</option>
+                    <option value="price_HNHC3mOYyMYhAt">Professional</option>
+                    <option value="business">Business</option>
+                  </select>
+                </div>
+              </div>
             </div>
 
+            <span id="subscribe-wrapper">
+              <button
+                :disabled="!payment.plan || payment.processing"
+                id="subscribe"
+                v-on:click="selfCheckout"
+              >
+                <span>Subscribe</span>
+                <img src="images/loading.svg" v-if="payment.processing" />
+              </button>
+            </span>
+          </form>
         </div>
+      </div>
     </div>
+  </div>
 
+  <div class="row" id="manage-subscription" menu-item="Manage">
+    <div class="col-md-6">
+      <h2>Manage Subscription</h2>
 
-    <div class="row" id="manage-subscription" menu-item = "Manage">
+      <p>
+        You can manage your subscription by adding time/ changing payment
+        methods/ cancelling subscriptions, etc. by logging in with your token.
+        In case of any issues, please don't hesitate to contact us at
+        <a class="external" href="mailto:support@zurianalytics.com"
+          >support@zurianalytics.com</a
+        >
+      </p>
 
-        <div class="col-md-6">
-
-            <h2>Manage Subscription</h2>
-
-            <p>
-                You can manage your subscription by adding time/ changing payment methods/ cancelling
-                subscriptions, etc. by logging in with your token.
-
-                In case of any issues, please don't hesitate to contact us at <a class = "external" href ="mailto:support@zurianalytics.com">support@zurianalytics.com</a>
-            </p>
-
-            <form id="manage-subscription-form" method="GET">
-
-                <div class="row">
-                    <div class="col-md-6">
-
-                        <div class="form-group">
-                            <label>
-            <a class="info" data-tippy-content="The API token is used to authenticate & track all API calls.
+      <form id="manage-subscription-form" method="GET">
+        <div class="row">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label>
+                <a
+                  class="info"
+                  data-tippy-content="The API token is used to authenticate & track all API calls.
             A token can be reused and additional calls and time will be added to the token automatically with the subscription.
             The API token must be kept safe and secret.
-            The only restriction of the token is for it to be between 4 and 240 characters.">API Token </a>
-                            </label>
-                            <textarea id="api-token-manage" v-model="dashboard.token"></textarea>
-                        </div>
-
-                    </div>
-                </div>
-
-                <button :disabled='!dashboard.token' id="management-portal"
-                        v-on:click="managementDashboardLogin">
-                    <span>Manage Subscription</span>
-                </button>
-
-            </form>
-
+            The only restriction of the token is for it to be between 4 and 240 characters."
+                  >API Token
+                </a>
+              </label>
+              <textarea
+                id="api-token-manage"
+                v-model="dashboard.token"
+              ></textarea>
+            </div>
+          </div>
         </div>
+
+        <button
+          :disabled="!dashboard.token"
+          id="management-portal"
+          v-on:click="managementDashboardLogin"
+        >
+          <span>Manage Subscription</span>
+        </button>
+      </form>
     </div>
+  </div>
 </div>
