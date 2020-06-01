@@ -525,12 +525,12 @@ form {
 
   // Styles
   &[data-theme~='zurianalytics'] {
-    background-color: $color-blue-500;
+    background-color: $color-blue-400;
     color: $color-gray-000;
 
     & > .tippy-arrow::before {
-      border-top-color: $color-blue-500 !important;
-      border-bottom-color: $color-blue-500 !important;
+      border-top-color: $color-blue-400 !important;
+      border-bottom-color: $color-blue-400 !important;
     }
   }
 
