@@ -2,6 +2,7 @@
 // ======================================
 // Blues
 $color-blue-000: hsla(227, 50%, 95%, 1);
+$color-blue-100: hsla(227, 70%, 90%, 1); 
 $color-blue-200: hsla(227, 60%, 70%, 1); 
 $color-blue-400: hsla(227, 52%, 25%, 1);
 $color-blue-500: hsla(227, 52%, 21%, 1);
@@ -23,7 +24,9 @@ $color-green-100: hsla(154, 55%, 57%, 1);
 // ======================================
 @mixin typography-header 
 {
-  font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", 
+               "Verdana", 
+               "Geneva", sans-serif;
   font-weight: bold;
   font-display: swap;
 }
