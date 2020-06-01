@@ -68,7 +68,7 @@ nav {
   z-index: 30;
 
   .puller {
-    height: 40vh;
+    height: 100vh;
     float: right;
     display: none;
     flex-direction: column;
@@ -91,6 +91,7 @@ nav {
       padding-right: 0;
       transform: translateX(-100%);
       margin-left: 8px;
+      top: 0;
       transition: all 0.3s ease-out;
     }
 

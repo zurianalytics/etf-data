@@ -2,8 +2,7 @@
 <nav v-bind:class="{ active: interaction.menu }" id = "side-menu">
 
     <a class="puller" href="" v-on:click.prevent="interaction.menu = !interaction.menu">
-        <span v-if="!interaction.menu">»</span>
-        <span v-if="interaction.menu">«</span>
+        <i class = "zuri-icon arrow-right"></i>
     </a>
     <div class="representation">
         <a href="#">
