@@ -3,6 +3,7 @@
 @import 'normalize';
 @import '_layout';
 @import '_icons';
+@import '_fonts';
 
 /*! ---------------------
   Global Styles
@@ -283,6 +284,11 @@ nav {
   Accents & Special
   -------------------- !*/
 .content {
+
+  a.info 
+  {
+    cursor: help;
+  }
 
   // External && info
   a.external, a.info, a.internal {
