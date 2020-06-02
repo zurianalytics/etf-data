@@ -150,10 +150,9 @@
               <button
                 :disabled="!payment.plan || payment.processing"
                 id="subscribe"
-                v-on:click="selfCheckout"
-              >
+                v-on:click="selfCheckout">
                 <span>Subscribe</span>
-                <img src="images/loading.svg" v-if="payment.processing" />
+                <i class = "zuri-icon load align-middle" v-if="payment.processing"></i>
               </button>
             </span>
           </form>

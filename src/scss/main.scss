@@ -285,6 +285,11 @@ nav {
   -------------------- !*/
 .content {
 
+  .label {
+    @include typography-footnote;
+    color: $color-gray-300;
+  }
+
   a.info 
   {
     cursor: help;
@@ -297,12 +302,6 @@ nav {
     color: $color-blue-200;
 
     &.external, &.internal {
-      &.external:after {
-        content: '\e100';
-      }
-      &.internal:after {
-        content: '\e102';
-      }
 
       /* Effect */
       & {
@@ -354,9 +353,9 @@ nav {
   Dark Box Styles
   -------------------- !*/
 .content .accent-box {
-  background-color: $color-blue-400;
+  background-color: $color-gray-200;
   border-radius: 10px;
-  color: $color-gray-000;
+  color: $color-gray-400;
   box-sizing: border-box;
   overflow: hidden;
   margin-top: 2rem;
@@ -373,7 +372,8 @@ nav {
 
   
   header {
-    background-color: $color-blue-500;
+    background-color: $color-blue-400;
+    color: $color-gray-100;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
 
@@ -415,17 +415,17 @@ nav {
   .json-formatter-row a,
   .json-formatter-row a:hover,
   .json-formatter-number {
-    color: $color-gray-000 !important;
+    color: $color-gray-400 !important;
   }
 
   label,
   .json-formatter-key,
   .json-formatter-bracket {
-    color: $color-blue-200;
+    color: $color-gray-300;
   }
 
   .json-formatter-string {
-    color: $color-green-100;
+    color: $color-blue-300;
   }
 
   .json-formatter-null {
@@ -471,11 +471,6 @@ form {
     box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
     border-radius: 4px;
 
-    & > img {
-      height: 50%;
-      vertical-align: middle;
-    }
-
     &:disabled {
       background: $color-gray-400;
 
@@ -483,13 +478,6 @@ form {
         background: $color-green-100;
       }
     }
-  }
-
-  label {
-    display: block;
-    @include typography-footnote;
-    color: $color-gray-300;
-    margin-bottom: 6px;
   }
 
   textarea {

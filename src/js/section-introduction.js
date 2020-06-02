@@ -16,7 +16,8 @@ new Vue({
                 regions: []
             },
             server: env.api + "/product/",
-            apiName: env.name
+            apiName: env.name,
+            url: this.server + this.isin
         }
     },
 
@@ -32,13 +33,13 @@ new Vue({
     methods:
         {
             getFund: function () {
-                let url = this.server + this.isin;
+                this.url = this.server + this.isin;
 
-                console.info("Loading fund on: " + url);
+                console.info("Loading fund on: " + this.url);
 
                 // Get fund
                 axios
-                    .get(url)
+                    .get(this.url)
                     .then(response => {
                         this.fund = response.data
                         this.drawChart("sectors", response.data.sectors, "sector")

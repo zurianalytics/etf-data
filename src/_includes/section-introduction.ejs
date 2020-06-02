@@ -1,33 +1,29 @@
 
     <div class="container-fluid" id="introduction" menu-item="ETF Data API" top>
 
-        <h1>ETF Data API<i class = "zuri-icon information size-l align-middle"></i></h1>
+        <h1>About ETF Data API<i class = "zuri-icon information size-l align-middle"></i></h1>
 
         <div class="row">
             <div class="col-md-6">
                 
                 <p>
-                    {{apiName}} contains deep fundamental information about most ETFs, ETNs, ETCs and other fund-like products listed on all major European exchanges.
+                    We provide deep fundamental information, derived using AI, about most ETFs, ETNs, ETCs and other fund-like products listed on all major European exchanges.
+                    The free and base service is a JSON API.
                 </p>
 
                 <p>
-                    {{apiName}} provides basic information such as: 
+                    Includes basic information such as: 
                     Domicile, Followed Index, Asset Class, Fee, Currency, Replication Method, Distribution Type & Frequency.
-                    This information is manually analysed by our team and updated regularly. 
-
-                    Listings of new products are reflected almost immediately.
                 </p>
                 
                 <p>
-                    {{apiName}} also provides deep fundamental information derived from the underlying securities such as: <b>Sector Exposure</b>, 
+                    {{apiName}} also provides deep fundamental information derived using ML to learn about the underlying securities such as: <b>Sector Exposure</b>, 
                     <b>Country Exposure</b>, <b>Factors</b>, <b>Dividend Yield</b> etc.
-
-                    This information is dynamically updated as the underlying securities change or are added/ removed from their tracking product. 
                 </p>
-
+        
                 <p>
-                    <div class = "accent-bold" style = "text-align: right;">
-                        <span class = "align-middle">TRY IT OUT</span><i class = "zuri-icon arrow-right align-middle"></i>
+                    <div style = "text-align: right;">
+                        <span class = "accent-bold align-middle">TRY IT OUT</span><i class = "zuri-icon arrow-right align-middle"></i>
                     </div>
                 </p>
             </div>
@@ -39,7 +35,11 @@
                     <header id="demo-header">
                         <code class="info"
                               data-tippy-content="Input an ISIN into the field to the right, to check what information we store about the security">
-                            LIVE DEMO (ISIN):</code><input v-model="isin" v-on:change="getFund()"/>
+                            Type in an ISIN:</code><input v-model="isin" v-on:change="getFund()"/>
+                            <br/>
+                            <span class = "label">or just call</label>
+                            <br/>
+                            <a v-bind:href="url" class = "external">{{url}}<i class = "zuri-icon external"></i></a>
                     </header>
 
 
@@ -63,52 +63,52 @@
 
                         <div class="row">
                             <div class="col-m-12">
-                                <label>Index</label><br/>
+                                <label class = "label">Index</label><br/>
                                 <span>{{ fund.indexName }}</span>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-md-4">
-                                <label>ISIN</label><br/>
+                                <label class = "label">ISIN</label><br/>
                                 <span>{{ fund.isin }}</span>
                             </div>
                             <div class="col-md-4">
-                                <label>Asset Class</label><br/>
+                                <label class = "label">Asset Class</label><br/>
                                 <span>{{ fund.assetClass }}</span>
                             </div>
                             <div class="col-md-4">
-                                <label>Provider</label><br/>
+                                <label class = "label">Provider</label><br/>
                                 <span>{{ fund.provider }}</span>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-md-4">
-                                <label>Factor</label><br/>
+                                <label class = "label">Factor</label><br/>
                                 <span>{{ fund.factor }}</span>
                             </div>
                             <div class="col-md-4">
-                                <label>Domicile</label><br/>
+                                <label class = "label">Domicile</label><br/>
                                 <span>{{ fund.domicile }}</span>
                             </div>
                             <div class="col-md-4">
-                                <label>Base Currency</label><br/>
+                                <label class = "label">Base Currency</label><br/>
                                 <span>{{ fund.baseCurrency }}</span>
                             </div>
                         </div>
 
                         <div class="row">
                             <div class="col-md-4">
-                                <label>Replication</label><br/>
+                                <label class = "label">Replication</label><br/>
                                 <span>{{ fund.replicationMethod }}</span>
                             </div>
                             <div class="col-md-4">
-                                <label>Type</label><br/>
+                                <label class = "label">Type</label><br/>
                                 <span>{{ fund.distributionType }}</span>
                             </div>
                             <div class="col-md-4">
-                                <label>Frequency</label><br/>
+                                <label class = "label">Frequency</label><br/>
                                 <span>{{ fund.distributionFrequency }}</span>
                             </div>
                         </div>
