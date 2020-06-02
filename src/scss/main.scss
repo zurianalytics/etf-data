@@ -468,7 +468,6 @@ nav {
     color: $color-gray-400 !important;
   }
 
-  label,
   .json-formatter-key,
   .json-formatter-bracket {
     color: $color-gray-300;
@@ -491,6 +490,12 @@ form {
   margin-top: 3rem;
   background-color: $color-gray-100;
   padding: 1rem;
+
+  label 
+  {
+    margin-bottom: 1rem;
+    display: block;
+  }
 
   input, textarea, select, .StripeElement {
     width: 100%;
