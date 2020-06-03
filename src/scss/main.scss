@@ -268,6 +268,8 @@ nav {
   font-weight: 600;
 }
 
+
+
 /*! ---------------------
   Content formatting styles
   -------------------- !*/
@@ -285,6 +287,15 @@ nav {
   h2 {
     padding-top: 1rem;
     padding-bottom: 1rem;
+  }
+
+  h3,
+  h4,
+  h5,
+  h6 {
+    @include typography-5;
+    margin-top: 2.5em;
+    margin-bottom: 0.8em;
   }
 
   & > .container-fluid {
@@ -306,15 +317,6 @@ nav {
     }
   }
 
-  h3,
-  h4,
-  h5,
-  h6 {
-    @include typography-5;
-    margin-top: 2.5em;
-    margin-bottom: 0.8em;
-  }
-
   code,
   .accent-box {
     font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono",
@@ -322,7 +324,6 @@ nav {
       serif;
     font-size: 12px;
     line-height: 1.5;
-    word-break: break-all;
     hyphens: auto;
   }
 
