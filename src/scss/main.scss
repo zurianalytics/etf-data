@@ -1,131 +1,123 @@
 @charset "utf-8";
-@import '_brand';
-@import 'normalize';
-@import '_layout';
-@import '_icons';
-@import '_fonts';
+@import "_brand";
+@import "normalize";
+@import "_layout";
+@import "_icons";
+@import "_fonts";
 
 /*! ---------------------
   Global Styles
   --------------------!*/
-html, body {
-
+html,
+body {
   @include typography-6;
   color: $color-gray-500;
   padding: 0;
   margin: 0;
   background-color: $color-gray-000;
   height: 100%;
-
-  .accent-blue {
-    color: $color-blue-200;
-  }
-
-  .accent-green {
-    color: $color-green-100;
-  }
-
-  .accent-hard {
-    color: $color-green-100;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-
-  .accent-gray {
-    font-weight: bold;
-    color: $color-gray-400;
-  }
-
-  .accent-bold {
-    font-weight: bold;
-    color: $color-blue-200;
-  }
-
-  .accent-blink {
-    color: $color-green-100;
-    font-weight: bold;
-    margin-right: 10px;
-    animation: blinker-text 1.4s linear infinite;
-  }
-
-  @keyframes blinker-text {
-    50% {
-      color: #5dd9d7;
-      opacity: 0.7;
-    }
-  }
-
-  @keyframes blinker-border {
-    50% {
-      border-bottom-color: #5dd9d7;
-      opacity: 0.7;
-    }
-  }
 }
 
 
 /*! ---------------------
-  Layout styles
+  Accent and colors
+  --------------------!*/
+.accent-blue {
+  color: $color-blue-200;
+}
+
+.accent-green {
+  color: $color-green-100;
+}
+
+.accent-hard {
+  color: $color-green-100;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.accent-gray {
+  font-weight: bold;
+  color: $color-gray-400;
+}
+
+.accent-bold {
+  font-weight: bold;
+  color: $color-blue-200;
+}
+
+.accent-blink {
+  color: $color-green-100;
+  font-weight: bold;
+  margin-right: 10px;
+  animation: blinker-text 1.4s linear infinite;
+}
+
+@keyframes blinker-text {
+  50% {
+    color: #5dd9d7;
+    opacity: 0.7;
+  }
+}
+
+@keyframes blinker-border {
+  50% {
+    border-bottom-color: #5dd9d7;
+    opacity: 0.7;
+  }
+}
+
+
+
+/*! ---------------------
+  Design Components
   -------------------- !*/
-  #app {
-    margin-top: 5rem;
-    margin-bottom: 5rem;
-    padding-top: 6rem;
-    padding-bottom: 6rem;
+.background {
+  background: linear-gradient(90deg, $color-gray-200 0%, $color-gray-100 100%);
+  top: 0;
+  z-index: 0;
+  position: absolute;
+  height: 100vh;
+  transform: skewY(-12deg);
+  margin-top: -50vh;
+  width: 100%;
 
-    @media (max-width: 1200px) {
-      & {
-        margin-top: 0;
-        margin-bottom: 0;
-      }
-    }
-  }
-
-
-  .background
-  {
-    background: linear-gradient(90deg, $color-gray-200 0%, $color-gray-100 100%);
-    top: 0;
-    z-index: 0;
-    position: absolute;
-    height: 100vh;
-    transform: skewY(-12deg);
-    margin-top: -50vh;
+  .stripe-primary {
+    background: linear-gradient(
+      90deg,
+      rgba($color-blue-500, 0) 0%,
+      rgba($color-blue-500, 0) 40%,
+      $color-blue-500 50%,
+      $color-blue-400 100%
+    );
     width: 100%;
-
-    .stripe-primary
-    {
-      background: linear-gradient(90deg, rgba($color-blue-500, 0) 0%, rgba($color-blue-500, 0) 40%, $color-blue-500 50%, $color-blue-400 100%);
-      width: 100%;
-      height: 10vh;
-      position: absolute;
-      bottom: 0;
-    }
-
-    .stripe-secondary
-    {
-      background: linear-gradient(90deg, $color-gray-100 50%, $color-gray-200 100%);
-      width: 50%;
-      height: 10vh;
-      margin-bottom: -10vh;
-      position: absolute;
-      bottom: 0;
-    }
+    height: 10vh;
+    position: absolute;
+    bottom: 0;
   }
 
-  .card 
-  {
-    background-color: $color-gray-000;
-    box-shadow: 0 1px 2px rgba(0,0,0,0.03), 
-    0 2px 4px rgba(0,0,0,0.03), 
-    0 4px 8px rgba(0,0,0,0.03), 
-    0 8px 16px rgba(0,0,0,0.03),
-    0 16px 32px rgba(0,0,0,0.03), 
-    0 32px 64px rgba(0,0,0,0.03);
-    padding: 4rem;
-    border-radius: 6px;
+  .stripe-secondary {
+    background: linear-gradient(
+      90deg,
+      $color-gray-100 50%,
+      $color-gray-200 100%
+    );
+    width: 50%;
+    height: 10vh;
+    margin-bottom: -10vh;
+    position: absolute;
+    bottom: 0;
   }
+}
 
+.card {
+  background-color: $color-gray-000;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03), 0 2px 4px rgba(0, 0, 0, 0.03),
+    0 4px 8px rgba(0, 0, 0, 0.03), 0 8px 16px rgba(0, 0, 0, 0.03),
+    0 16px 32px rgba(0, 0, 0, 0.03), 0 32px 64px rgba(0, 0, 0, 0.03);
+  padding: 4rem;
+  border-radius: 6px;
+}
 
 /*! ---------------------
 Side menu
@@ -162,6 +154,9 @@ nav {
       margin-left: 8px;
       top: 0;
       transition: all 0.3s ease-out;
+      background-color: $color-gray-100;
+      width: 50%;
+      text-align: center;
     }
 
     &.active {
@@ -179,8 +174,7 @@ nav {
     border-top: 1px solid $color-gray-100;
   }
 
-  .note 
-  {
+  .note {
     @include typography-footnote;
     font-weight: bold;
     color: $color-gray-300;
@@ -188,7 +182,6 @@ nav {
 
   // Top header
   .representation {
-    
     text-align: center;
 
     .logo {
@@ -210,7 +203,8 @@ nav {
     }
 
     // First level headers
-    ul, li {
+    ul,
+    li {
       line-height: 2rem;
     }
 
@@ -233,48 +227,37 @@ nav {
         max-height: 400px;
       }
 
-      ul, li {
+      ul,
+      li {
         transition: all 0.6s 0s;
       }
     }
   }
 }
 
-
-
-
-
-
-
 /*! ---------------------
   Chart styles
   -------------------- !*/
-.left 
-{
+.left {
   .pie-chart {
     transform: translate(160px, 0);
   }
 
-  .chart-legend
-  {
+  .chart-legend {
     transform: translate(0, 0);
   }
 }
 
-.right 
-{
-  .pie-chart
-  {
+.right {
+  .pie-chart {
     transform: translate(-40px, 0);
   }
 
-  .chart-legend
-  {
+  .chart-legend {
     transform: scaleX(-1);
 
     & .legend-dot,
-    & .legend-dataset-text
-    {
+    & .legend-dataset-text {
       transform: scaleX(-1) translateX(80%);
     }
   }
@@ -285,15 +268,10 @@ nav {
   font-weight: 600;
 }
 
-
-
-
-
 /*! ---------------------
   Content formatting styles
   -------------------- !*/
 .content {
-
   h1 {
     @include typography-2;
     color: $color-blue-500;
@@ -303,7 +281,8 @@ nav {
     @include typography-4;
   }
 
-  h1, h2 {
+  h1,
+  h2 {
     padding-top: 1rem;
     padding-bottom: 1rem;
   }
@@ -319,61 +298,63 @@ nav {
 
     margin-top: 12rem;
 
-    & > .row
-    {
+    & > .row {
       margin-top: 8rem;
-      &:first-of-type
-      {
+      &:first-of-type {
         margin-top: 0;
       }
     }
   }
 
-  h3, h4, h5, h6 {
+  h3,
+  h4,
+  h5,
+  h6 {
     @include typography-5;
     margin-top: 2.5em;
     margin-bottom: 0.8em;
   }
 
-  code, .accent-box {
-    font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace, serif;
+  code,
+  .accent-box {
+    font-family: Consolas, Menlo, Monaco, "Lucida Console", "Liberation Mono",
+      "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Courier New", monospace,
+      serif;
     font-size: 12px;
     line-height: 1.5;
     word-break: break-all;
     hyphens: auto;
   }
 
-  li, .list {
+  li,
+  .list {
     border-top: 1px solid $color-gray-100;
     padding: 1rem 0;
   }
 }
 
-
-
 /*! ---------------------
   Accents & Special
   -------------------- !*/
 .content {
-
   .label {
     @include typography-footnote;
     color: $color-gray-300;
   }
 
-  a.info 
-  {
+  a.info {
     cursor: help;
   }
 
   // External && info
-  a.external, a.info, a.internal {
-
+  a.external,
+  a.info,
+  a.internal {
     display: inline-block;
     color: $color-blue-200;
 
-    &.external, &.internal {
-
+    &.external,
+    &.internal {
       /* Effect */
       & {
         padding: 0 4px;
@@ -388,7 +369,7 @@ nav {
           top: 60%;
           left: 50%;
           color: transparent;
-          content: '•';
+          content: "•";
           text-shadow: 0 0 transparent;
           font-size: 1em;
           -webkit-transition: text-shadow 0.3s, color 0.3s;
@@ -415,10 +396,9 @@ nav {
     border-radius: 4px;
     border: 1px solid $color-gray-200;
     color: $color-gray-400;
-    display:inline-block;
+    display: inline-block;
   }
 }
-
 
 /*! ---------------------
   Dark Box Styles
@@ -431,17 +411,14 @@ nav {
   overflow: hidden;
   margin-top: 2rem;
 
-  #demo-content h6
-  {
+  #demo-content h6 {
     margin-top: 0;
   }
 
-  #demo-content .row
-  {
+  #demo-content .row {
     padding: 0.3rem;
   }
 
-  
   header {
     background-color: $color-blue-400;
     color: $color-gray-100;
@@ -482,7 +459,6 @@ nav {
   }
 }
 
-
 /*! ---------------------
   Form Elements
   -------------------- !*/
@@ -491,13 +467,15 @@ form {
   background-color: $color-gray-100;
   padding: 1rem;
 
-  label 
-  {
+  label {
     margin-bottom: 1rem;
     display: block;
   }
 
-  input, textarea, select, .StripeElement {
+  input,
+  textarea,
+  select,
+  .StripeElement {
     width: 100%;
     box-sizing: border-box;
     height: 40px;
@@ -511,7 +489,9 @@ form {
     margin-bottom: 1rem;
   }
 
-  input:focus, select:focus, textarea:focus {
+  input:focus,
+  select:focus,
+  textarea:focus {
     box-shadow: 0 1px 3px 0 #bec7d1;
     border: none;
     outline: none;
@@ -523,7 +503,7 @@ form {
     height: 38px;
     padding: 0 14px;
     border: none;
-    box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
+    box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
     border-radius: 4px;
 
     &:disabled {
@@ -541,7 +521,6 @@ form {
   }
 }
 
-
 /*! ---------------------
   Tippy
   -------------------- !*/
@@ -549,31 +528,31 @@ form {
   padding: 0.8rem;
 
   // Animation
-  &[data-animation=scale] {
-    &[data-placement^=top] {
-      transform-origin: bottom
+  &[data-animation="scale"] {
+    &[data-placement^="top"] {
+      transform-origin: bottom;
     }
 
-    &[data-placement^=bottom] {
-      transform-origin: top
+    &[data-placement^="bottom"] {
+      transform-origin: top;
     }
 
-    &[data-placement^=left] {
+    &[data-placement^="left"] {
       transform-origin: right;
     }
 
-    &[data-placement^=right] {
-      transform-origin: left
+    &[data-placement^="right"] {
+      transform-origin: left;
     }
 
-    &[data-state=hidden] {
-      transform: scale(.5);
-      opacity: 0
+    &[data-state="hidden"] {
+      transform: scale(0.5);
+      opacity: 0;
     }
   }
 
   // Styles
-  &[data-theme~='zurianalytics'] {
+  &[data-theme~="zurianalytics"] {
     background-color: $color-blue-400;
     color: $color-gray-000;
 
@@ -583,7 +562,7 @@ form {
     }
   }
 
-  &[data-theme~='mild'] {
+  &[data-theme~="mild"] {
     background-color: $color-green-100;
     color: $color-gray-000;
 
