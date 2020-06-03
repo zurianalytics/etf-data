@@ -29,10 +29,12 @@
             <div class="col-md-6">
                 <div class="accent-box">
                     <header>
-                        <code>GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">exchange</span>=<span class = "accent-hard">SIX</span>&#38;<span class = "accent-bold">USA</span>=<span class = "accent-hard">20</span>&#38;<span class = "accent-bold">TECHNOLOGY</span>=<span class = "accent-hard">30</span></code>
+                        <a v-bind:href="apiUrl +'/search?exchange=XETRA&DEU=30&INFORMATION_TECHNOLOGY=50'">
+                            <code class = "accent-blink">GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">exchange</span>=<span class = "accent-hard">XETRA</span>&#38;<span class = "accent-bold">DEU</span>=<span class = "accent-hard">20</span>&#38;<span class = "accent-bold">INFORMATION_TECHNOLOGY</span>=<span class = "accent-hard">30</span></code>
+                        </a>
                     </header>
                     <code class="json">
-{"content":[{"name":"iShares NASDAQ 100 UCITS ETF USD (Acc)","isin":"IE00B53SZB19"},{"name":"iShares Dow Jones Industrial Average UCITS ETF USD (Acc)","isin":"IE00B53L4350"},{"name":"ComStage MSCI North America UCITS ETF","isin":"LU0392494992"},{"name":"Xtrackers MSCI USA UCITS ETF 1C","isin":"IE00BJ0KDR00"},{"name":"SPDR S&P 500 UCITS ETF","isin":"IE00B6YX5C33"},{"name":"Amundi MSCI World Ex Europe UCITS ETF - EUR (C)","isin":"LU1681045537"},{"name":"iShares Core MSCI World UCITS ETF GBP Hedged (Dist)","isin":"IE00BD45YS76"},{"name":"Lyxor MSCI USA UCITS ETF - Acc","isin":"FR0011363423"},{"name":"iShares Core S&P 500 UCITS ETF USD (Dist)","isin":"IE0031442068"},{"name":"iShares MSCI World ESG Enhanced UCITS ETF USD (Acc)","isin":"IE00BHZPJ569"}],"metaInfo":{"pageNumber":0,"pageSize":10,"totalPages":6,"totalElements":59}}
+                        {"content":[{"name":"ComStage STOXX Europe 600 Technology UCITS ETF","isin":"LU0378437098"},{"name":"iShares STOXX Europe 600 Technology UCITS ETF (DE)","isin":"DE000A0H08Q4"},{"name":"Lyxor STOXX Europe 600 Technology UCITS ETF - Acc","isin":"LU1834988518"}],"metaInfo":{"pageNumber":0,"pageSize":10,"totalPages":1,"totalElements":3}}
                     </code>
                 </div>
 
@@ -76,7 +78,9 @@
             <div class="col-md-6">
                 <div class="accent-box">
                     <header>
-                        <code>GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">exchange</span>=<span class = "accent-hard">SIX</span></code>
+                        <a v-bind:href="apiUrl +'/search?exchange=SIX'">
+                            <code class = "accent-blink">GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">exchange</span>=<span class = "accent-hard">SIX</span></code>
+                        </a>
                     </header>
                     <div>
                         <span>Returns a list of funds listed on SIX.</span>
@@ -119,7 +123,9 @@
             <div class="col-md-6">
                 <div class="accent-box">
                     <header>
-                        <code>GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">factor</span>=<span class = "accent-hard">MOMENTUM</span></code>
+                        <a v-bind:href="apiUrl +'/search?factor=MOMENTUM'">
+                            <code class = "accent-blink">GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">factor</span>=<span class = "accent-hard">MOMENTUM</span></code>
+                        </a>
                     </header>
                     <div>
                         <span>Returns a list of products which follow a Momentum factor strategy.</span>
@@ -153,7 +159,9 @@
             <div class="col-md-6">
                 <div class="accent-box">
                     <header>
-                        <code>GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">IRL</span>=<span class = "accent-hard">45</span></code>
+                        <a v-bind:href="apiUrl +'/search?IRL=45'">
+                            <code class = "accent-blink">GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">IRL</span>=<span class = "accent-hard">45</span></code>
+                        </a>
                     </header>
                     <div>
                         <span>Returns a list of funds which have at least 45% of their assets invested in Ireland.</span>
@@ -161,7 +169,9 @@
                 </div>
                                 <div class="accent-box">
                     <header>
-                        <code>GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">RUS</span>=<span class = "accent-hard">1</span></code>&<span class = "accent-bold">HUN</span>=<span class = "accent-hard">1</span></code>&<span class = "accent-bold">POL</span>=<span class = "accent-hard">1</span></code>
+                        <a v-bind:href="apiUrl +'/search?RUS=1&HUN=1&POL=1'">
+                            <code class = "accent-blink">GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">RUS</span>=<span class = "accent-hard">1</span></code>&<span class = "accent-bold">HUN</span>=<span class = "accent-hard">1</span></code>&<span class = "accent-bold">POL</span>=<span class = "accent-hard">1</span></code>
+                        </a>
                     </header>
                     <div>
                         <span>Finds products with some broad Eastern Europe exposure.</span>
@@ -209,11 +219,13 @@
             <div class="col-md-6">
                 <div class="accent-box">
                     <header>
-                        <code>GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">ENERGY</span>=<span class = "accent-hard">30</span>&<span class = "accent-bold">FINANCIALS</span>=<span class = "accent-hard">30</span></code>
+                        <a v-bind:href="apiUrl +'/search?ENERGY=20&FINANCIALS=20'">
+                            <code class = "accent-blink">GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">ENERGY</span>=<span class = "accent-hard">20</span>&<span class = "accent-bold">FINANCIALS</span>=<span class = "accent-hard">20</span></code>
+                        </a>
                     </header>
 
                     <p>
-                        Returns products with at least 30% exposure to Energy and 30% exposure to Financials.
+                        Returns products with at least 20% exposure to Energy and 20% exposure to Financials.
                     </p>
                 </div>
 
@@ -242,7 +254,9 @@
             <div class="col-md-6">
                 <div class="accent-box">
                     <header>
-                        <code>GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">totalFee</span>=<span class = "accent-hard">4.5</span></code>
+                        <a v-bind:href="apiUrl +'/search?totalFee=4.5'">
+                            <code class = "accent-blink">GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">totalFee</span>=<span class = "accent-hard">4.5</span></code>
+                        </a>
                     </header>
                     <div>
                         <span>Returns a list of products that have at most 4.5% fee. For instance all ETFs with TERS smaller than or equal to 4.5% will be included here.</span>
@@ -274,7 +288,9 @@
             <div class="col-md-6">
                 <div class="accent-box">
                     <header>
-                        <code>GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">domicile</span>=<span class = "accent-hard">LUX</span></code>
+                        <a v-bind:href="apiUrl +'/search?domicile=LUX'">
+                            <code class = "accent-blink">GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">domicile</span>=<span class = "accent-hard">LUX</span></code>
+                        </a>
                     </header>
                     <div>
                         <span>Returns a list of products that are domiciled in Luxembourg.</span>
@@ -306,7 +322,9 @@
             <div class="col-md-6">
                 <div class="accent-box">
                     <header>
-                        <code>GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">replicationMethod</span>=<span class = "accent-hard">PHYSICAL</span></code>
+                        <a v-bind:href="apiUrl +'/search?replicationMethod=PHYSICAL'">
+                            <code class = "accent-blink">GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">replicationMethod</span>=<span class = "accent-hard">PHYSICAL</span></code>
+                        </a>
                     </header>
                     <div>
                         <span>Returns a list of products which are physically replicated.</span>
@@ -338,7 +356,9 @@
             <div class="col-md-6">
                 <div class="accent-box">
                     <header>
-                        <code>GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">distributionType</span>=<span class = "accent-hard">DISTRIBUTING</span></code>
+                        <a v-bind:href="apiUrl +'/search?distributionType=DISTRIBUTING'">
+                            <code class = "accent-blink">GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">distributionType</span>=<span class = "accent-hard">DISTRIBUTING</span></code>
+                        </a>
                     </header>
                     <div>
                         <span>Returns a list of products which distribute their dividends.</span>
@@ -374,7 +394,9 @@
             <div class="col-md-6">
                 <div class="accent-box">
                     <header>
-                        <code>GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">assetClass</span>=<span class = "accent-hard">EQUITY</span></code>
+                        <a v-bind:href="apiUrl +'/search?assetClass=EQUITY'">
+                            <code class = "accent-blink">GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">assetClass</span>=<span class = "accent-hard">EQUITY</span></code>
+                        </a>
                     </header>
                     <div>
                         <span>Returns a list of products with asset class EQUITY (e.g. ETFs and Equity Funds)</span>

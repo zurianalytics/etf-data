@@ -34,13 +34,12 @@
                 <div class="accent-box .light">
 
                     <header id="demo-header">
-                        <code class="info"
-                              data-tippy-content="Input an ISIN into the field to the right, to check what information we store about the security">
+                        <code class="accent-blink">
                             Type in an ISIN:</code><input v-model="isin" v-on:change="getFund()"/>
                             <br/>
-                            <span class = "label">or just call</label>
+                            <span class = "label">..or just call</span>
                             <br/>
-                            <a v-bind:href="url">{{url}}</a>
+                            <a v-bind:href="url" ><code class = "accent-blink">GET</code><code>{{url}}</code></a>
                     </header>
 
 
@@ -63,7 +62,7 @@
                         </div>
 
                         <div class="row">
-                            <div class="col-m-12">
+                            <div class="col-md-12">
                                 <label class = "label">Index</label><br/>
                                 <span>{{ fund.indexName }}</span>
                             </div>
