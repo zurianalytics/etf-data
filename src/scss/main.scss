@@ -348,14 +348,13 @@ nav {
   }
 
   // External && info
-  a.external,
   a.info,
-  a.internal {
+  a.link {
     display: inline-block;
     color: $color-blue-200;
 
-    &.external,
-    &.internal {
+    &.link{
+      
       /* Effect */
       & {
         padding: 0 4px;
