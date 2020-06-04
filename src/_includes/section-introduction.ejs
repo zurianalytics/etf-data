@@ -8,6 +8,13 @@
                 <h1>About ETF Data API<i class = "zuri-icon information size-l align-middle"></i></h1>
 
                 <p>
+                    <div class = "label top">Try it out</div>
+                    <code class = "inline">
+                        <a v-bind:href="url" ><i class = "zuri-icon terminal size-s"></i><code class = "accent-blink">GET</code><code>{{url}}</code></a>
+                    </code>
+                </p>
+
+                <p>
                     We provide deep fundamental information, derived using AI, about most ETFs, ETNs, ETCs and other fund-like products listed on all major European exchanges.
                     The free and base service is a JSON API.
                 </p>
@@ -24,7 +31,9 @@
         
                 <p>
                     <div style = "text-align: right;">
-                        <span class = "accent-bold align-middle">TRY IT OUT</span><i class = "zuri-icon arrow-right align-middle"></i>
+
+                        <span class = "accent-bold align-middle">EXPLORE</span><i class = "zuri-icon arrow-right align-middle"></i>
+
                     </div>
                 </p>
             </div>
@@ -34,22 +43,15 @@
                 <div class="accent-box .light">
 
                     <header id="demo-header">
-                        <p>
-                            <code class="accent-blink">
-                                Type in an ISIN:
-                            </code>
-                            <input v-model="isin" v-on:change="getFund()"/>
-                        </p>
-                        <p>
-                            <span class = "label">or try it out directly!</span>
-                        </p>
-                        <p>
-                            <a v-bind:href="url" ><i class = "zuri-icon terminal size-s"></i><code class = "accent-blink">GET</code><code>{{url}}</code></a>
-                        </p>
+                        <code class="accent-blink">
+                            Type in an ISIN:
+                        </code>
+                        <input v-model="isin" v-on:change="getFund()"/>
                     </header>
 
 
                     <div id="demo-content">
+
                         <div class="row">
                             <div class="col-md-12">
                                 <h6 class = "accent-blue">{{ fund.name }}</h6>

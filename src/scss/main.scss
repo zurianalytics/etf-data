@@ -341,6 +341,12 @@ nav {
   .label {
     @include typography-footnote;
     color: $color-gray-300;
+
+    &.top
+    {
+      margin-bottom: 1rem;
+      display: block;
+    }
   }
 
   a.info {
@@ -466,11 +472,6 @@ form {
   margin-top: 3rem;
   background-color: $color-gray-100;
   padding: 1rem;
-
-  label {
-    margin-bottom: 1rem;
-    display: block;
-  }
 
   input,
   textarea,
