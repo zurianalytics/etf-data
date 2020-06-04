@@ -34,12 +34,18 @@
                 <div class="accent-box .light">
 
                     <header id="demo-header">
-                        <code class="accent-blink">
-                            Type in an ISIN:</code><input v-model="isin" v-on:change="getFund()"/>
-                            <br/>
-                            <span class = "label">or just call</span>
-                            <br/>
-                            <a v-bind:href="url" ><code class = "accent-blink">GET</code><code>{{url}}</code></a>
+                        <p>
+                            <code class="accent-blink">
+                                Type in an ISIN:
+                            </code>
+                            <input v-model="isin" v-on:change="getFund()"/>
+                        </p>
+                        <p>
+                            <span class = "label">or try it out directly!</span>
+                        </p>
+                        <p>
+                            <a v-bind:href="url" ><i class = "zuri-icon terminal size-s"></i><code class = "accent-blink">GET</code><code>{{url}}</code></a>
+                        </p>
                     </header>
 
 
