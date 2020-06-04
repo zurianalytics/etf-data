@@ -55,8 +55,7 @@ new Vue({
                             text = "Unfortunatelly the product provided could not be found. Did you try with a correct ISIN?"
                         else if (error && error.response.status == 401)
                             text = "Unfortunatelly your free requests have expired."+ 
-                            " Please feel free to visit again tomorrow, or <a href = '#subscription-plans' class = 'internal'>subscribe</a>" +
-                            " to the API for a price of a coffee."
+                            " Please feel free to visit again tomorrow, or <a href = '#subscription-plans' class = 'link'>subscribe</a> to a plan."
                         
                         document.querySelector('#demo-content').innerHTML = text
                     })
