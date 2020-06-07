@@ -28,7 +28,7 @@
 	<meta property="og:type" content="article"/>
 
     <!-- Website Title -->
-    <title>ETF Data API</title>
+    <title>Thank you</title>
 	
 	<!-- Favicon  -->
     <link rel="icon" href="/images/etf-data_logo.png">
@@ -48,26 +48,53 @@
 
     <div class="page container" id="app">
 
-        <!-- Left Side Menu -->
-        <div class="row">
+    <!-- Left Side Menu -->
+    <div class="row">
 
-            <div class="col-md-2">
-                    <% include _includes/section-side-menu %>
-            </div>
+    <div class="col-md-2">
+            <% include _includes/section-side-menu-static %>
+    </div>
 
-            <div class="col-md-10">
-                <!-- Main Page Conent -->
-                <div class="content">
+    <div class="col-md-10">
+        <!-- Main Page Conent -->
+        <div class="content">
 
-                    <!-- Page content -->
-                    <% include _includes/section-introduction %>
-                    <% include _includes/section-single-product %>
-                    <% include _includes/section-search-product %>
-                    <% include _includes/section-authentication %>
-                    <% include _includes/section-subscriptions %>
+            <!-- Page content -->
+            <div class="container-fluid card" menu-item="Success" top>
 
+                <div class="row">
+                    <h1>Thank you for subscribing!</h1>
+
+                    <div class="col-md-6">
+                        
+                        <p>
+                            Your subscripion plan will be activated shortly. Please note your token XXX  
+                        </p>
+
+                        <p>
+                            You can <b>manage your subscription</b> <a class="link" href="https://etf-data.com/#manage-subscription">here</a>.
+                        </p>
+                        
+                        <p>
+                            If you have any questions, please don't hesitate to contact us at <a class="link" href="mailto:support@zurianalytics.com">support@zurianalytics.com</a>
+                        </p>
+
+                        <p>
+                            <div style = "text-align: right">
+
+                                <span class = "accent-bold align-middle">EXPLORE</span><i class = "zuri-icon arrow-right align-middle"></i>
+
+                            </div>
+                        </p>
+                    </div>    
+
+                    <div class="col-md-6">
+                        <div class="container-fluid" top>
+                            <img src="/images/etf-data_success.jpg" alt="Business visualisation">
+                        </div>
+                    </div>
                 </div>
-            </div>
+            </div>        
         </div>
     </div>
 </body>
@@ -86,4 +113,3 @@
 <script async src="https://js.stripe.com/v3/"></script>
 
 </html>
-
