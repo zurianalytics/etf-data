@@ -21,7 +21,7 @@
   },
   
   "devDependencies": {
-    "eleventy": "^1.0.6",
+    "@11ty/eleventy": "^1.0.6",
     "parcel": "^1.12.4",
     "rimraf": "^3.0.2",
     "sass": "^1.26.5"
