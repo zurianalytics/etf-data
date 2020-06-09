@@ -110,14 +110,81 @@ body {
   }
 }
 
+
+
 .card {
   background-color: $color-gray-000;
+
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03), 0 2px 4px rgba(0, 0, 0, 0.03),
-    0 4px 8px rgba(0, 0, 0, 0.03), 0 8px 16px rgba(0, 0, 0, 0.03),
-    0 16px 32px rgba(0, 0, 0, 0.03), 0 32px 64px rgba(0, 0, 0, 0.03);
+  0 4px 8px rgba(0, 0, 0, 0.03), 0 8px 16px rgba(0, 0, 0, 0.03),
+  0 16px 32px rgba(0, 0, 0, 0.03), 0 32px 64px rgba(0, 0, 0, 0.03);
   padding: 4rem;
+
   border-radius: 6px;
 }
+
+.tile
+{
+  background-color: $color-gray-100;
+  border-radius: 4px;
+  border: 1px solid $color-gray-200;
+  color: $color-gray-400;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.01), 0 2px 4px rgba(0, 0, 0, 0.01),
+  0 4px 8px rgba(0, 0, 0, 0.01), 0 8px 16px rgba(0, 0, 0, 0.01),
+  0 16px 32px rgba(0, 0, 0, 0.01), 0 32px 64px rgba(0, 0, 0, 0.01);
+  padding: 2rem;
+  border-radius: 6px;
+}
+
+.accent-box {
+  background-color: $color-gray-200;
+  border-radius: 6px;
+  color: $color-gray-400;
+  box-sizing: border-box;
+  overflow: hidden;
+
+  header {
+    background-color: $color-blue-400;
+    color: $color-gray-100;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+
+    input {
+      background: rgba(1, 1, 1, 0.3);
+      padding: 2px 10px;
+      border: none;
+      border-bottom: 1px solid $color-green-100;
+      animation: blinker-border 1.4s linear infinite;
+    }
+  }
+
+
+
+  & > * {
+    padding: 1.2rem 2rem;
+  }
+
+  .json-formatter-row,
+  .json-formatter-row a,
+  .json-formatter-row a:hover,
+  .json-formatter-number {
+    color: $color-gray-400 !important;
+  }
+
+  .json-formatter-key,
+  .json-formatter-bracket {
+    color: $color-gray-300;
+  }
+
+  .json-formatter-string {
+    color: $color-blue-300;
+  }
+
+  .json-formatter-null {
+    color: $color-gray-400;
+  }
+}
+
 
 /*! ---------------------
 Side menu
@@ -235,6 +302,14 @@ nav {
   }
 }
 
+
+
+
+
+
+
+
+
 /*! ---------------------
   Chart styles
   -------------------- !*/
@@ -289,13 +364,8 @@ nav {
     padding-bottom: 1rem;
   }
 
-  h3,
-  h4,
-  h5,
-  h6 {
+  h3, h6 {
     @include typography-5;
-    margin-top: 2.5em;
-    margin-bottom: 0.8em;
   }
 
   & > .container-fluid {
@@ -333,6 +403,15 @@ nav {
     padding: 1rem 0;
   }
 }
+
+
+
+
+
+
+
+
+
 
 /*! ---------------------
   Accents & Special
@@ -398,72 +477,23 @@ nav {
 
   code.inline {
     background-color: $color-gray-100;
-    padding: 0.15rem 0.3rem;
     border-radius: 4px;
     border: 1px solid $color-gray-200;
     color: $color-gray-400;
     display: inline-block;
+    padding: 0.15rem 0.3rem;
   }
 }
 
-/*! ---------------------
-  Dark Box Styles
-  -------------------- !*/
-.content .accent-box {
-  background-color: $color-gray-200;
-  border-radius: 6px;
-  color: $color-gray-400;
-  box-sizing: border-box;
-  overflow: hidden;
-  margin-top: 2rem;
 
-  #demo-content h6 {
-    margin-top: 0;
-  }
 
-  #demo-content .row {
-    padding: 0.3rem;
-  }
 
-  header {
-    background-color: $color-blue-400;
-    color: $color-gray-100;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
 
-    input {
-      background: rgba(1, 1, 1, 0.3);
-      padding: 2px 10px;
-      border: none;
-      border-bottom: 1px solid $color-green-100;
-      animation: blinker-border 1.4s linear infinite;
-    }
-  }
 
-  & > * {
-    padding: 1.2rem 2rem;
-  }
 
-  .json-formatter-row,
-  .json-formatter-row a,
-  .json-formatter-row a:hover,
-  .json-formatter-number {
-    color: $color-gray-400 !important;
-  }
 
-  .json-formatter-key,
-  .json-formatter-bracket {
-    color: $color-gray-300;
-  }
 
-  .json-formatter-string {
-    color: $color-blue-300;
-  }
 
-  .json-formatter-null {
-    color: $color-gray-400;
-  }
-}
 
 /*! ---------------------
   Form Elements

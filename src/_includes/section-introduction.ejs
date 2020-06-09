@@ -5,8 +5,8 @@
 
             <div class="col-md-6">
                 
-                <h1>About ETF Data API<i class = "zuri-icon information size-l align-middle"></i></h1>
-
+                <h1>About ETF Data API<i class = "zuri-icon information size-l align-middle right"></i></h1>
+                
                 <p>
                     <div class = "label top">Try it out</div>
                     <code class = "inline">
@@ -25,9 +25,40 @@
                 
                 <p>
                     Deep fundamental information is derived using ML and AI technologies to learn about the underlying securities. Our models currently 
-                    recognize <b>Sector Exposure</b>, <b>Country Exposure</b>, <b>Factors</b> & <b>Dividend Yield</b>
+                    recognize Sector Exposure, Country Exposure, Factors & Dividend Yield
                 </p>
-        
+
+                <div class = "container-fluid">
+                    <div class = "row">
+                        <div class = "col-sm-6">
+                            <div class = "marg-m">
+                                <div class = "row">
+                                    <div class = "col-sm-2">
+                                        <i class = "zuri-icon kubernetes size-l left"></i>
+                                    </div>
+                                    <div class = "col-sm-10">
+                                        <h3>Highly Available</h3>
+                                        <div class = "label">Build with Kubernetes</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class = "col-sm-6">
+                            <div class = "marg-m">
+                                <div class = "row">
+                                    <div class = "col-sm-2">
+                                        <i class = "zuri-icon code size-l left"></i>
+                                    </div>
+                                    <div class = "col-sm-10">
+                                        <h3>93 ms</h3>
+                                        <div class = "label">Median Response Time</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
                 <p>
                     <div style = "text-align: right;">
 
@@ -35,6 +66,7 @@
 
                     </div>
                 </p>
+
             </div>
 
 
@@ -51,70 +83,70 @@
 
                     <div id="demo-content">
 
-                        <div class="row">
-                            <div class="col-md-12">
+                        <div class="row padd-s">
+                            <div class="col-sm-12">
                                 <h6 class = "accent-blue">{{ fund.name }}</h6>
                             </div>
                         </div>
 
-                        <div class="row">
+                        <div class="row padd-s">
 
-                            <div class="col-md-12">
+                            <div class="col-sm-12">
                                 <div id="sectors" style="width: 100%;" class = "left"></div>
                             </div>
 
-                            <div class="col-md-12">
+                            <div class="col-sm-12">
                                 <div id="countries" style="width: 100%;" class = "right"></div>
                             </div>
                         </div>
 
-                        <div class="row">
-                            <div class="col-md-12">
+                        <div class="row padd-s">
+                            <div class="col-sm-12">
                                 <label class = "label">Index</label><br/>
                                 <span>{{ fund.indexName }}</span>
                             </div>
                         </div>
 
-                        <div class="row">
-                            <div class="col-md-4">
+                        <div class="row padd-s">
+                            <div class="col-sm-4">
                                 <label class = "label">ISIN</label><br/>
                                 <span>{{ fund.isin }}</span>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-sm-4">
                                 <label class = "label">Asset Class</label><br/>
                                 <span>{{ fund.assetClass }}</span>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-sm-4">
                                 <label class = "label">Provider</label><br/>
                                 <span>{{ fund.provider }}</span>
                             </div>
                         </div>
 
-                        <div class="row">
-                            <div class="col-md-4">
+                        <div class="row padd-s">
+                            <div class="col-sm-4">
                                 <label class = "label">Factor</label><br/>
                                 <span>{{ fund.factor }}</span>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-sm-4">
                                 <label class = "label">Domicile</label><br/>
                                 <span>{{ fund.domicile }}</span>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-sm-4">
                                 <label class = "label">Base Currency</label><br/>
                                 <span>{{ fund.baseCurrency }}</span>
                             </div>
                         </div>
 
-                        <div class="row">
-                            <div class="col-md-4">
+                        <div class="row padd-s">
+                            <div class="col-sm-4">
                                 <label class = "label">Replication</label><br/>
                                 <span>{{ fund.replicationMethod }}</span>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-sm-4">
                                 <label class = "label">Type</label><br/>
                                 <span>{{ fund.distributionType }}</span>
                             </div>
-                            <div class="col-md-4">
+                            <div class="col-sm-4">
                                 <label class = "label">Frequency</label><br/>
                                 <span>{{ fund.distributionFrequency }}</span>
                             </div>
