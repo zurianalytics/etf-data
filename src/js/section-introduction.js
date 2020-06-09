@@ -88,9 +88,11 @@ new Vue({
                     data: dataS,
                     type: 'pie', // or 'bar', 'line', 'scatter', 'pie', 'percentage'
                     height: 280,
-                    colors: []
+                    colors: ['hsla(227, 52%, 25%, 1)', 'hsla(227, 50%, 50%, 1)', 'hsla(227, 80%, 70%, 1)',
+                             'hsla(200, 80%, 70%, 1)', 'hsla(200, 50%, 50%, 1)', 'hsla(200, 52%, 25%, 1)',
+                             'hsla(154, 45%, 40%, 1)', 'hsla(154, 45%, 50%, 1)', 'hsla(154, 55%, 57%, 1)',
+                             'hsla(124, 55%, 57%, 1)', 'hsla(124, 45%, 50%, 1)', 'hsla(124, 45%, 40%, 1)']
                 })
-
                 this.resizeChart(element);
             },
 
