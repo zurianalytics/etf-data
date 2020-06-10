@@ -11,6 +11,11 @@ $accent-light: $color-blue-100;
   margin-right: 0.3rem;
   vertical-align: sub;
 
+  &.size-s
+  {
+    width: 0.7rem;
+  }
+
   &.size-l {
     width: 1.8rem;
     

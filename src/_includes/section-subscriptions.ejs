@@ -122,7 +122,7 @@
 
       <div class="row">
         <div class="col-md-8">
-          <form id="payment-form">
+          <form id="payment-form" class = "tile">
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
@@ -130,10 +130,12 @@
                     <a
                       class="info"
                       data-tippy-content="The API token is used to authenticate & track all API calls.
-                      <a href = '#authentication'>Lean more</a>
-            A token can be reused and additional calls and time will be added to the token automatically with the subscription.
-            The API token must be kept safe and secret."
-                      >API Token<i class = "zuri-icon lightbulb"></i>
+                      <a href = '#authentication' class = 'link'>Lean more</a>
+                      
+                      <br/><br/>
+                      <div class = 'accent-bold'>MAKE SURE YOU HAVE SAVED YOUR TOKEN BEFORE SUBSCRIBING</div>"
+
+                      >API Token<i class = "zuri-icon lightbulb size-s"></i>
                     </a>
                   </label>
                   <textarea
@@ -153,19 +155,32 @@
                   <select
                     id="plan"
                     selected="individual"
-                    v-model="payment.plan"
-                  >
+                    v-model="payment.plan">
                   <option value="price_HNHSicEhz1eIa9">Test plan</option>
                   <option value="price_HO2znP6SdSpvZn">Professional</option>
                   <option value="business">Business</option>
                   </select>
                 </div>
+
+                <div class="form-group">
+                  <div class = "row">
+                    <div class = "col-md-12">
+                      <input type = "checkbox" id = "saved-token" v-model="payment.tokenSaved"></input>
+                      <label class = "label" for = "saved-token">I have saved my token to a secure location</label>
+                    </div>
+                    <div class = "col-md-12">
+                      <input type = "checkbox" id = "tos" v-model="payment.tos"></input>
+                      <label class = "label" for = "tos">I have read and agree to the <a class = "link" href = "https://zurianalytics.com/terms_conditions/">TOS<i class="zuri-icon size-s external"></i></a></label>
+                    </div>
+                  </div>
+                </div>
+
               </div>
             </div>
 
-            <span id="subscribe-wrapper">
+            <span id="subscribe-wrapper" class = "form-group">
               <button
-                :disabled="!payment.plan || payment.processing"
+                :disabled="!payment.plan || payment.processing || !payment.tos || !payment.tokenSaved"
                 id="subscribe"
                 v-on:click="selfCheckout">
                 <span>Subscribe</span>
@@ -189,17 +204,15 @@
         <a href="mailto:support@zurianalytics.com" class = "link">support@zurianalytics.com<i class = "zuri-icon external"></i></a>
       </p>
 
-      <form id="manage-subscription-form" method="GET">
+      <form id="manage-subscription-form" method="GET" class = "tile">
         <div class="row">
-          <div class="col-md-6">
+          <div class="col-md-8">
             <div class="form-group">
               <label class = "label top">
                 <a
                   class="info"
-                  data-tippy-content="The API token is used to authenticate & track all API calls.
-            A token can be reused and additional calls and time will be added to the token automatically with the subscription.
-            The API token must be kept safe and secret."
-                  >API Token<i class = "zuri-icon lightbulb"></i>
+                  data-tippy-content="This is the API token you have loaded time & requests to. An expired token can be managed, but an unloaded one cannot."
+                  >API Token<i class = "zuri-icon lightbulb size-s"></i>
                 </a>
               </label>
               <textarea
@@ -209,14 +222,17 @@
             </div>
           </div>
         </div>
-
-        <button
+        
+        <div class = "form-group">
+          <button
           :disabled="!dashboard.token"
           id="management-portal"
           v-on:click="managementDashboardLogin"
         >
           <span>Manage Subscription</span>
         </button>
+        </div>
+        
       </form>
     </div>
   </div>

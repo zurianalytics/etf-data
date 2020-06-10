@@ -6,7 +6,7 @@ Vue.mixin({
     methods: {
         initializeTooltips: function () {
             // Initialize tooltips on info links
-            tippy('.info', {
+            tippy('[data-tippy-content]', {
                 animation: 'scale',
                 theme: 'zurianalytics',
                 inertia: true,
