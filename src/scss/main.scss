@@ -427,6 +427,11 @@ nav {
     cursor: help;
   }
 
+  a.action
+  {
+    cursor: pointer;
+  }
+  
   // External && info
   a.info,
   a.link {

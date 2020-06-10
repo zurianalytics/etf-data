@@ -135,7 +135,11 @@
                       <br/><br/>
                       <div class = 'accent-bold'>MAKE SURE YOU HAVE SAVED YOUR TOKEN BEFORE SUBSCRIBING</div>"
 
-                      >API Token<i class = "zuri-icon lightbulb size-s"></i>
+                      >API Token
+                      <i class = "zuri-icon lightbulb size-s action"></i>
+                    </a>
+                    <a data-tippy-content="Get a new token" v-on:click="initializeToken" class = "action">
+                      <i class = "zuri-icon refresh"></i>
                     </a>
                   </label>
                   <textarea
