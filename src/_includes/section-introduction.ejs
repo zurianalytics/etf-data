@@ -6,13 +6,6 @@
             <div class="col-md-6">
                 
                 <h1>About ETF Data API<i class = "zuri-icon information size-l align-middle right"></i></h1>
-                
-                <p>
-                    <div class = "label top">Try it out</div>
-                    <code class = "inline">
-                        <a v-bind:href="url" ><i class = "zuri-icon terminal size-s"></i><code class = "accent-blink">GET</code><code>{{url}}</code></a>
-                    </code>
-                </p>
 
                 <p>
                     We provide fundamental information, about most ETFs, ETNs, ETCs and other fund-like products listed on all major European exchanges.
@@ -47,7 +40,7 @@
                             <div class = "marg-m">
                                 <div class = "row">
                                     <div class = "col-sm-2">
-                                        <i class = "zuri-icon code size-l left"></i>
+                                        <i class = "zuri-icon lighting size-l left"></i>
                                     </div>
                                     <div class = "col-sm-10">
                                         <h3>93 ms</h3>
@@ -74,10 +67,12 @@
                 <div class="accent-box .light">
 
                     <header id="demo-header">
-                        <code class="accent-blink">
-                            Type in an ISIN:
-                        </code>
-                        <input v-model="isin" v-on:change="getFund()"/>
+                        <p>
+                            <a v-bind:href="url" >
+                                <i class = "zuri-icon terminal size-s"></i><code class = "accent-blink">GET</code><code>product/</code>
+                            </a>
+                            <input v-model="isin" v-on:change="getFund()"/>
+                        </p>
                     </header>
 
 
