@@ -115,6 +115,6 @@ parcelRequire=function(e,r,t,n){var i,o="function"==typeof parcelRequire&&parcel
 },{"@popperjs/core":"cujj"}],"AAv3":[function(require,module,exports) {
 
 },{}],"BKjv":[function(require,module,exports) {
-"use strict";var i=t(require("tippy.js"));function t(i){return i&&i.__esModule?i:{default:i}}require("tippy.js/dist/tippy.css"),Vue.mixin({methods:{initializeTooltips:function(){(0,i.default)(".info",{animation:"scale",theme:"zurianalytics",inertia:!0,interactive:!0,allowHTML:!0})},openTooltip:function(t,e,n){(0,i.default)(e,{content:t,animation:"scale",theme:n||"aggressive",trigger:"manual",allowHTML:!0})[0].show()}},mounted:function(){this.initializeTooltips()}});
+"use strict";var i=t(require("tippy.js"));function t(i){return i&&i.__esModule?i:{default:i}}require("tippy.js/dist/tippy.css"),Vue.mixin({methods:{initializeTooltips:function(){(0,i.default)("[data-tippy-content]",{animation:"scale",theme:"zurianalytics",inertia:!0,interactive:!0,allowHTML:!0})},openTooltip:function(t,e,n){(0,i.default)(e,{content:t,animation:"scale",theme:n||"aggressive",trigger:"manual",allowHTML:!0})[0].show()}},mounted:function(){this.initializeTooltips()}});
 },{"tippy.js":"fSQx","tippy.js/dist/tippy.css":"AAv3"}]},{},["BKjv"], null)
 //# sourceMappingURL=/js/tippy.bundle.js.map
