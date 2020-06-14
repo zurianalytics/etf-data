@@ -94,7 +94,7 @@ new Vue({
                     }],
                     clientReferenceId: this.payment.token,
                     mode: 'subscription',
-                    successUrl: env.website,
+                    successUrl: env.website + '/success' + '?token=' + this.payment.token,
                     cancelUrl: env.website,
                   }).then( (result) => {
                     this.openTooltip(result.response.data.message, '#subscribe-wrapper')
