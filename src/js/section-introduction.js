@@ -15,6 +15,7 @@ new Vue({
                 sectors: [], 
                 regions: []
             },
+            fundError: null,
             server: env.api + "/product/",
             apiName: env.name,
             url: this.server + this.isin
@@ -41,28 +42,29 @@ new Vue({
                 axios
                     .get(this.url)
                     .then(response => {
+                        this.fundError = false;
                         this.fund = response.data
-                        this.drawChart("sectors", response.data.sectors, "sector")
-                        this.drawChart("countries", response.data.regions, "country")
+                        this.$nextTick(l => 
+                        {
+                            this.drawChart("sectors", response.data.sectors, "sector")
+                            this.drawChart("countries", response.data.regions, "country")
+                        })
                     })
                     // Free requests have expired
                     .catch(error => {
                         console.error(error)
-                        let text = "Unspecified error occured."
+                        //this.fundError = "Unspecified error occured."
                         if (typeof error.response === "undefined")
-                            text = "Unspecified error occured."
+                            this.fundError = "Unspecified error occured."
                         else if (error && error.response.status == 404)
-                            text = "Unfortunatelly the product provided could not be found. Did you try with a correct ISIN?"
+                            this.fundError = "Unfortunatelly the product provided could not be found. Did you try with a correct ISIN?"
                         else if (error && error.response.status == 401)
-                            text = "Unfortunatelly your free requests have expired."+ 
+                            this.fundError = "Unfortunatelly your free requests have expired."+ 
                             " Please feel free to visit again tomorrow, or <a href = '#subscription-plans' class = 'link'>subscribe</a> to a plan."
-                        
-                        document.querySelector('#demo-content').innerHTML = text
                     })
             },
 
             drawChart: function (element, data, attr) {
-
                 if (data.length === 0)
                     document.querySelector('#' + element).style.display = "none"
                 else 

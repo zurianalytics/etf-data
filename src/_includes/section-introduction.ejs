@@ -74,9 +74,12 @@
                             <input v-model="isin" v-on:change="getFund()"/>
                         </p>
                     </header>
+                    
+                    <div id = "demo-error" v-if = "fundError">
+                        {{fundError}}
+                    </div>
 
-
-                    <div id="demo-content">
+                    <div id="demo-content" v-if = "!fundError">
 
                         <div class="row padd-s">
                             <div class="col-sm-12">
