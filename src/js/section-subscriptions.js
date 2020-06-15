@@ -68,7 +68,9 @@ new Vue({
 
                 axios.post(env.api + '/payment/manage',
                     {
-                        token: this.dashboard.token
+                        token: this.dashboard.token,
+                        successUrl: env.website,
+                        returnUrl: env.website,
                     })
                     .then(result => {
                         console.dir("Management Dashboard Session returned: ", result.data);
@@ -76,7 +78,7 @@ new Vue({
                     })
                     .catch(result => {
                         console.dir("Management Dashboard Session failed:: ", result)
-                        this.openTooltip(result.response.data.message, button);
+                        this.openTooltip("<p>Unfortunatelly something went wrong. Is your token active?</p><p>Unloaded tokens can't be managed</p>", button);
                         this.payment.status = "ready"
                     });
 
