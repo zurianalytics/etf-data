@@ -64,6 +64,7 @@
                             <code class="inline">XETRA</code>
                             <code class="inline">BORSA_ITALIANA</code>
                             <code class="inline">SIX</code>
+                            <code class="inline">EURONEXT</code>
                         </p>
                         <p>
                             To get a list of the products listed on an exchange <span class = "accent-hard">EX</span>
@@ -84,51 +85,6 @@
                     </header>
                     <div>
                         <span>Returns a list of funds listed on SIX.</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="row" style = "margin-top: 0" menu-item="By Factor" id ="by-factor">
-
-            <div class="col-md-6">
-                <div class = "list">
-                        <code class="accent-bold">factor</code> <code class="accent-gray">Factor</code> <code class="accent-hard">Optional</code>
-                        <p>
-                            Returns products with the given factor. 
-
-                            Factor definitions follow the <a href = "https://www.msci.com/factor-indexes" class = "link">MSCI Factors<i class = "zuri-icon external"></i></a>:
-                        </p>
-                        <p>
-                            <code class = "inline">VOLATILITY_HIGH</code> 
-                            <code class = "inline">VOLATILITY_LOW</code> 
-                            <code class = "inline">YIELD</code> 
-                            <code class = "inline">QUALITY</code> 
-                            <code class = "inline">MOMENTUM</code> 
-                            <code class = "inline">VALUE</code> 
-                            <code class = "inline">SIZE_BIG</code> 
-                            <code class = "inline">SIZE_SMALL</code> 
-                            <code class = "inline">MULTIFACTOR</code>
-                        </p>
-                        <p>
-                            In order to search for a product with a specific factor <code class = "accent-green">F</code> use:
-                        </p>
-                        <p>
-                            <code class="inline">{{apiUrl}}/search?<span class = "accent-bold">factor</span>=<span class = "accent-hard">F</span></code>
-                        </p>
-                </div>
-            </div>
-
-            <div class="col-md-6">
-                <div class="accent-box">
-                    <header>
-                        <a v-bind:href="apiUrl +'/search?factor=MOMENTUM'">
-                            <i class = "zuri-icon terminal"></i><code class = "accent-blink">GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">factor</span>=<span class = "accent-hard">MOMENTUM</span></code>
-                        </a>
-                    </header>
-                    <div>
-                        <span>Returns a list of products which follow a Momentum factor strategy.</span>
                     </div>
                 </div>
             </div>
@@ -342,7 +298,9 @@
                             Returns products with the given distribution type. The available distribution types are:
                         </p>
                         <p>
-                            <code class = "inline">DISTRIBUTING</code> <code class = "inline">ACCUMULATING</code>
+                            <code class = "inline">DISTRIBUTING</code> 
+                            <code class = "inline">ACCUMULATING</code>
+                            <code class = "inline">NOT_APPLICABLE</code>
                         </p>
                         <p>
                             In order to search for a product with distribution type <code class = "accent-green">DIST_TYPE</code> use:
@@ -381,6 +339,8 @@
                             <code class = "inline">REAL_ESTATE</code>
                             <code class = "inline">EQUITY</code>
                             <code class = "inline">CURRENCY</code>
+                            <code class = "inline">MIXED</code>
+                            <code class = "inline">ALTERNATIVE</code>
                         </p>
                         <p>
                             In order to search for a product with asset class <code class = "accent-green">ASSET</code> use:
