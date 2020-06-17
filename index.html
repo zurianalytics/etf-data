@@ -15,7 +15,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Quality ETF fundamental data, updated daily. Providing deep data including sector, country, factor, dividend yield, valuations.">
+    <meta name="description" content="Quality European ETF, ETN and ETC data, updated daily. Complete overview including sector, country, factor, dividend yield and valuations. Additionally basic information such as domicile, followed index, asset class, fee, currency, replication method, distribution type and frequency. Try for free.">
     <meta name="author" content="ETF Data API">
 
     <!-- OG Meta Tags to improve the way the post looks when you share the page on LinkedIn, Facebook, Google+ -->
@@ -28,7 +28,7 @@
 	<meta property="og:type" content="article"/>
 
     <!-- Website Title -->
-    <title>ETF Data API</title>
+    <title>ETF Data API - Complete overview of European funds updated daily</title>
 	
 	<!-- Favicon  -->
     <link rel="icon" href="/images/etf-data_logo.png">
@@ -150,7 +150,7 @@ Side menu
                 <h1>About ETF Data API<i class = "zuri-icon information size-l align-middle right"></i></h1>
 
                 <p>
-                    We provide fundamental information, about most ETFs, ETNs, ETCs and other fund-like products listed on all major European exchanges.
+                    We provide fundamental information, about all ETFs, ETNs, ETCs and other fund-like products listed on all major European exchanges.
                 </p>
 
                 <p>
@@ -160,7 +160,7 @@ Side menu
                 
                 <p>
                     Deep fundamental information is derived using ML and AI technologies to learn about the underlying securities. Our models currently 
-                    recognize Sector Exposure, Country Exposure, Factors & Dividend Yield
+                    recognize Sector Exposure, Country Exposure, Factors & Dividend Yield.
                 </p>
 
                 <div class = "container-fluid">
@@ -197,7 +197,7 @@ Side menu
                 <p>
                     <div style = "text-align: right;">
 
-                        <span class = "accent-bold align-middle">SEE THE DATA WE HAVE</span><i class = "zuri-icon arrow-right align-middle"></i>
+                        <span class = "accent-bold align-middle">SEE THE DATA WE HAVE</span><i class = "zuri-icon arrow-right align-middle right"></i>
 
                     </div>
                 </p>
@@ -216,9 +216,12 @@ Side menu
                             <input v-model="isin" v-on:change="getFund()"/>
                         </p>
                     </header>
+                    
+                    <div id = "demo-error" v-if = "fundError">
+                        {{fundError}}
+                    </div>
 
-
-                    <div id="demo-content">
+                    <div id="demo-content" v-if = "!fundError">
 
                         <div class="row padd-s">
                             <div class="col-sm-12">
@@ -261,8 +264,8 @@ Side menu
 
                         <div class="row padd-s">
                             <div class="col-sm-4">
-                                <label class = "label">Factor</label><br/>
-                                <span>{{ fund.factor }}</span>
+                                <label class = "label">Total Fee</label><br/>
+                                <span>{{ fund.totalFee }}%</span>
                             </div>
                             <div class="col-sm-4">
                                 <label class = "label">Domicile</label><br/>
@@ -285,7 +288,7 @@ Side menu
                             </div>
                             <div class="col-sm-4">
                                 <label class = "label">Frequency</label><br/>
-                                <span>{{ fund.distributionFrequency }}</span>
+                                <span>{{ fund.frequency }}</span>
                             </div>
                         </div>
 
@@ -424,6 +427,7 @@ Side menu
                             <code class="inline">XETRA</code>
                             <code class="inline">BORSA_ITALIANA</code>
                             <code class="inline">SIX</code>
+                            <code class="inline">EURONEXT</code>
                         </p>
                         <p>
                             To get a list of the products listed on an exchange <span class = "accent-hard">EX</span>
@@ -444,51 +448,6 @@ Side menu
                     </header>
                     <div>
                         <span>Returns a list of funds listed on SIX.</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-        <div class="row" style = "margin-top: 0" menu-item="By Factor" id ="by-factor">
-
-            <div class="col-md-6">
-                <div class = "list">
-                        <code class="accent-bold">factor</code> <code class="accent-gray">Factor</code> <code class="accent-hard">Optional</code>
-                        <p>
-                            Returns products with the given factor. 
-
-                            Factor definitions follow the <a href = "https://www.msci.com/factor-indexes" class = "link">MSCI Factors<i class = "zuri-icon external"></i></a>:
-                        </p>
-                        <p>
-                            <code class = "inline">VOLATILITY_HIGH</code> 
-                            <code class = "inline">VOLATILITY_LOW</code> 
-                            <code class = "inline">YIELD</code> 
-                            <code class = "inline">QUALITY</code> 
-                            <code class = "inline">MOMENTUM</code> 
-                            <code class = "inline">VALUE</code> 
-                            <code class = "inline">SIZE_BIG</code> 
-                            <code class = "inline">SIZE_SMALL</code> 
-                            <code class = "inline">MULTIFACTOR</code>
-                        </p>
-                        <p>
-                            In order to search for a product with a specific factor <code class = "accent-green">F</code> use:
-                        </p>
-                        <p>
-                            <code class="inline">{{apiUrl}}/search?<span class = "accent-bold">factor</span>=<span class = "accent-hard">F</span></code>
-                        </p>
-                </div>
-            </div>
-
-            <div class="col-md-6">
-                <div class="accent-box">
-                    <header>
-                        <a v-bind:href="apiUrl +'/search?factor=MOMENTUM'">
-                            <i class = "zuri-icon terminal"></i><code class = "accent-blink">GET</code><code>{{apiUrl}}/search?<span class = "accent-bold">factor</span>=<span class = "accent-hard">MOMENTUM</span></code>
-                        </a>
-                    </header>
-                    <div>
-                        <span>Returns a list of products which follow a Momentum factor strategy.</span>
                     </div>
                 </div>
             </div>
@@ -702,7 +661,9 @@ Side menu
                             Returns products with the given distribution type. The available distribution types are:
                         </p>
                         <p>
-                            <code class = "inline">DISTRIBUTING</code> <code class = "inline">ACCUMULATING</code>
+                            <code class = "inline">DISTRIBUTING</code> 
+                            <code class = "inline">ACCUMULATING</code>
+                            <code class = "inline">NOT_APPLICABLE</code>
                         </p>
                         <p>
                             In order to search for a product with distribution type <code class = "accent-green">DIST_TYPE</code> use:
@@ -741,6 +702,8 @@ Side menu
                             <code class = "inline">REAL_ESTATE</code>
                             <code class = "inline">EQUITY</code>
                             <code class = "inline">CURRENCY</code>
+                            <code class = "inline">MIXED</code>
+                            <code class = "inline">ALTERNATIVE</code>
                         </p>
                         <p>
                             In order to search for a product with asset class <code class = "accent-green">ASSET</code> use:
