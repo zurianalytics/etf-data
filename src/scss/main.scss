@@ -119,6 +119,12 @@ body {
   0 16px 32px rgba(0, 0, 0, 0.03), 0 32px 64px rgba(0, 0, 0, 0.03);
   padding: 4rem;
   border-radius: 6px;
+
+  @media (max-width: 992px) {
+    & {
+      padding: 2rem;
+    }
+  }
 }
 
 .tile, .inline
@@ -298,44 +304,17 @@ nav {
 }
 
 
-
-
-
-
-
-
-
 /*! ---------------------
   Chart styles
   -------------------- !*/
-.left {
-  .pie-chart {
-    transform: translate(160px, 0);
-  }
-
-  .chart-legend {
-    transform: translate(0, 0);
-  }
+.chart-legend text 
+{
+  @include typography-footnote;
 }
 
-.right {
-  .pie-chart {
-    transform: translate(-40px, 0);
-  }
-
-  .chart-legend {
-    transform: scaleX(-1);
-
-    & .legend-dot,
-    & .legend-dataset-text {
-      transform: scaleX(-1) translateX(80%);
-    }
-  }
-}
-
-.chart-container .legend-dataset-text {
-  fill: $color-blue-200;
-  font-weight: 600;
+.chart-container .legend-dataset-text
+{
+  fill: $color-gray-300;
 }
 
 

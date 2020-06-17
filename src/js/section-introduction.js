@@ -9,7 +9,7 @@ new Vue({
 
     data() {
         return {
-            isin: "DE000A0F5UG3",
+            isin: "DE000A14ND46",
             chart: {},
             fund: {
                 sectors: [], 
@@ -82,31 +82,34 @@ new Vue({
                         }))
                 
                 let dataS = {
-                    labels: data.map(d => d[attr]),
+                    labels: data.map(d => d[attr]).map(this.shortenString),
                     datasets: [{values: data.map(d => d.percentage)}]
                 }
 
                 new Chart('#' + element, {  
                     data: dataS,
-                    type: 'pie', // or 'bar', 'line', 'scatter', 'pie', 'percentage'
-                    height: 280,
+                    height: 140,
+                    type: 'percentage', // or 'bar', 'line', 'scatter', 'pie', 'percentage'
                     colors: ['hsla(227, 52%, 25%, 1)', 'hsla(227, 50%, 50%, 1)', 'hsla(227, 80%, 70%, 1)',
                              'hsla(200, 80%, 70%, 1)', 'hsla(200, 50%, 50%, 1)', 'hsla(200, 52%, 25%, 1)',
                              'hsla(154, 45%, 40%, 1)', 'hsla(154, 45%, 50%, 1)', 'hsla(154, 55%, 57%, 1)',
-                             'hsla(124, 55%, 57%, 1)', 'hsla(124, 45%, 50%, 1)', 'hsla(124, 45%, 40%, 1)']
+                             'hsla(124, 55%, 57%, 1)', 'hsla(124, 45%, 50%, 1)', 'hsla(124, 45%, 40%, 1)'],
+                    barOptions: {
+                        height: 20,          // default: 20
+                        depth: 0,             // default: 2
+                        spaceRatio: 1,
+                        stacked: true
+
+                    }
                 })
-                this.resizeChart(element);
+                //this.resizeChart(element);
             },
 
-            resizeChart: function(element)
+            shortenString: function(s)
             {
-                // Resize 
-                let holder = document.querySelector('#' + element).querySelector('.frappe-chart')
-                holder.setAttribute("height", 200)
-                let pixels = 0;
-                holder.querySelector('.pie-chart').removeAttribute("transform")
-                holder.querySelectorAll('.chart-legend').forEach(l => l.removeAttribute("transform"))
-                holder.querySelectorAll('.chart-legend > *').forEach(l => l.setAttribute("transform", "translate(10, " + (pixels += 17) + ")"))
+                if (!s.includes("_"))
+                    return s.substring(0, 3);
+                return s.split("_").map(s => s.substring(0, 1)).join("")
             }
         }
 })
