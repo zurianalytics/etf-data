@@ -96,7 +96,7 @@
 
       <div class="row">
         <div class="col-md-8">
-          <form id="payment-form" class = "tile marg-m">
+          <form id="payment-form" class = "marg-m">
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
@@ -157,6 +157,7 @@
             </div>
 
             <span id="subscribe-wrapper" class = "form-group">
+              
               <button
                 :disabled="!payment.plan || payment.processing || !payment.tos || !payment.tokenSaved"
                 id="subscribe"
@@ -182,7 +183,7 @@
         <a href="mailto:support@zurianalytics.com" class = "link">support@zurianalytics.com<i class = "zuri-icon external"></i></a>
       </p>
 
-      <form id="manage-subscription-form" method="GET" class = "tile">
+      <form id="manage-subscription-form" method="GET">
         <div class="row">
           <div class="col-md-8">
             <div class="form-group">
