@@ -4,6 +4,8 @@
 @import "_layout";
 @import "_icons";
 @import "_fonts";
+@import "_hamburger";
+
 
 /*! ---------------------
   Global Styles
@@ -190,52 +192,15 @@ body {
 /*! ---------------------
 Side menu
   -------------------- !*/
-nav {
+nav.side-menu {
+  display: block;
+  // Center
+  top: 50%;
+  transform: translateY(-50%);
   position: fixed;
   font-weight: bold;
   padding: 1.4rem;
   z-index: 30;
-
-  .puller {
-    height: 100vh;
-    float: right;
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-    width: 22px;
-    border-right: 2px solid $color-blue-200;
-    color: $color-blue-200;
-    font-size: 2rem;
-  }
-
-  @media (max-width: 1200px) {
-    & {
-      padding: 0.6rem;
-    }
-  }
-
-  // Responsive
-  @media (max-width: 992px) {
-    & {
-      padding-right: 0;
-      transform: translateX(-100%);
-      margin-left: 8px;
-      top: 0;
-      transition: all 0.3s ease-out;
-      background-color: $color-gray-100;
-      width: 50%;
-      text-align: center;
-    }
-
-    &.active {
-      transform: translateX(0);
-      margin-left: 0;
-    }
-
-    .puller {
-      display: flex;
-    }
-  }
 
   // Section at the bottom
   footer {
@@ -298,6 +263,57 @@ nav {
       ul,
       li {
         transition: all 0.6s 0s;
+      }
+    }
+  }
+
+  // Responsive styles
+  @media (max-width: 1200px) {
+    & {
+      padding: 0.6rem;
+    }
+  }
+
+  .action
+  {
+    display: none;
+  }
+
+  @media (max-width: 992px) {
+    & {
+
+      .action
+      {
+        display: block;
+        margin-bottom: 2rem;
+      }
+
+      background-color: $color-gray-100;
+      left: 0;
+      top: 0;
+      transform: translate(0, 0);
+      height: 100vh;
+      padding: 1.4rem 0;
+      transition: all 0.3s;
+
+      // CLosed menu
+      width: 0;
+      & > .representation, & > footer, & > ul
+      {
+        transform: scaleX(0);
+      }
+
+      // Open menu
+      &.is-active
+      {
+        padding: 1.4rem 1.4rem;
+        width: 50vw;
+        text-align: center;
+      
+        & > .representation, & > footer, & > ul
+        {
+          transform: scaleX(1);
+        }
       }
     }
   }

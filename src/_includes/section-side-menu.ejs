@@ -1,9 +1,15 @@
 
-<nav v-bind:class="{ active: interaction.menu }" id = "side-menu">
 
-    <a class="puller" href="" v-on:click.prevent="interaction.menu = !interaction.menu">
-        <i class = "zuri-icon arrow-right"></i>
-    </a>
+<nav class = "side-menu" id = "side-menu" v-bind:class="{ 'is-active': interaction.menu }">
+
+    <div style = "text-align: center" class = "action">
+        <button class="hamburger hamburger--elastic" type="button" v-bind:class="{ 'is-active': interaction.menu }" v-on:click.prevent="interaction.menu = !interaction.menu">
+            <span class="hamburger-box">
+              <span class="hamburger-inner"></span>
+            </span>
+        </button>
+    </div>
+
     <div class="representation">
         <a href="#">
             <img class="logo" src="/images/etf-data_logo.png"/>

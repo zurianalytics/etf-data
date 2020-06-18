@@ -20,7 +20,8 @@ new Vue({
                     clientSecret: "pk_test_Dzl7yTz2o6HP1UYa4Wb4ZC8g00tZaM2vr5",
                     plan: null,
                     token: null,
-                    processing: false
+                    processing: false,
+                    tokenSaved: false
                 },
 
             /* =======================================
@@ -112,6 +113,7 @@ new Vue({
             },
 
             initializeToken: function () {
+                this.payment.tokenSaved = false;
                 return axios
                     .get(env.api + "/token/")
                     .then(response => this.payment.token = response.data)

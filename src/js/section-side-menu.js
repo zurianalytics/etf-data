@@ -21,6 +21,8 @@ new Vue({
             e.preventDefault() 
             // Scroll
             target.scrollIntoView({ behavior: 'smooth' });
+            // Close menu 
+            this.interaction.menu = false;
         },
 
         applyIntersectStyles(entries, observer)
@@ -28,9 +30,9 @@ new Vue({
             entries.forEach(e =>
             {
                 if (e.intersectionRatio > 0)
-                    document.querySelector('a[href="#' + e.target.id + '"]').parentElement.classList.add("active")
+                    document.querySelectorAll('a[href="#' + e.target.id + '"]').forEach(e => e.parentElement.classList.add("active"))
                 else
-                    document.querySelector('a[href="#' + e.target.id + '"]').parentElement.classList.remove("active")
+                    document.querySelectorAll('a[href="#' + e.target.id + '"]').forEach(e => e.parentElement.classList.remove("active"))
             })
         },
     },
