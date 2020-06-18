@@ -11,6 +11,11 @@ $accent-light: $color-blue-100;
   margin-right: 0.3rem;
   vertical-align: sub;
 
+  &.baseline
+  {
+    vertical-align: baseline;
+  }
+
   &.size-s
   {
     width: 0.7rem;

@@ -6,7 +6,6 @@
 @import "_fonts";
 @import "_hamburger";
 
-
 /*! ---------------------
   Global Styles
   --------------------!*/
@@ -19,7 +18,6 @@ body {
   background-color: $color-gray-000;
   height: 100%;
 }
-
 
 /*! ---------------------
   Accent and colors
@@ -69,8 +67,6 @@ body {
   }
 }
 
-
-
 /*! ---------------------
   Design Components
   -------------------- !*/
@@ -112,16 +108,12 @@ body {
   }
 }
 
-
-
 .card {
+  @include borders-box;
+  @include elevation-1;
   background-color: $color-gray-000;
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03), 0 2px 4px rgba(0, 0, 0, 0.03),
-  0 4px 8px rgba(0, 0, 0, 0.03), 0 8px 16px rgba(0, 0, 0, 0.03),
-  0 16px 32px rgba(0, 0, 0, 0.03), 0 32px 64px rgba(0, 0, 0, 0.03);
-  padding: 4rem;
-  border-radius: 6px;
 
+  padding: 4rem;
   @media (max-width: 992px) {
     & {
       padding: 2rem;
@@ -129,28 +121,45 @@ body {
   }
 }
 
-.tile, .inline
-{
+.plan {
+  @include elevation-1;
+  @include borders-box-layered;
+  height: 20rem;
+  & > *:first-child {
+    background-color: $color-gray-100;
+  }
+  background-color: $color-gray-000;
+  text-align: center;
+
+  &.dark {
+    color: $color-gray-000;
+    background-color: $color-blue-400;
+
+    & > *:first-child {
+      background-color: $color-blue-500;
+    }
+  }
+}
+
+.tile,
+.inline {
+  @include borders-box;
   background-color: $color-gray-100;
-  border-radius: 4px;
   border: 1px solid $color-gray-200;
   color: $color-gray-400;
   padding: 2rem;
 }
 
 .accent-box {
+  @include borders-box-layered;
   margin-top: 0.8rem;
   margin-bottom: 2.5rem;
   background-color: $color-gray-200;
-  border-radius: 6px;
   color: $color-gray-400;
-  box-sizing: border-box;
   overflow: hidden;
   header {
     background-color: $color-blue-400;
     color: $color-gray-100;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
 
     input {
       background: rgba(1, 1, 1, 0.3);
@@ -159,12 +168,6 @@ body {
       border-bottom: 1px solid $color-green-100;
       animation: blinker-border 1.4s linear infinite;
     }
-  }
-
-
-
-  & > * {
-    padding: 1.2rem 2rem;
   }
 
   .json-formatter-row,
@@ -187,7 +190,6 @@ body {
     color: $color-gray-400;
   }
 }
-
 
 /*! ---------------------
 Side menu
@@ -274,16 +276,13 @@ nav.side-menu {
     }
   }
 
-  .action
-  {
+  .action {
     display: none;
   }
 
   @media (max-width: 1024px) {
     & {
-
-      .action
-      {
+      .action {
         display: block;
         margin-bottom: 2rem;
       }
@@ -298,20 +297,21 @@ nav.side-menu {
 
       // CLosed menu
       width: 0;
-      & > .representation, & > footer, & > ul
-      {
+      & > .representation,
+      & > footer,
+      & > ul {
         transform: scaleX(0);
       }
 
       // Open menu
-      &.is-active
-      {
+      &.is-active {
         padding: 1.4rem 1.4rem;
         width: 50vw;
         text-align: center;
-      
-        & > .representation, & > footer, & > ul
-        {
+
+        & > .representation,
+        & > footer,
+        & > ul {
           transform: scaleX(1);
         }
       }
@@ -319,21 +319,16 @@ nav.side-menu {
   }
 }
 
-
 /*! ---------------------
   Chart styles
   -------------------- !*/
-.chart-legend text 
-{
+.chart-legend text {
   @include typography-footnote;
 }
 
-.chart-container .legend-dataset-text
-{
+.chart-container .legend-dataset-text {
   fill: $color-gray-300;
 }
-
-
 
 /*! ---------------------
   Content formatting styles
@@ -354,7 +349,8 @@ nav.side-menu {
     padding-bottom: 1rem;
   }
 
-  h3, h6 {
+  h3,
+  h6 {
     @include typography-5;
   }
 
@@ -394,15 +390,6 @@ nav.side-menu {
   }
 }
 
-
-
-
-
-
-
-
-
-
 /*! ---------------------
   Accents & Special
   -------------------- !*/
@@ -411,8 +398,7 @@ nav.side-menu {
     @include typography-footnote;
     color: $color-gray-300;
 
-    &.top
-    {
+    &.top {
       margin-bottom: 1rem;
       display: block;
     }
@@ -422,19 +408,17 @@ nav.side-menu {
     cursor: help;
   }
 
-  a.action
-  {
+  a.action {
     cursor: pointer;
   }
-  
+
   // External && info
   a.info,
   a.link {
     display: inline-block;
     color: $color-blue-200;
 
-    &.link{
-      
+    &.link {
       /* Effect */
       & {
         padding: 0 4px;
@@ -476,36 +460,23 @@ nav.side-menu {
   }
 }
 
-
-
-
-
-
-
-
-
-
-
 /*! ---------------------
   Form Elements
   -------------------- !*/
 form {
-
-  .form-group
-  {
+  .form-group {
     margin-top: 1.2rem;
     margin-bottom: 1.2rem;
   }
 
   textarea,
-  select
-  {
+  select {
+    @include borders-box;
     width: 100%;
     box-sizing: border-box;
     height: 40px;
     padding: 10px 12px;
     border: 1px solid transparent;
-    border-radius: 4px;
     background-color: $color-gray-000;
     box-shadow: 0 1px 3px 0 #e6ebf1;
     -webkit-transition: box-shadow 150ms ease;
@@ -520,13 +491,13 @@ form {
   }
 
   button {
+    @include borders-box;
     background: $color-blue-200;
     color: $color-gray-100;
     height: 38px;
     padding: 0 14px;
     border: none;
     box-shadow: 0 4px 6px rgba(50, 50, 93, 0.11), 0 1px 3px rgba(0, 0, 0, 0.08);
-    border-radius: 4px;
 
     &:disabled {
       background: $color-gray-400;
