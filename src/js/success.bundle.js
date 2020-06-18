@@ -1,3 +1,6 @@
+// Menu should always be last
+import './section-side-menu'
+
 const urlParams = new URLSearchParams(window.location.search);
 const myParam = urlParams.get("myParam");
 
