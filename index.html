@@ -96,7 +96,7 @@ Side menu
 
 /*! ---------------------
   Form Elements
-  -------------------- !*/form{border-radius:4px;background-color:#1f2d61;padding:2rem}form ::selection{color:#d4dbf7;background:#405bbf}form .form-group{margin-top:1.2rem;margin-bottom:1.2rem}form select,form textarea{border-radius:4px;width:100%;box-sizing:border-box;height:40px;padding:10px 12px;border:1px solid transparent;background-color:#1a2651;color:#d4dbf7;box-shadow:0 1px 3px 0 #1f2d61;-webkit-transition:box-shadow .15s ease;transition:box-shadow .15s ease}form select:focus,form textarea:focus{box-shadow:0 1px 3px 0 #405bbf;border:none;outline:none}form button{border-radius:4px;background:#3ecc8e;color:#f4f7fb;height:38px;padding:0 14px;border:none;box-shadow:0 4px 6px rgba(50,50,93,.11),0 1px 3px rgba(0,0,0,.08)}form button:disabled{background:#8498b3}form button:disabled.success{background:#38946c}form textarea{height:8.4rem!important;resize:none}
+  -------------------- !*/form{border-radius:4px;background-color:#1f2d61;padding:2rem}form ::selection{color:#d4dbf7;background:#405bbf}form .form-group{margin-top:1.2rem;margin-bottom:1.2rem}form select,form textarea{border-radius:4px;width:100%;box-sizing:border-box;height:40px;padding:10px 12px;border:1px solid transparent;background-color:#1a2651;color:#d4dbf7;box-shadow:0 1px 3px 0 #1f2d61;-webkit-transition:box-shadow .15s ease;transition:box-shadow .15s ease}form select:focus,form textarea:focus{box-shadow:0 1px 3px 0 #405bbf;border:none;outline:none}form button{border-radius:4px;background:#3ecc8e;color:#f4f7fb;height:38px;padding:0 14px;border:none;box-shadow:0 4px 6px rgba(50,50,93,.11),0 1px 3px rgba(0,0,0,.08)}form button:disabled{background:#8498b3}form button:disabled.success{background:#38946c}form textarea{height:10.4rem!important;resize:none}
 
 /*! ---------------------
   Tippy
@@ -183,7 +183,7 @@ Side menu
                 </p>
                 
                 <p>
-                    Deep fundamental information is derived using ML and AI technologies to learn about the underlying securities. Our models currently 
+                    Deep fundamental information is derived using Machine Learning and Artificial Intelligence to learn about the underlying securities. Our models currently 
                     recognize Sector Exposure, Country Exposure, Factors & Dividend Yield.
                 </p>
 
@@ -817,11 +817,11 @@ Side menu
             <h3 class = "marg-m">Professional</h3>
             <div>
               <p class = "label">
-                For individuals, or small applications aimed at a small set of users. <a href ='https://zurianalytics.com/terms_conditions' class = 'link'>Learn more about this license</a>
+                For individuals, or small applications aimed at a small set of users.<a href ='https://zurianalytics.com/terms_conditions' target="_blank" class = 'link'>Terms & conditions</a>
               </p>
               <p>
                 <h3>
-                  <i class = "zuri-icon terminal baseline"></i><span class="accent-green">5 000</span> API calls <span class = "label">| month</span>
+                  <i class = "zuri-icon terminal baseline"></i><span class="accent-green">5'000</span> API calls <span class = "label">| month</span>
                 </h3>
               </p>
 
@@ -838,11 +838,11 @@ Side menu
             <h3 class = "marg-m">Business</h3>
             <div>
               <p class = "label">
-                For applications & businesses presenting fund data to clients. <a href ='https://zurianalytics.com/terms_conditions' class = 'link'>Learn more about this license</a>
+                For applications & businesses presenting fund data to clients.<a href ='https://zurianalytics.com/terms_conditions' target="_blank" class = 'link'>Terms & conditions</a>
               </p>
               <p>
                 <h3>
-                  <i class = "zuri-icon terminal baseline"></i><span class="accent-green">10,000,000</span> API calls <span class = "label">| month</span>
+                  <i class = "zuri-icon terminal baseline"></i><span class="accent-green">10'000'000</span> API calls <span class = "label">| month</span>
                 </h3>
               </p>
 
@@ -894,7 +894,7 @@ Side menu
                       >API Token
                       <i class = "zuri-icon lightbulb size-s action"></i>
                     </a>
-                    <a data-tippy-content="Get a new token" v-on:click="initializeToken" class = "action">
+                    <a data-tippy-content="Generate a new token" v-on:click="initializeToken" class = "action">
                       <i class = "zuri-icon refresh"></i>
                     </a>
                   </label>
@@ -917,7 +917,7 @@ Side menu
                     selected="individual"
                     v-model="payment.plan">
                   <option value="price_HNHSicEhz1eIa9">Test plan</option>
-                  <option value="price_HO2znP6SdSpvZn">Professional</option>
+                  <option value="price_1H0O3rIVlbyABCXkxUt3rRVQ">Professional</option>
                   <option value="business">Business</option>
                   </select>
                 </div>
@@ -926,11 +926,11 @@ Side menu
                   <div class = "row">
                     <div class = "col-md-12">
                       <input type = "checkbox" id = "saved-token" v-model="payment.tokenSaved"></input>
-                      <label class = "label" for = "saved-token">I have saved my token to a secure location</label>
+                      <label class = "label" for = "saved-token">I have saved my token to a secure location*</label>
                     </div>
                     <div class = "col-md-12">
                       <input type = "checkbox" id = "tos" v-model="payment.tos"></input>
-                      <label class = "label" for = "tos">I have read and agree to the <a class = "link" href = "https://zurianalytics.com/terms_conditions/">TOS<i class="zuri-icon size-s external"></i></a></label>
+                      <label class = "label" for = "tos">I have read and agree to the<a class = "link" href = "https://zurianalytics.com/terms_conditions/" target="_blank">T&C*</a></label>
                     </div>
                   </div>
                 </div>
