@@ -60,7 +60,7 @@ new Vue({
                             this.fundError = "Unfortunatelly the product provided could not be found. Did you try with a correct ISIN?"
                         else if (error && error.response.status == 401)
                             this.fundError = "Unfortunatelly your free requests have expired."+ 
-                            " Please feel free to visit again tomorrow, or <a href = '#subscription-plans' class = 'link'>subscribe</a> to a plan."
+                            " Please feel free to visit again tomorrow, or subscribe to a plan."
                     })
             },
 
