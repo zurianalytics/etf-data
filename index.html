@@ -795,7 +795,7 @@ Side menu
       <h1>Subscriptions<i class="zuri-icon invoice size-l align-middle right"></i></h1>
 
       <p>
-        {{ apiName }} can be called for free up to a certain number of requests
+        {{ apiName }} can be called for <span class = "accent-hard">free</span> up to a certain number of requests
         daily. The number of free requests may change day-to-day, as we closely
         monitor abuse.
       </p>
@@ -881,7 +881,7 @@ Side menu
 
       <div class="row">
         <div class="col-md-8">
-          <form id="payment-form" class = "marg-m">
+          <form id="payment-form" class = "marg-m" onsubmit="return false;">
             <div class="row">
               <div class="col-md-6">
                 <div class="form-group">
