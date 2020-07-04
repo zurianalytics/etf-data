@@ -86,7 +86,7 @@ new Vue({
             },
 
             selfCheckout: function (event) {
-                event.preventDefault()
+                //event.preventDefault()
                 console.info("Redirecting to stripe api...")
                 this.payment.processing = true
                 this.payment.stripe.redirectToCheckout({
