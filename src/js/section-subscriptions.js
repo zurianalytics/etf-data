@@ -79,7 +79,7 @@ new Vue({
                     })
                     .catch(result => {
                         console.dir("Management Dashboard Session failed:: ", result)
-                        this.openTooltip("<p>Unfortunatelly something went wrong. Is your token active?</p><p>Unloaded tokens can't be managed</p>", button);
+                        this.openTooltip("<p>Unfortunately something went wrong. Is your token active?</p><p>Unloaded tokens can't be managed</p>", button);
                         this.payment.status = "ready"
                     });
 

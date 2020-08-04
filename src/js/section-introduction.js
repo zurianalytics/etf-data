@@ -57,9 +57,9 @@ new Vue({
                         if (typeof error.response === "undefined")
                             this.fundError = "Unspecified error occured."
                         else if (error && error.response.status == 404)
-                            this.fundError = "Unfortunatelly the product provided could not be found. Did you try with a correct ISIN?"
+                            this.fundError = "Unfortunately the product provided could not be found. Did you try with a correct ISIN?"
                         else if (error && error.response.status == 401)
-                            this.fundError = "Unfortunatelly your free requests have expired."+ 
+                            this.fundError = "Unfortunately your free requests have expired."+ 
                             " Please feel free to visit again tomorrow, or subscribe to a plan."
                     })
             },
